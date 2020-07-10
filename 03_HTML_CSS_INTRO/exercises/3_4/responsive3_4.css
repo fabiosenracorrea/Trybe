@@ -1,0 +1,14 @@
+@media (min-width:500px) and (max-width: 820px) {
+    /* facts section */
+    .facts-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fact {
+        height: 60vh;
+    }
+
+    .fact p {
+        font-size: 12px;
+    }
+}
