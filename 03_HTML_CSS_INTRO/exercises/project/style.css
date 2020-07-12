@@ -1,0 +1,323 @@
+/* general settings */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: crimson;
+}
+
+body {
+  background-color: rgb(253 , 251 , 251);
+}
+
+/* header */
+
+.cabecalho {
+  background-color: lightslategrey;
+  position: fixed;
+  top: 0;
+  height: 4vh;
+  z-index: 99999;
+  width: 100%;
+  border-radius: 0 0 6px 6px;
+}
+
+.cabecalho h1 {
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+/* nav bar */
+
+.nav_bar {
+  margin-top: 3vh;
+  background-color: lightslategrey;
+  padding: 14px 10px 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav_bar a {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 6px;
+  margin-right: 20px;
+  color: white;
+}
+
+.nav_bar a:hover {
+  background-color: black;
+}
+
+/* first section: my picture */
+
+.profile_pic {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: url("images/learning.jpeg") no-repeat;
+  background-size: cover;
+  background-position: 40% 70%;
+  min-height: 50vh;
+}
+
+.greeting {
+  width: 50%;
+  margin-left: 20px;
+}
+
+.greeting h2 {
+  margin-bottom: 36px;
+  font-size: 55px;
+}
+
+.greeting p {
+  width: 50%;
+  background-color: black;
+  color: white;
+  opacity: 0.92;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.profile_pic img {
+  height: 20vw;
+  border-radius: 100%;
+  margin-left: 20vw;
+}
+
+/* article */
+
+.lado-esquerdo {
+  padding: 16px;
+  width: 75%;
+  height: 45vh;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.lado-esquerdo h2 {
+  justify-self: flex-start;
+  margin: 20px 0 0;
+  font-size: 42px;
+  flex: 1;
+}
+
+.lado-esquerdo p {
+  margin-bottom: 25px;
+}
+
+/* semantic HTML part */
+
+.lado-direito {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  background-color: rgb(179 , 135 , 91);
+  padding: 8px;
+  border-radius: 8px;
+  margin: 16px 8px 16px 8px;
+}
+
+.html-semantico {
+  background-color: rgb(104 , 182 , 104);
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  width: 30vh;
+  font-size: 12px;
+  text-align: center;
+  padding: 2px;
+}
+
+.section-1 {
+  background-color: rgb(104 , 214 , 214);
+  margin: 3px;
+  border-radius: 8px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-1 p {
+  background-color: rgb(38 , 110 , 110);
+  width: 100%;
+  border-radius: 8px;
+}
+
+.section-2 {
+  margin: 3px;
+  display: flex;
+  width: 95%;
+}
+
+.sub1 {
+  background-color: rgb(104 , 214 , 214);
+  border-radius: 8px;
+  padding: 4px;
+  text-align: center;
+  width: 60%;
+}
+
+.sub1-1 {
+  background-color: rgb(38 , 110 , 110);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.sub1-1 span {
+  margin: 4px 0 4px;
+  display: inline-block;
+  /* esse display foi necessário para conseguir dar a margem!! */
+}
+
+.sub1-1 p {
+  background-color: rgb(104 , 214 , 214);
+  border-radius: 8px;
+  padding: 1px;
+}
+
+.sub2 {
+  background-color: rgb(104 , 214 , 214);
+  border-radius: 8px;
+  margin-left: 2%;
+  width: 40%;
+  padding-top: 2px;
+}
+
+.section-3 {
+  background-color: rgb(104 , 214 , 214);
+  border-radius: 8px;
+  margin: 3px;
+}
+
+.side-text {
+  font-size: 15px;
+  text-align: justify;
+  padding: 2px;
+  margin-top: 8px;
+}
+
+/* list-links-gif part */
+
+.parte-baixo {
+  display: flex;
+}
+
+.topicos {
+  padding: 12px;
+  margin: 12px;
+  width: 75%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  clear: both;
+}
+
+.card ul,
+.card ol {
+  margin-top: 12px;
+}
+
+.card li {
+  margin-left: 24px;
+}
+
+.bons-links li {
+  list-style: lower-greek;
+}
+
+.joke {
+  width: 20%;
+  left: 200px;
+  margin: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.joke a {
+  font-size: 0;
+}
+
+.joke h3 {
+  margin-bottom: 12px;
+}
+
+/* table */
+
+.table-complement {
+  float: right;
+  margin: 12px 24px;
+  width: 20%;
+  height: 20vh;
+}
+
+.table-complement aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  height: 100%;
+  margin-top: 12px;
+  background-color: lightcyan;
+  padding: 18px;
+  border-radius: 8px;
+}
+
+.table-complement h4 {
+  margin-bottom: 12px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  margin: 12px;
+}
+
+.table table {
+  border-collapse: collapse;
+  margin: 12px 0 16px;
+  width: 30%;
+  align-self: center;
+}
+
+.table table,
+.table th,
+.table td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 3px;
+}
+
+.table th {
+  background-color: lightslategrey;
+  color: white;
+}
+
+/* footer */
+
+footer {
+  background-color: navajowhite;
+}
+
+footer p {
+  font-weight: 600;
+  text-align: center;
+  padding: 4px
+}

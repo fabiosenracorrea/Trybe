@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lições Trybe - Projeto 1</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header id="cabecalho" class="cabecalho">
+    <h1 id="titulo">Expreriência Trybe</h1>
+  </header>
+
+  <section class="nav_bar">
+    <nav class="navegar">
+      <a href="#artigo">Experiência</a>
+      <a href="#licoes">Lições</a>
+      <a href="#extras">Pontos de Apoio</a>
+    </nav>
+  </section>
+
+  <section class="profile_pic">
+    <div class="greeting">
+      <h2>Fábio Corrêa</h2>
+      <p>Em um breve texto, conto um pouquinho mais sobre o aprendizado na Trybe até então e tudo aquilo que tirei de lição para mim.</p>
+    </div>
+    <img src="images/square_profie_pic.jpg" alt="Fábio_Corrêa" id="minha_foto">
+  </section>
+
+  <section class="lado-direito">
+    <div class="html-semantico">
+        <div class="section-1">
+            &#60;header&#62;
+            <p>&#60;nav&#62;</p>
+        </div>
+        <div class="section-2">
+            <div class="sub1">
+              &#60;section&#62;
+              <div class="sub1-1">
+                <p>&#60;header&#62;</p>
+                <span>&#60;article&#62;</span>
+                <p>&#60;footer&#62;</p>
+              </div>
+            </div>
+            <div class="sub2">
+              &#60;aside&#62;
+            </div>
+        </div>
+        <div class="section-3">
+          &#60;footer&#62;
+        </div>
+    </div>
+    <p class="side-text">
+      Uma lição fundamental deste módulo foi o aprendizado do <em>HTML semântico.</em> A possibilidade de melhorar o rankeamento dos sites e de gerar inclusão ao mesmo tempo é algo extremamente valioso!
+    </p>
+  </section>
+
+
+  <article class="lado-esquerdo">
+    <h2>Até aqui...</h2>
+    <p>
+      O desenvolvimento de Software é um caminho longo e irregular. Devido ao alto nível de complexidade e o emaranhado de soluções que resolvem determinado problema, não basta apenas entender o que está sendo codado, mas abstrair as razões pelas quais determinada solução foi escolhida em detrimento da outra.
+    </p>
+    <br>
+    <p>
+      O primeiro mês de aprendizado na Trybe tem sido um contato mais íntimo com a ponta do iceberg do desenvolvimento Web: <strong>HTML</strong> e <strong>CSS</strong>. E, tendo-os em mente, trago às lições aprendidas até aqui. O melhor ainda está por vir!
+    </p>
+  </article>
+
+  <section class="parte-baixo">
+    <section id="licoes" class="topicos">
+      <div class="licoes-1 card">
+        <h3>Tópicos aprendidos até aqui</h3>
+        <ol id="licoes_aprendidas">
+          <li>HTML Semântico</li>
+          <li>CSS</li>
+          <li>Bash</li>
+          <li>Shell Script</li>
+          <li>DNS</li>
+          <li>Protocolo TCP/IP</li>
+          <li>Git & Github</li>
+          <li>Protocolo HTTP/S</li>
+          <li>Unix</li>
+          <li>Chaves SSH</li>
+        </ol>
+      </div>
+      <div class="licoes-2 card">
+        <h3>Tópicos a serem aprendidos</h3>
+        <ul id="licoes_a_aprender">
+          <li>Javascript ES6+</li>
+          <li>NodeJS</li>
+          <li>ReactJS</li>
+          <li>SQL</li>
+          <li>NoSQL + mongodb</li>
+          <li>Python</li>
+          <li>Testes Unitários</li>
+          <li>CSS Responsivo</li>
+          <li>Frameworks e Dependências</li>
+          <li>Contruindo uma aplicação REST</li>
+        </ul>
+      </div>
+      <div class="links card">
+        <h3>Links úteis para estudo</h3>
+        <ul class="bons-links">
+          <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+          <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+          <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">Mozilla</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="joke">
+      <h3>Para refletir &#128514;</h3>
+      <iframe src="https://giphy.com/embed/13FrpeVH09Zrb2" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/css-13FrpeVH09Zrb2">a</a></p>
+    </section>
+  </section>
+
+  <section class="table-complement">
+    <aside>
+      <h4>Boas práticas no CSS</h4>
+      <p>Tente estilizar usando cores que conversam entre si e sempre tente usar medidas relativas (%, vh, rem/em por ex) em detrimento das absolutas (px).</p>
+    </aside>
+  </section>
+
+  <section class="table">
+    <h3>Tags e Propriedades mais importantes até aqui</h3>
+    <table>
+      <tr>
+        <th>HTML</th>
+        <th>CSS</th>
+      </tr>
+      <tr>
+        <td>section</td>
+        <td>display</td>
+      </tr>
+      <tr>
+        <td>article</td>
+        <td>position</td>
+      </tr>
+      <tr>
+        <td>header</td>
+        <td>margin</td>
+      </tr>
+      <tr>
+        <td>footer</td>
+        <td>padding</td>
+      </tr>
+      <tr>
+        <td>div</td>
+        <td>size related</td>
+      </tr>
+    </table>
+  </section>
+
+  <footer id="rodape">
+    <p>Desenvolvido em: 10/07/2020 - @fabioscx</p>
+  </footer>
+
+</body>
+</html>
