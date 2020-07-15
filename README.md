@@ -23,3 +23,4 @@ Trybe is a 1-year intesive course on becoming a full-stack web developer. During
 If you want quick acces to each module, you can either select their respective directory or go through here:
 
 * [Module 03 - HTML & CSS Introducition](https://github.com/fabiosenracorrea/Trybe/tree/master/03_HTML_CSS_INTRO)
+* [Module 04 - JavaScript Introduction](https://github.com/fabiosenracorrea/Trybe/tree/master/04_JAVASCRIPT_INTRO)
