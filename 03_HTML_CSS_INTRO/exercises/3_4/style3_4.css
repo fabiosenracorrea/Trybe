@@ -69,19 +69,24 @@ body {
     margin-bottom: 16px;
 }
 
+.stomatopoda-article .introduction {
+  display: flex;
+  flex-direction: column;
+}
+
 .stomatopoda-article .introduction p {
     text-align: justify;
     padding: 4px 8px 8px 18px;
 }
 
+/* table */
+
 .stomatopoda-article .introduction .bio-table {
-    width: 100%;
     display: flex;
     justify-content: center;
     margin: 16px 0;
 }
 
-/* table */
 
 .bio-table table {
     border: 1px solid gray;
@@ -118,6 +123,8 @@ body {
 .complementary-video iframe{
     margin-bottom: 6px;
     border-radius: 8px;
+    width: 266,67px;
+    height: 150px;
 }
 
 .complementary-video p{
@@ -146,7 +153,7 @@ body {
     justify-content: center;
     background-color: seashell;
     border: 1px solid orange;
-    padding: 4px 4px 8px 4px;
+    padding: 4px 4px 12px 4px;
     border-radius: 8px;
     position: relative;
     height: 43vh;
@@ -181,6 +188,7 @@ body {
 
 .references p {
     margin: 12px 0 0 0;
+    text-align: justify;
 }
 
 
