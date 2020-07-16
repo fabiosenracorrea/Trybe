@@ -32,7 +32,13 @@
 
 }
 
-@media (max-width: 486px) {
+@media (max-width: 535px) {
+
+
+  .stomatopoda-article .introduction {
+    display: flex;
+    flex-direction: column;
+  }
 
   /* table */
 
@@ -43,7 +49,6 @@
   /* iframe */
 
   .complementary-video {
-    float: none;
     width: 80%;
     margin: 24px auto 24px;
     padding: 12px 8px;

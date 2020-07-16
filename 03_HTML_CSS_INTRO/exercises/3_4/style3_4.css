@@ -31,7 +31,7 @@ body {
     margin-right: 24px;
 }
 
-.header-nav a {
+nav a {
     color: black;
     font-size: 16px;
     margin-right: 12px;
@@ -69,10 +69,6 @@ body {
     margin-bottom: 16px;
 }
 
-.stomatopoda-article .introduction {
-  display: flex;
-  flex-direction: column;
-}
 
 .stomatopoda-article .introduction p {
     text-align: justify;
