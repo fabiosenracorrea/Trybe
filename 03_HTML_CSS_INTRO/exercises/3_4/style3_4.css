@@ -155,6 +155,8 @@ nav a {
     height: 43vh;
 }
 
+/* Usei position aqui para deixar todas as imagens e textos alinhados corretamente */
+
 .fact img {
     height: 20vh;
     border-radius: 8px;
