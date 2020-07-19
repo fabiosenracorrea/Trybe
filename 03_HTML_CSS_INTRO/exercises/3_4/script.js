@@ -1,4 +1,24 @@
 
+let resized = false;
+
+
+if (document.body.clientWidth < 685) {
+  sizeTableDown();
+}
+
+
+window.addEventListener("resize", event => {
+  let width = document.body.clientWidth;
+  if (width < 685 && !resized) {
+    sizeTableDown()
+  } else if (width > 685 && resized) {
+    sizeTableUp()
+  }
+})
+
+
+// functions
+
 function sizeTableDown() {
   let table = document.getElementById("table");
 
@@ -6,7 +26,9 @@ function sizeTableDown() {
   let descriptions = document.querySelectorAll("#table-info td");
 
   let newTr1 = document.createElement("tr");
+  newTr1.setAttribute("id", "tr1")
   let newTr2 = document.createElement("tr");
+  newTr2.setAttribute("id", "tr2")
 
   for (let i = 3; i < 6; i += 1) {
     let headerText = headers[i].outerText;
@@ -18,8 +40,8 @@ function sizeTableDown() {
     tableHeaderTr.removeChild(tableHeaderTr.lastElementChild);
     tableDescTr.removeChild(tableDescTr.lastElementChild);
 
-    let newTh =  document.createElement("th");
-    let newTd =  document.createElement("td");
+    let newTh = document.createElement("th");
+    let newTd = document.createElement("td");
 
     newTh.appendChild(document.createTextNode(headerText))
 
@@ -41,22 +63,31 @@ function sizeTableDown() {
 }
 
 function sizeTableUp() {
-  console.log('This function is going to return the table to its normal aspect if the window gets resized up again')
+  let tr1 = document.getElementById("tr1");
+  let tr2 = document.getElementById("tr2");
+  let tr1Size = tr1.children.length;
+  let tr2Size = tr2.children.length;
+
+  let tableHeaderTr = document.getElementById("table-header");
+  let tableDescTr = document.getElementById("table-info");
+
+  /* Sobre a peculiaridade abaixo: a cada fez que apendamos o 'filho' do tr1 em outro elemento, ele
+  é MOVIDO para o novo local. Ou seja, não cria-se uma cópia. Por esse motivo, quando passamos pra segunda interação
+  o tamanho do array de filhos é MENOR em 1 unidade. Logo, o nosso i sendo restrido pelo .length dinamico (sem ser uma variavel constante fora do for)
+  gera um problema quanto ao remanejo dos filhos. Como queremos sempre na ordem, basta settarmos o loop para rodar pelo número fixo
+  que é o tamanho inicial do elemento e sempre apendar o primeiro elemento do array!!
+  */
+
+  for (i = 0; i < tr1Size; i += 1) {
+    tableHeaderTr.appendChild(tr1.children[0])
+  }
+  for (i = 0; i < tr2Size; i += 1) {
+    tableDescTr.appendChild(tr2.children[0])
+  }
+
+
+  tr1.remove();
+  tr2.remove();
+
   resized = false;
 }
-
-if (document.body.clientWidth < 685) {
-  sizeTableDown();
-}
-
-
-let resized = false;
-
-window.addEventListener("resize", event => {
-  let width = document.body.clientWidth;
-  if (width < 685 && !resized) {
-    sizeTableDown()
-  } else if (width > 685 && resized) {
-    sizeTableUp()
-  }
-})
