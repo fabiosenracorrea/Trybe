@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lições Trybe - Projeto 1</title>
-  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 
@@ -29,45 +30,47 @@
     <img src="images/square_profie_pic.jpg" alt="Fábio_Corrêa" id="minha_foto">
   </section>
 
-  <section class="lado-direito">
-    <div class="html-semantico">
-        <div class="section-1">
-            &#60;header&#62;
-            <p>&#60;nav&#62;</p>
-        </div>
-        <div class="section-2">
-            <div class="sub1">
-              &#60;section&#62;
-              <div class="sub1-1">
-                <p>&#60;header&#62;</p>
-                <span>&#60;article&#62;</span>
-                <p>&#60;footer&#62;</p>
+  <section class="main-content">
+    <section class="lado-direito">
+      <div class="html-semantico">
+          <div class="section-1">
+              &#60;header&#62;
+              <p>&#60;nav&#62;</p>
+          </div>
+          <div class="section-2">
+              <div class="sub1">
+                &#60;section&#62;
+                <div class="sub1-1">
+                  <p>&#60;header&#62;</p>
+                  <span>&#60;article&#62;</span>
+                  <p>&#60;footer&#62;</p>
+                </div>
               </div>
-            </div>
-            <div class="sub2">
-              &#60;aside&#62;
-            </div>
-        </div>
-        <div class="section-3">
-          &#60;footer&#62;
-        </div>
-    </div>
-    <p class="side-text">
-      Uma lição fundamental deste módulo foi o aprendizado do <em>HTML semântico.</em> A possibilidade de melhorar o rankeamento dos sites e de gerar inclusão ao mesmo tempo é algo extremamente valioso!
-    </p>
+              <div class="sub2">
+                &#60;aside&#62;
+              </div>
+          </div>
+          <div class="section-3">
+            &#60;footer&#62;
+          </div>
+      </div>
+      <p class="side-text">
+        Uma lição fundamental deste módulo foi o aprendizado do <em>HTML semântico.</em> A possibilidade de melhorar o rankeamento dos sites e de gerar inclusão ao mesmo tempo é algo extremamente valioso!
+      </p>
+    </section>
+
+
+    <article class="lado-esquerdo">
+      <h2>Até aqui...</h2>
+      <p>
+        O desenvolvimento de Software é um caminho longo e irregular. Devido ao alto nível de complexidade e o emaranhado de soluções que resolvem determinado problema, não basta apenas entender o que está sendo codado, mas abstrair as razões pelas quais determinada solução foi escolhida em detrimento da outra.
+      </p>
+      <br>
+      <p>
+        O primeiro mês de aprendizado na Trybe tem sido um contato mais íntimo com a ponta do iceberg do desenvolvimento Web: <strong>HTML</strong> e <strong>CSS</strong>. E, tendo-os em mente, trago às lições aprendidas até aqui. O melhor ainda está por vir!
+      </p>
+    </article>
   </section>
-
-
-  <article class="lado-esquerdo">
-    <h2>Até aqui...</h2>
-    <p>
-      O desenvolvimento de Software é um caminho longo e irregular. Devido ao alto nível de complexidade e o emaranhado de soluções que resolvem determinado problema, não basta apenas entender o que está sendo codado, mas abstrair as razões pelas quais determinada solução foi escolhida em detrimento da outra.
-    </p>
-    <br>
-    <p>
-      O primeiro mês de aprendizado na Trybe tem sido um contato mais íntimo com a ponta do iceberg do desenvolvimento Web: <strong>HTML</strong> e <strong>CSS</strong>. E, tendo-os em mente, trago às lições aprendidas até aqui. O melhor ainda está por vir!
-    </p>
-  </article>
 
   <section class="parte-baixo">
     <section id="licoes" class="topicos">
@@ -117,42 +120,45 @@
     </section>
   </section>
 
-  <section class="table-complement">
-    <aside>
-      <h4>Boas práticas no CSS</h4>
-      <p>Tente estilizar usando cores que conversam entre si e sempre tente usar medidas relativas (%, vh, rem/em por ex) em detrimento das absolutas (px).</p>
-    </aside>
-  </section>
+  <div class="last-part">
+    <section class="table-complement">
+      <aside>
+        <h4>Boas práticas no CSS</h4>
+        <p>Tente estilizar usando cores que conversam entre si e sempre tente usar medidas relativas (%, vh, rem/em por ex) em detrimento das absolutas (px).</p>
+      </aside>
+    </section>
 
-  <section class="table">
-    <h3>Tags e Propriedades mais importantes até aqui</h3>
-    <table>
-      <tr>
-        <th>HTML</th>
-        <th>CSS</th>
-      </tr>
-      <tr>
-        <td>section</td>
-        <td>display</td>
-      </tr>
-      <tr>
-        <td>article</td>
-        <td>position</td>
-      </tr>
-      <tr>
-        <td>header</td>
-        <td>margin</td>
-      </tr>
-      <tr>
-        <td>footer</td>
-        <td>padding</td>
-      </tr>
-      <tr>
-        <td>div</td>
-        <td>size related</td>
-      </tr>
-    </table>
-  </section>
+    <section class="table">
+      <h3>Tags e Propriedades mais importantes até aqui</h3>
+      <table>
+        <tr>
+          <th>HTML</th>
+          <th>CSS</th>
+        </tr>
+        <tr>
+          <td>section</td>
+          <td>display</td>
+        </tr>
+        <tr>
+          <td>article</td>
+          <td>position</td>
+        </tr>
+        <tr>
+          <td>header</td>
+          <td>margin</td>
+        </tr>
+        <tr>
+          <td>footer</td>
+          <td>padding</td>
+        </tr>
+        <tr>
+          <td>div</td>
+          <td>size related</td>
+        </tr>
+      </table>
+    </section>
+  </div>
+
 
   <footer id="rodape">
     <p>Desenvolvido em: 10/07/2020 - @fabioscx</p>

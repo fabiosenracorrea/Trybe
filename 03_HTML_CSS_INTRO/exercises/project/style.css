@@ -22,7 +22,7 @@ body {
   top: 0;
   height: 4vh;
   z-index: 99999;
-  width: 100%;
+  width: 100vw;
   border-radius: 0 0 6px 6px;
 }
 
@@ -30,7 +30,6 @@ body {
   font-size: 20px;
   line-height: 22px;
   text-align: center;
-  width: 100%;
   color: white;
 }
 
@@ -99,7 +98,7 @@ body {
 
 .lado-esquerdo {
   padding: 16px;
-  width: 75%;
+  width: 70vw;
   height: 45vh;
   text-align: justify;
   display: flex;
@@ -116,6 +115,7 @@ body {
 
 .lado-esquerdo p {
   margin-bottom: 25px;
+  width: 90%;
 }
 
 /* semantic HTML part */
@@ -137,7 +137,8 @@ body {
   border-radius: 8px;
   color: white;
   font-weight: 700;
-  width: 30vh;
+  width: 90%;
+  max-width: 30vh;
   font-size: 12px;
   text-align: center;
   padding: 2px;
@@ -235,6 +236,7 @@ body {
 
 .card li {
   margin-left: 24px;
+  margin-bottom: 8px;
 }
 
 .bons-links li {
