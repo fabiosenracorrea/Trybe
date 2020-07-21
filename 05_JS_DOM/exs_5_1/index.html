@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title" >Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <a href="#" target="_blank">Texto padrão do nosso site</a>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <br>
+    <br>
+    <table id="myTable" border="1">
+      <tr><td>Row1 cell1</td>
+      <td>Row1 cell2</td></tr>
+      <tr><td>Row2 cell1</td>
+      <td>Row2 cell2</td></tr>
+      <tr><td>Row3 cell1</td>
+      <td>Row3 cell2</td></tr>
+      </table>
+      <br>
+      <select id="colorSelect">
+        <option>Red</option>
+        <option>Green</option>
+        <option>White</option>
+        <option>Black</option>
+      </select>
+
+      <br>
+      <br>
+      <br>
+
+      <section class="sphereCalc">
+        <div>
+          <p>This is a simple header for the calc</p>
+
+          <div class="radius">
+            <label for="radius">Radius</label>
+            <input type="number" name="radius">
+          </div>
+          <div class="volume">
+            <label for="volume">Volume</label>
+            <input type="number" name="volume" disabled>
+          </div>
+          <button onclick="calculateES()">Calculate</button>
+        </div>
+      </section>
+
+      <br>
+      <br>
+
+      <section>
+        <div class="rand-img">
+          <button onclick="randImg()">Random Img!</button>
+          <img src="" alt="Random">
+        </div>
+      </section>
+
+      <br>
+      <br>
+
+      <section class="hover-mouse">
+        <a href="#">On mouse over here bold words of the following paragraph will be highlighted</a>
+        <p><strong>We</strong> have just started <strong>this</strong> section for the users (<strong>beginner</strong> to intermediate) who <strong>want</strong> to work with <strong>various</strong> JavaScript <strong>problems</strong> and write scripts online to <strong>test</strong> their JavaScript <strong>skill</strong>.</p>
+      </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
