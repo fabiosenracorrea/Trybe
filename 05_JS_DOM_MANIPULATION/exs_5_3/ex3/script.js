@@ -7,7 +7,7 @@ btn.appendChild(document.createTextNode('Click here!'));
 
 btn.onclick = () => alert('You clicked the button');
 
-let placeToAdd = document.querySelector('.exampleblock');
+const placeToAdd = document.querySelector('.exampleblock');
 placeToAdd.innerHTML = '';
 placeToAdd.appendChild(btn);
 
@@ -16,9 +16,9 @@ placeToAdd.appendChild(btn);
 const gamePrice = 39.99;
 const discount = 0.20;
 
-let secondH2 = document.querySelectorAll('h2')[1];
+const secondH2 = document.querySelectorAll('h2')[1];
 
-let btnCalc = document.createElement('button');
+const btnCalc = document.createElement('button');
 btnCalc.appendChild(document.createTextNode('Calculate!'));
 
 btnCalc.onclick = () => {
@@ -30,7 +30,7 @@ secondH2.appendChild(btnCalc);
 
 // Extensions
 
-let img = document.getElementById('alterImg');
+const img = document.getElementById('alterImg');
 img.style.width = '80px';
 img.style.display = 'block';
 img.style.margin = '0 auto';
