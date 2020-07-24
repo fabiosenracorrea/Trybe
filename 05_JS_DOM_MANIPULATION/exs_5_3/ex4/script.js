@@ -24,7 +24,7 @@ let walkingRight = true;
 // }
 
 // uncomment this to work
-let step = setInterval(catWalk, 50);
+// let step = setInterval(catWalk, 50);
 
 
 // Bonus #2: When the cat reaches the right-hand of the screen, make them move backwards instead. They should keep walking back and forth forever and ever.
