@@ -1,6 +1,12 @@
 
 let resized = false;
 
+// --> desse jeito a mudança é mais devagar.
+// window.onload = () => {
+//   if (document.body.clientWidth < 685) {
+//     sizeTableDown();
+//   }
+// }
 
 if (document.body.clientWidth < 685) {
   sizeTableDown();
@@ -71,7 +77,7 @@ function sizeTableUp() {
   let tableHeaderTr = document.getElementById("table-header");
   let tableDescTr = document.getElementById("table-info");
 
-  /* Sobre a peculiaridade abaixo: a cada fez que apendamos o 'filho' do tr1 em outro elemento, ele
+  /* Sobre a peculiaridade abaixo: a cada vez que apendamos o 'filho' do tr1 em outro elemento, ele
   é MOVIDO para o novo local. Ou seja, não cria-se uma cópia. Por esse motivo, quando passamos pra segunda interação
   o tamanho do array de filhos é MENOR em 1 unidade. Logo, o nosso i sendo restrido pelo .length dinamico (sem ser uma variavel constante fora do for)
   gera um problema quanto ao remanejo dos filhos. Como queremos sempre na ordem, basta settarmos o loop para rodar pelo número fixo
