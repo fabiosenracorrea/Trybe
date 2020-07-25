@@ -6,8 +6,7 @@ How to create, modify and delete data stored with each method.
 
 #### The exercise here was as described:
 
-`
-Imagine que você é a pessoa responsável por desenvolver uma página que servirá como um leitor de conteúdo escrito.
+```Imagine que você é a pessoa responsável por desenvolver uma página que servirá como um leitor de conteúdo escrito.
 
 Esse conteúdo escrito pode ser uma página de livro, uma reportagem de revista ou uma nota de jornal online. Para que você não tenha que pensar no conteúdo da página, utilize este link para gerar o texto para sua página.
 
@@ -21,7 +20,7 @@ Tamanho da fonte;
 Espaçamento entre as linhas do texto;
 Tipo da fonte (Font family).
 Essas preferências devem ser salvas de forma que, ao retornar à página, as preferências que foram previamente configuradas possam ser aplicadas na tela.
-`
+```
 
 #### Coments
 
