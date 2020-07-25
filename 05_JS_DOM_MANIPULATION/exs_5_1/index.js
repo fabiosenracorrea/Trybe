@@ -55,7 +55,7 @@ function removeDropDownItem(num) {
   list[num-1].remove()
 }
 
-//10. Write a JavaScript program to calculate the volume of a sphere.
+//9. Write a JavaScript program to calculate the volume of a sphere.
 
 function calculateES() {
   let radius = document.querySelector("input[name=radius]").value
@@ -66,7 +66,7 @@ function calculateES() {
   volumeInput.value = volume
 }
 
-//11. Write a JavaScript program to display a random image (clicking on a button) from the following list.
+//10. Write a JavaScript program to display a random image (clicking on a button) from the following list.
 
 function randImg() {
   let randomNum = Math.round(Math.random() * 3);
@@ -94,7 +94,7 @@ function randImg() {
   imgElement.style.height = imgs[randomNum].height;
 }
 
-// 12. Write a JavaScript program to highlight the bold words of the following paragraph, on mouse over a certain link.
+// 11. Write a JavaScript program to highlight the bold words of the following paragraph, on mouse over a certain link.
 
 function hoverLink() {
   let boldElems = document.querySelectorAll(".hover-mouse p strong");
