@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saving Preferences</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&family=Recursive:wght@400;700&family=Red+Rose:wght@400;700&family=Roboto:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Custom Reader - Save your preferences!</h1>
+    <div class="preferences">
+      <div class="item bg-color">
+        <p>Background Color</p>
+        <div class="color-container">
+          <div class="color-input">
+            <label for="red">Red</label>
+            <input type="number" name="red" id="red">
+          </div>
+          <div class="color-input">
+            <label for="green">Green</label>
+            <input type="number" name="green" id="green">
+          </div>
+          <div class="color-input">
+            <label for="blue">Blue</label>
+            <input type="number" name="blue" id="blue">
+          </div>
+        </div>
+      </div>
+      <div class="item text-color">
+        <p>Text Color</p>
+        <div class="color-container">
+          <div class="color-input">
+            <label for="redText">Red</label>
+            <input type="number" name="redText" id="redText">
+          </div>
+          <div class="color-input">
+            <label for="greenText">Green</label>
+            <input type="number" name="greenText" id="greenText">
+          </div>
+          <div class="color-input">
+            <label for="blueText">Blue</label>
+            <input type="number" name="blueText" id="blueText">
+          </div>
+        </div>
+      </div>
+      <div class="item text-size">
+        <p>Font Size</p>
+        <select name="text" id="text-selector">
+          <option value="12">12</option>
+          <option value="14">14</option>
+          <option value="16">16</option>
+          <option value="18">18</option>
+          <option value="24">24</option>
+          <option value="30">30</option>
+          <option value="36">36</option>
+          <option value="48">48</option>
+        </select>
+      </div>
+      <div class="item line-spacing">
+        <p>Line Height</p>
+        <select name="line" id="line-selector">
+          <option value="12">12</option>
+          <option value="14">14</option>
+          <option value="16">16</option>
+          <option value="18">18</option>
+          <option value="24">24</option>
+          <option value="30">30</option>
+          <option value="36">36</option>
+          <option value="48">48</option>
+        </select>
+      </div>
+      <div class="item font-family">
+        <p>Font Family</p>
+        <select name="line" id="fonts">
+          <option value="Helvetica">Helvetica</option>
+          <option value="Montserrat">Montserrat</option>
+          <option value="Recursive">Recursive</option>
+          <option value="Red Rose">Red Rose</option>
+          <option value="Roboto">Roboto</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <section class="content">
+    <article class="text-base">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus laoreet molestie leo sit amet pretium. Quisque et est non turpis blandit viverra. Nullam ac sapien eu sem varius lacinia. Mauris mollis bibendum enim, a iaculis diam venenatis bibendum. Sed laoreet nunc at nibh fermentum hendrerit. Fusce ultrices ex sit amet eleifend consectetur. Fusce malesuada purus interdum, feugiat elit nec, maximus arcu. Curabitur in tincidunt leo, a accumsan orci. Vivamus id orci ullamcorper, porta nulla quis, interdum neque. Proin pulvinar id mi non dictum. Fusce at orci id urna auctor egestas. Fusce malesuada augue nibh, ultricies varius eros congue non. Etiam mollis faucibus nisl, at aliquet nunc mattis eget. Donec felis odio, mattis eget euismod nec, blandit id dolor. Phasellus id massa nisi.</p>
+      <p>Pellentesque mollis tellus a tortor dapibus scelerisque. Mauris nec tristique arcu. Nullam nec pellentesque libero, ac placerat neque. Praesent id dui in risus pulvinar tristique. Cras sollicitudin bibendum mauris convallis consequat. Quisque tincidunt congue leo, quis vehicula massa pretium nec. Ut nec ipsum sed diam scelerisque ultricies vel vel felis. Suspendisse porta leo hendrerit congue dignissim.</p>
+      <p>Sed lobortis quam vitae leo porttitor tempor. Duis venenatis suscipit ante, vitae posuere felis. Morbi ac consectetur urna, ut vestibulum risus. Ut ante magna, posuere quis elit et, suscipit facilisis arcu. Nulla iaculis, arcu a molestie ultricies, orci quam efficitur arcu, ac ultrices quam eros eu turpis. In eleifend semper nisi, nec molestie lacus molestie eget. Quisque elementum varius imperdiet. Donec bibendum eget felis ac porttitor. Mauris quam tortor, ultricies ut ipsum ac, mollis porttitor augue. Vivamus tortor enim, pretium nec egestas non, laoreet eu diam. Ut ac odio vitae ex varius tincidunt. Aenean ac augue congue, molestie turpis at, dapibus ipsum. Nullam pulvinar, ex at tempor tempus, purus ex ultricies turpis, in rutrum metus magna et lacus. Vestibulum vestibulum sem ultricies maximus ullamcorper. Suspendisse ac laoreet massa. Integer fermentum augue nec nisl consectetur cursus sit amet quis est.</p>
+      <p>Phasellus at lorem ac risus molestie convallis non eget dui. Aenean ultricies ultrices urna sed lacinia. In aliquam euismod mi, at condimentum ipsum aliquet vitae. Fusce ullamcorper sed mauris vel finibus. Nam ut sem ac felis ullamcorper laoreet vitae at ipsum. Duis in eros et nulla vehicula mattis. Suspendisse et viverra odio, ut pellentesque turpis. Nunc et nulla nec diam laoreet sagittis. Etiam et fringilla nisl. Phasellus ac leo porttitor, tempus ex euismod, laoreet lectus. In eget suscipit ipsum. Duis iaculis eu tellus sed faucibus.</p>
+      <p>Sed mi lacus, porta sed aliquam et, feugiat quis enim. Vivamus consequat nunc non odio tempor iaculis. Proin dapibus ultrices justo eget sodales. Praesent sagittis eu lorem id vestibulum. In gravida, augue nec finibus rutrum, risus dui dictum magna, et aliquet felis ipsum at ante. Nam a odio id sem maximus aliquam eu ac ligula. Ut ut nunc a tellus semper ultricies. Vestibulum a lectus convallis, ultrices nibh sed, blandit augue. Sed ornare tincidunt felis eget tincidunt.</p>
+    </article>
+  </section>
+
+  <footer>
+    <p>Desgined by @fabioscx</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
