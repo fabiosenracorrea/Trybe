@@ -8,7 +8,7 @@ Because it's such an important feature, you can check the list of each and every
 
 This section is devided into 4 exercises, each based on its HTML content. Because of that, you can access each command directly on the javascript files.
 
-Navegate:
+Navigate:
 
 * [Exercise 1](https://github.com/fabiosenracorrea/Trybe/tree/master/05_JS_DOM_MANIPULATION/exs_5_3/ex1)
 * [Exercise 2](https://github.com/fabiosenracorrea/Trybe/tree/master/05_JS_DOM_MANIPULATION/exs_5_3/ex2)
