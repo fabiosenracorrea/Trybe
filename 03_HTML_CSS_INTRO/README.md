@@ -11,9 +11,11 @@ This module is an introduction to the basics of the course and covered, mostly:
     * meta
     * title
     * link
+    * [...]
   * body
     * h1 - h6
     * p
+    * img
     * div
     * span
     * [...]
@@ -35,8 +37,8 @@ This module is an introduction to the basics of the course and covered, mostly:
 * 3.1 - Introduction to HTML & CSS
 * 3.2 - CSS Styling
 * 3.3 - CSS Selectors and Positioning
-* 3.4 - [Semantic HTML](https://github.com/fabiosenracorrea/Trybe/)
-* 3.5 - [Project: developing a page with HTML/CSS](https://github.com/fabiosenracorrea/Trybe/)
+* 3.4 - [Semantic HTML](https://github.com/fabiosenracorrea/Trybe/tree/master/03_HTML_CSS_INTRO/3.4%20-%20Semantic%20HTML%20%26%20First%20PageDeveloped)
+* 3.5 - [Project: developing a page with HTML/CSS](https://github.com/fabiosenracorrea/Trybe/tree/master/03_HTML_CSS_INTRO/3.5%20-%20Project)
 
 #### Comments
 
