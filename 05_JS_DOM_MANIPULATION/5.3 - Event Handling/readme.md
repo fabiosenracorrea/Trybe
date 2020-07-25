@@ -15,7 +15,7 @@ Navigate:
 * [Exercise 3](https://github.com/fabiosenracorrea/Trybe/tree/master/05_JS_DOM_MANIPULATION/exs_5_3/ex3)
 * [Exercise 4](https://github.com/fabiosenracorrea/Trybe/tree/master/05_JS_DOM_MANIPULATION/exs_5_3/ex4)
 
-#### Coments
+#### Comments
 
 Event handling is a fundamental aspect of modern JS and Web Development. Because of that, this subject is going to appear pretty frequently from now on, and the content here servers just as an introduction to it.
 

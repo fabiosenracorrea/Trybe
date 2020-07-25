@@ -22,7 +22,7 @@ Tipo da fonte (Font family).
 Essas preferências devem ser salvas de forma que, ao retornar à página, as preferências que foram previamente configuradas possam ser aplicadas na tela.
 ```
 
-#### Coments
+#### Comments
 
 The responsivity of the page was not properly set, altough it was designed mostly with relative units (which is recommended to ease up any responsivity task). Because of it, the page works 100% correctly as intended and designed until window width hits ~485px, in which header's inputs lose alignment.
 
