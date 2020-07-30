@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  align-items: center;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  height: 15vh;
+  justify-content: center;
+}
+
+h1 {
+  margin-bottom: 12px;
+}
+
+h3 {
+  margin-bottom: 12px;
+}
+
+/* content */
+main {
+  display: flex;
+  padding: 12px;
+}
+
+/* left-side - preloaded memes */
+.preloaded-memes {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  width: 20%;
+}
+
+.preloaded-memes img {
+  border-radius: 6px;
+  cursor: pointer;
+  height: 100px;
+  margin-bottom: 4px;
+  width: 150px;
+}
+
+.app-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.file-insert {
+  display: flex;
+  justify-content: center;
+}
+
+[ type = 'file' ] {
+  overflow: hidden;
+  width: 0;
+}
+
+.upload {
+  background-color: #99c793;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  font-family: Rubik, sans-serif;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding: 1rem 50px;
+  position: relative;
+  transition: all 0.3s;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.upload::before {
+  color: white;
+  content: '\f382';
+  font-family: "Font Awesome 5 Free";
+  font-size: 100%;
+  font-weight: 900;
+  height: 100%;
+  line-height: 3.3;
+  position: absolute;
+  right: 130%;
+  top: -2px;
+  transition: all 0.3s;
+}
+
+.upload:hover::before {
+  background-color: darken(#99c793 , 30%);
+  right: 83%;
+}
+
+/* input text */
+.text-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  width: 524px;
+}
+
+.text-container div {
+  display: flex;
+  align-items: center;
+}
+
+.text-container input {
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 7px;
+  width: 60%;
+}
+
+.text-container input:focus {
+  outline: none;
+}
+
+/* meme */
+.meme-image-container {
+  background-color: white;
+  border: 1px solid black;
+  height: 524px;
+  width: 524px;
+  position: relative;
+  overflow: hidden;
+  width: auto;
+}
+
+.meme-image {
+  display: none;
+}
+
+.meme-text {
+  bottom: 20px;
+  color: white;
+  font-family: 'Rowdies', cursive;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 5px 5px 5px black;
+  width: 100%;
+}
+
+
+/* buttons (side bar) */
+.button-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20%;
+}
+
+.button-container button {
+  border-radius: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  height: 30px;
+  margin-bottom: 12px;
+  outline: none;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+  width: 60%;
+}
+
+.fire::before {
+  color: white;
+  content: '\f06d';
+  font-family: "Font Awesome 5 Free";
+  font-size: 100%;
+  font-weight: 900;
+  height: 100%;
+  line-height: 3.3;
+  position: absolute;
+  right: 130%;
+  top: -8px;
+  transition: all 0.15s;
+}
+
+.fire:hover::before {
+  right: 83%;
+}
+
+.water::before {
+  color: white;
+  content: '\f773';
+  font-family: "Font Awesome 5 Free";
+  font-size: 100%;
+  font-weight: 900;
+  height: 100%;
+  line-height: 3.3;
+  position: absolute;
+  right: 130%;
+  top: -8px;
+  transition: all 0.15s;
+}
+
+.water:hover::before {
+  right: 83%;
+}
+
+.earth::before {
+  color: white;
+  content: '\f57c';
+  font-family: "Font Awesome 5 Free";
+  font-size: 100%;
+  font-weight: 900;
+  height: 100%;
+  line-height: 3.3;
+  position: absolute;
+  right: 130%;
+  top: -8px;
+  transition: all 0.15s;
+}
+
+.earth:hover::before {
+  right: 83%;
+}
+
+.remove::before {
+  color: white;
+  content: '\f2ed';
+  font-family: "Font Awesome 5 Free";
+  font-size: 100%;
+  font-weight: 900;
+  height: 100%;
+  line-height: 3.3;
+  position: absolute;
+  right: 130%;
+  top: -8px;
+  transition: all 0.15s;
+}
+
+.remove:hover::before {
+  right: 83%;
+}
+
+.button-container button:active {
+  transform: translateY(4px);
+}
+
+.fire {
+  background-color: red;
+}
+
+.water {
+  background-color: blue;
+}
+
+.earth {
+  background-color: green;
+}
+
+.remove {
+  background-color: slategray;
+}
+
+a {
+  background-color: olivedrab;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  outline: none;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  width: 54%;
+}
