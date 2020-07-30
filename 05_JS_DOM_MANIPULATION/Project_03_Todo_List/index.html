@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do Organizer</title>
+
+  <script src="https://kit.fontawesome.com/2c91ae5b1f.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="entire-page">
+    <header>
+      <h1>Minha Lista de Tarefas</h1>
+      <div class="header-info">
+        <p id="funcionamento" class="header-text">Clique duas vezes em um item para marcá-lo como completo.</p>
+        <div class="account"></div>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="todos-container">
+        <h2 class="todo-title">Tarefas do Dia</h2>
+        <div class="todos-container-grid">
+          <div class="daily-todos-container card">
+            <div class="daily-todos list-container">
+              <h4 class="daily-saying">Tarefas</h4>
+              <ol id="lista-tarefas" class="todo-list"></ol>
+            </div>
+            <div class="up-down-control">
+              <button id="mover-cima" class="btn up"></button>
+              <button id="mover-baixo" class="btn down"></button>
+              <button id="mover-direita" class="btn right"></button>
+              <button id="remover-selecionado" class="btn remove"></button>
+            </div>
+          </div>
+
+          <div class="current-doing-todos card">
+            <div class="list-container">
+              <h4 class="current-doing-text">Em execução</h4>
+              <ol class="todo-list"></ol>
+            </div>
+          </div>
+
+          <div class="completed-todos card">
+            <div class="list-container">
+              <h4 class="completed-todos-text">Finalizadas</h4>
+              <ol class="todo-list"></ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="add-todos">
+        <div class="input-todo">
+          <input type="text" name="texto-tarefa" id="texto-tarefa" class="input-tarefa" placeholder=" " maxlength="30">
+          <label for="texto-tarefa" class="label-todo">
+            <span class="input-text">O que você precisa fazer hoje?</span>
+          </label>
+        </div>
+        <button id="criar-tarefa">Adicionar!</button>
+      </section>
+
+      <section class="control">
+        <h3>Gerencie suas Tarefas</h3>
+        <div class="control-btn-container">
+          <button id="remover-finalizados" class="control-btn">Remover Finalizados</button>
+          <button id="apaga-tudo" class="control-btn">Apagar Tarefas</button>
+          <button id="salvar-tarefas" class="control-btn">Salvar Tarefas</button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>Placeholder - designed by @fabioscx</p>
+    </footer>
+
+  </div>
+
+  <div class="account-details">
+    <div class="user-interaction">
+      <div class="user">
+        <img src="square_profie_pic.jpg" alt="user-profile-pic" class="user-pic">
+        <h6 class="user-name">Fábio Corrêa</h6>
+        <p class="user-credentials">fabiosenracorrea@gmail.com</p>
+      </div>
+    </div>
+        <div class="account-options">
+          <p class="acc-opt dl-tasks">
+            <span class="opt-text">Baixe suas Tarefas</span></p>
+          <p class="acc-opt acc-details">
+            <span class="opt-text">Detalhes da Conta</span></p>
+          <p class="acc-opt change-plan">
+            <span class="opt-text">Mudar de Plano</span></p>
+          <p class="acc-opt help">
+            <span class="opt-text">Ajuda</span></p>
+          <p class="acc-opt sign-out">
+            <span class="opt-text">Sair</span></p>
+        </div>
+  </div>
+
+  <div class="invisible-modal"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
