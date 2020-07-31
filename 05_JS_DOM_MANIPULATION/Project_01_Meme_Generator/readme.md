@@ -105,7 +105,7 @@ The challenge of this project was to create an user-interface that would accept 
 
 Knowledge on a new HTML element, <canvas>, was acquired in order to deliver a great product.
 
-As a personal goal, i set to make it responsive and to add an option for the user to download the meme created into his computer.
+As a personal goal, i set to make it **responsive** and to add an option for the user to download the meme created into his computer. And it's fully responsive! Try to scale down your chrome window with devTools and check it out!
 
 Because of that, this project diverges from the one linked above, and the reason is the automatic evaluator available at the time: one of the requirements was to make an input's text go to a HTML element on screen, on top of the image. Because canvas' created text can't be accessed easily with that logic, i opted to change and improve the project here.
 

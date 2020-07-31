@@ -31,9 +31,9 @@ For more details about the css-selectors, [check it out here](https://www.w3scho
 11. Write a JavaScript program to highlight the bold words of the following paragraph, on mouse over a certain link.
 ```
 
-#### Commnets
+#### Comments
 
-Prety basic exercises, so nothing extra to add at this time.
+Pretty basic exercises, so nothing extra to add at this time.
 
 ###### Feedback
 

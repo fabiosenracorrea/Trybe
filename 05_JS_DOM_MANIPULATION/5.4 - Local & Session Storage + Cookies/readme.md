@@ -24,7 +24,7 @@ Essas preferências devem ser salvas de forma que, ao retornar à página, as pr
 
 #### Comments
 
-The responsivity of the page was not properly set, altough it was designed mostly with relative units (which is recommended to ease up any responsivity task). Because of it, the page works 100% correctly as intended and designed until window width hits ~485px, in which header's inputs lose alignment.
+The responsivity of the page was not properly set, although it was designed mostly with relative units (which is recommended to ease up any responsivity task). Because of it, the page works 100% correctly as intended and designed until window width hits ~485px, in which header's inputs lose alignment.
 
 As an extra, i added default values to each property that can be changed by the user, in case the local storage is deleted. Each property set by the user gets saved as the default input/select value, so the user knows which preference was set on the previous access.
 

@@ -6,7 +6,7 @@ Because it's such an important feature, you can check the list of each and every
 
 ## Exercises
 
-This section is devided into 4 exercises, each based on its HTML content. Because of that, you can access each command directly on the javascript files.
+This section is divided into 4 exercises, each based on its HTML content. Because of that, you can access each command directly on the javascript files.
 
 Navigate:
 

@@ -1,6 +1,6 @@
 ## 5.2 - More on Element Manipulation
 
-On this section, more details of Element manipulation were covered, and a deep understanding of how to deal with this interections was reached.
+On this section, more details of Element manipulation were covered, and a deep understanding of how to deal with this interactions was reached.
 
 #### Exercises on this section
 
