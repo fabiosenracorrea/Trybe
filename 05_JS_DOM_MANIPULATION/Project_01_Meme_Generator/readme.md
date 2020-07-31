@@ -95,4 +95,20 @@ As a literal copy/paste of the instructions:
 
 ---
 
-#### Coments
+### Grade
+
+This project got a **100%/100%** grade and can be checkout entirely on [here](https://github.com/tryber/sd-06-project-meme-generator/pull/31).
+
+#### Comments
+
+The challenge of this project was to create an user-interface that would accept and process any image upload, to then be able to modify the input and produce an output with the desired text.
+
+Knowledge on a new HTML element, <canvas>, was acquired in order to deliver a great product.
+
+As a personal goal, i set to make it responsive and to add an option for the user to download the meme created into his computer.
+
+Because of that, this project diverges from the one linked above, and the reason is the automatic evaluator available at the time: one of the requirements was to make an input's text go to a HTML element on screen, on top of the image. Because canvas' created text can't be accessed easily with that logic, i opted to change and improve the project here.
+
+###### Feedback
+
+As always, any feedback or suggestion is welcomed.

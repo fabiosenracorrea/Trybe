@@ -95,12 +95,12 @@ function handleText(canvas, ctx, text, pos) {
   switch (pos) {
     case 'top':
       if (text.length < 15) {
-        ctx.fillText(text, canvas.width/2, 40);
+        ctx.fillText(text, canvas.width/2, 60);
       } else {
         const text1 = text.slice(0, 15);
         const text2 = text.slice(15, text.length);
-        ctx.fillText(text1, canvas.width/2, 40);
-        ctx.fillText(text2, canvas.width/2, 80);
+        ctx.fillText(text1, canvas.width/2, 60);
+        ctx.fillText(text2, canvas.width/2, 100);
       }
       break;
     default:
@@ -132,8 +132,37 @@ function drawImg(text = "", pos) {
   handleText(canvas, ctx, text, pos);
 
   makeItDownloadable(canvas);
-
 }
+
+let resized = false;
+
+window.addEventListener("resize", event => {
+  let width = document.body.clientWidth;
+  if (width < 550 && !resized) {
+    sizeCanvasDown()
+    drawImg();
+  } else if (width > 550 && resized) {
+    sizeCanvasUp()
+    drawImg();
+  }
+})
+
+function sizeCanvasDown() {
+  const canvas = document.getElementById('meme-image');
+
+  canvas.style.width = '300px';
+  canvas.style.height = '300px';
+  resized = true;
+}
+
+function sizeCanvasUp() {
+  const canvas = document.getElementById('meme-image');
+
+  canvas.style.width = '524px';
+  canvas.style.height = '524px';
+  resized = false;
+}
+
 
 window.onload = () => {
   drawImg();
@@ -141,4 +170,8 @@ window.onload = () => {
   clickSuggestedMemes();
   addBorders();
   addText();
+
+  if (document.body.clientWidth < 550) {
+    sizeCanvasDown();
+  }
 }

@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meme Generator - Fábio</title>
 
-
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/2c91ae5b1f.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="responsive.css">
 
 </head>
 <body>
@@ -22,18 +22,21 @@
 
     <div class="preloaded-memes">
       <h3>Some suggestions:</h3>
-      <div class="meme1">
-        <img src="imgs/meme1.png" alt="example-meme-1" id="meme-1">
+      <div class="memes-grid">
+        <div class="meme1">
+          <img src="imgs/meme1.png" alt="example-meme-1" id="meme-1">
+        </div>
+        <div class="meme2">
+          <img src="imgs/meme2.png" alt="example-meme-1" id="meme-2">
+        </div>
+        <div class="meme3">
+          <img src="imgs/meme3.png" alt="example-meme-1" id="meme-3">
+        </div>
+        <div class="meme4">
+          <img src="imgs/meme4.png" alt="example-meme-1" id="meme-4">
+        </div>
       </div>
-      <div class="meme2">
-        <img src="imgs/meme2.png" alt="example-meme-1" id="meme-2">
-      </div>
-      <div class="meme3">
-        <img src="imgs/meme3.png" alt="example-meme-1" id="meme-3">
-      </div>
-      <div class="meme4">
-        <img src="imgs/meme4.png" alt="example-meme-1" id="meme-4">
-      </div>
+
     </div>
 
     <div class="app-container">
@@ -59,7 +62,7 @@
     </div>
 
     <div class="button-container">
-      <h3>Add a border!</h3>
+      <h3 class="add-border-tittle">Add a border!</h3>
       <button id="fire" class="fire">Fire</button>
       <button id="water" class="water">Water</button>
       <button id="earth" class="earth">Earth</button>
@@ -68,6 +71,11 @@
     </div>
 
   </main>
+
+  <footer>
+    <p>Placeholder: Designed by @fabioscx</p>
+    <p>Contact me at fabiosenracorrea@gmail.com</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
