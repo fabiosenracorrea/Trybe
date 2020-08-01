@@ -116,7 +116,7 @@ This project got a **100%/100%** grade and can be checkout entirely on [here](ht
 
 ### Current Overview
 
-![Current State](/imgs/todo_aplication.gif)
+![Current State](/05_JS_DOM_MANIPULATION/Project_03_Todo_List/imgs/todo_aplication.gif)
 
 #### Comments
 
