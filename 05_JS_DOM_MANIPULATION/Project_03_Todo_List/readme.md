@@ -1,6 +1,6 @@
 ## Projeto 03 - Todo List
 
-The first project of Trybe's 5th module.
+The third project of Trybe's 5th module.
 
 ### What was proposed here
 

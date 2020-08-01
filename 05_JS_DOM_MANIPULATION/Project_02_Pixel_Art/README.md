@@ -1,6 +1,6 @@
 ## Projeto 02 - Pixel Art
 
-The first project of Trybe's 5th module.
+The second project of Trybe's 5th module.
 
 ### What was proposed here
 
