@@ -74,7 +74,7 @@ function renderTodaysTodos() {
   const orderedListElem = document.getElementById('lista-tarefas');
   orderedListElem.innerHTML = '';
 
-  // hideBtn();
+  hideBtn();
 
   todoList.forEach((todo) => {
     const listItem = document.createElement('li');
@@ -99,9 +99,17 @@ function renderTodaysTodos() {
   });
 }
 
-function addTodo() {
-  const addInput = document.getElementById('texto-tarefa');
+function addTodo(loaded = true) {
+  let addInput
+
+  if (loaded) {
+    addInput = document.getElementById('texto-tarefa');
+  } else {
+    addInput = document.getElementById('welcome-input');
+  }
+
   const todoText = addInput.value.trim();
+
   if (todoText) {
     todoList.push(todoText);
     renderTodaysTodos();
@@ -207,29 +215,52 @@ function enableMovingButtons() {
 
 }
 
-// END MOVING BUTTONS ENABLING
+function generateWelcome(cond) {
+  const welcomeContainer = document.querySelector('.no-todo');
+  if (cond) {
+    welcomeContainer.classList.remove('hide');
+  } else {
+    welcomeContainer.classList.add('hide');
+  }
+}
 
-// function hideBtn() {
-//   const upDownBtnElement = document.querySelector('.up-down-control');
-//   const controlContainer = document.querySelector('.control');
 
-//   if (todoList[0]) {
-//     upDownBtnElement.classList.remove('hide');
-//     controlContainer.classList.remove('hide');
-//   } else {
-//     upDownBtnElement.classList.add('hide');
-//     controlContainer.classList.add('hide');
-//   }
-// }
+function hideBtn() {
+  const upDownBtnElement = document.querySelector('.up-down-control');
+  const controlContainer = document.querySelector('.control');
+  const todoContainer = document.querySelector('.todos-container');
+  const inputContainer = document.querySelector('.add-todos');
+
+  if (todoList[0]) {
+    upDownBtnElement.classList.remove('hide');
+    controlContainer.classList.remove('hide');
+    todoContainer.classList.remove('hide');
+    inputContainer.classList.remove('hide');
+    generateWelcome(false);
+  } else {
+    upDownBtnElement.classList.add('hide');
+    controlContainer.classList.add('hide');
+    todoContainer.classList.add('hide');
+    inputContainer.classList.add('hide');
+    generateWelcome(true);
+  }
+}
 
 function enableEnter() {
   const addInput = document.getElementById('texto-tarefa');
+  const welcomeInput = document.getElementById('welcome-input');
 
   addInput.onkeypress = (event) => {
     if (event.key === 'Enter') {
       addTodo();
     }
   };
+
+  welcomeInput.onkeypress = (event) => {
+    if (event.key === 'Enter') {
+      addTodo(false);
+    }
+  }
 }
 
 function enableAddBtn() {

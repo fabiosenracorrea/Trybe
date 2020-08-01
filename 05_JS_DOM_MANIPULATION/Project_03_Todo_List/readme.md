@@ -114,6 +114,10 @@ As a literal copy/paste of the instructions:
 
 This project got a **100%/100%** grade and can be checkout entirely on [here](https://github.com/tryber/sd-06-project-todo-list/pull/101).
 
+### Current Overview
+
+![Current State](/imgs/todo_aplication.gif)
+
 #### Comments
 
 Creating a todo list is a pretty straight forward test. Because of that, i challenged myself to create a good looking page, that could be the version 0 of an app.

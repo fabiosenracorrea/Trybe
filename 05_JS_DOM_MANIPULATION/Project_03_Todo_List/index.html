@@ -8,6 +8,7 @@
   <script src="https://kit.fontawesome.com/2c91ae5b1f.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 
@@ -84,7 +85,7 @@
   <div class="account-details">
     <div class="user-interaction">
       <div class="user">
-        <img src="square_profie_pic.jpg" alt="user-profile-pic" class="user-pic">
+        <img src="imgs/square_profie_pic.jpg" alt="user-profile-pic" class="user-pic">
         <h6 class="user-name">Fábio Corrêa</h6>
         <p class="user-credentials">fabiosenracorrea@gmail.com</p>
       </div>
@@ -104,6 +105,14 @@
   </div>
 
   <div class="invisible-modal"></div>
+
+  <div class="no-todo hide">
+    <div class="no-todo-content">
+      <p class="no-todo-text">O que você precisa fazer hoje?</p>
+      <label for="welcome-todo" class="label-before"></label>
+      <input type="text" name="welcome-input" id="welcome-input" class="no-todo-input">
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
