@@ -11,9 +11,11 @@ You can navigate though here:
 * [5.3 - Event Handling](https://github.com/fabiosenracorrea/Trybe/tree/master/05_JS_DOM_MANIPULATION/5.3%20-%20Event%20Handling)
 * [5.4 - Local, Session Storages & Cookies](https://github.com/fabiosenracorrea/Trybe/tree/master/05_JS_DOM_MANIPULATION/5.4%20-%20Local%20%26%20Session%20Storage%20%2B%20Cookies)
 
-* [Project 01 - Meme Generator]()
-* [Project 02 - Pixel Art]()
-* [Project 03 - Todo List]()
+* [Project 01 - Meme Generator](https://github.com/fabiosenracorrea/Trybe/tree/master/05_JS_DOM_MANIPULATION/Project_01_Meme_Generator)
+* [Project 02 - Pixel Art](https://github.com/fabiosenracorrea/Trybe/tree/master/05_JS_DOM_MANIPULATION/Project_02_Pixel_Art)
+* [Project 03 - Todo List](https://github.com/fabiosenracorrea/Trybe/tree/master/05_JS_DOM_MANIPULATION/Project_03_Todo_List)
+* [Project 04 - RGB Color Guess Game](https://github.com/fabiosenracorrea/Trybe/tree/master/05_JS_DOM_MANIPULATION/Project_04_Color_Guess_Game)
+* [Project 05 - Mystery Letter](https://github.com/fabiosenracorrea/Trybe/tree/master/05_JS_DOM_MANIPULATION/Project_05_Mystery_Letter)
 
 #### Comments
 
