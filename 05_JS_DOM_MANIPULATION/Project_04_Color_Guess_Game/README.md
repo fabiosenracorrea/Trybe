@@ -1,6 +1,6 @@
 ## Projeto 04 - TExtra - RGB Color Guess Game
 
-The first project of Trybe's 5th module.
+The fourth project of Trybe's 5th module.
 
 ### What was proposed here
 
@@ -60,6 +60,8 @@ On this project i challenged myself to keep all the constraints given when uploa
 To do that, i decided to create a 'hard mode', in which the used only has 3 lives (showed on screen) and every consecutive hit, creating a *streak* increases the amount of points gained per hit. Hard mode is enabled with a checkbox, and can be disabled with the reset button.
 
 One other challenge i proposed to myself was to **not use any while loop** during the development and execution of the project. The reasoning being most courses or videos always uses the while loop as an example of 'game mechanic' or associates it with that. Obviously is a correct association, since a lot of games do, in fact, use while loops to work. But the idea here is to show the power of **events**, topic of the module.
+
+The application is also fully responsive on smaller screens.
 
 ###### Feedback
 
