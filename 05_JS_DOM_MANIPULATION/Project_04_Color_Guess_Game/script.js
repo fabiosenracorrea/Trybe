@@ -211,6 +211,8 @@ function loadHardMode() {
   updateScore(false);
   fillBalls();
   fillLevelColor();
+  const levelElement = document.getElementById('level');
+  levelElement.innerText = level;
   const answer = document.getElementById('answer');
   answer.innerText = 'Escolha uma cor';
   const checkInput = document.getElementById('hard-mode-checker');
