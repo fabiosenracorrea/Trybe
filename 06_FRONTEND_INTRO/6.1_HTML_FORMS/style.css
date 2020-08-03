@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.form-container {
+  background-color: #f0f0f5;
+  width: 90%;
+  max-width: 1300px;
+  margin: 36px auto;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset + fieldset {
+  margin-top: 10px;
+}
+
+legend {
+  margin: 8px 0;
+}
+
+.input-group {
+  display: flex;
+  width: 90%;
+  margin: 12px auto;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.field + .field input,
+.field + .field label,
+.field + .field select {
+  margin-left: 8px;
+}
+
+label {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+input {
+  padding: 8px 14px;
+  font-size: 12px;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.alone {
+  width: 100%;
+}
+
+select {
+  padding: 8px 14px;
+  font-size: 12px;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+option {
+  outline: none;
+}
+
+label + input + label {
+  margin-left: 8px;
+}
+
+input[ type = 'radio'] {
+  align-self: center;
+  margin-left: 10px;
+}
+
+textarea {
+  width: 95%;
+  max-width: 95%;
+  min-width: 95%;
+  outline: none;
+  max-height: 300px;
+  min-height: 24px;
+  padding: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 8px;
+  border: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+input[ type = 'reset' ],
+button {
+  border: none;
+  background-color: cadetblue;
+  border-radius: 8px;
+  padding: 12px;
+  margin-right: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  outline: none;
+}
+
+input[ type = 'reset' ]:active,
+button:active {
+  transform: translateY(2px);
+}
+

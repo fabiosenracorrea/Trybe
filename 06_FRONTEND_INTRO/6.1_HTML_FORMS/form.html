@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.1 Exercise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <form action="">
+
+      <fieldset class="personal-data">
+        <legend>
+          <h2>Dados Pessoais</h2>
+        </legend>
+
+        <div class="input-group">
+          <div class="field">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name" maxlength="40" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" required>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="field">
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" maxlength="11" required>
+          </div>
+          <div class="field">
+            <label for="city">Cidade</label>
+            <input type="text" name="city" id="city" required>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="field alone">
+            <label for="address">Endereço</label>
+            <input type="text" name="address" id="address" maxlength="200" required>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="field">
+            <label for="address2">Complemento</label>
+            <input type="text" name="address2" id="address2">
+          </div>
+          <div class="field">
+            <label for="state">Estado</label>
+            <select name="state" id="state" required>
+              <option value="">Selecione uma cidade</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="house">Casa</label>
+          <input type="radio" name="house" id="house" value="casa" required>
+          <label for="apartment">Apartamento</label>
+          <input type="radio" name="house" id="apartment" value="apartamento" required>
+        </div>
+      </fieldset>
+
+      <fieldset class="job-info">
+        <legend>
+          <h2>Último Emprego</h2>
+        </legend>
+
+        <div class="input-group">
+          <div class="field alone">
+            <label for="resume">Resumo do Currículo</label>
+            <textarea name="resume" id="resume" maxlength="1000" required></textarea>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="field">
+            <label for="position">Cargo</label>
+            <input type="text" name="position" id="position" required>
+          </div>
+          <div class="field">
+            <label for="start">Data de início</label>
+            <input type="text" name="start" id="start" maxlength="10" placeholder="dd/mm/aaaa" required>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="field alone">
+            <label for="job-description">Descrição do Cargo</label>
+            <textarea name="job-description" id="job-description" maxlength="500" required></textarea>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="button-container">
+
+        <button type="submit">Enviar</button>
+        <input type="reset" value="Resetar">
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
