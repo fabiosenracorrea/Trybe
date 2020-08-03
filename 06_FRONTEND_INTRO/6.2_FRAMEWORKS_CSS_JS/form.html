@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>6.2 Exercise - Frameworks/libraries</title>
   <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="datePicker.css">
+  <link rel="stylesheet" href="validation.css">
 </head>
 <body>
   <div class="container shadow-lg p-3 mb-5 bg-white rounded-lg mt-5">
-    <form action="">
+    <form action="" id="form-s">
       <fieldset class="form-row">
         <legend>
           <h2>Dados Pessoais</h2>
@@ -21,7 +23,7 @@
           </div>
           <label for="email" class="col-md-6">Email</label>
           <div class="form-group col-md-6 input-group mb-3">
-            <input class="form-control" type="text" name="email" id="email" required>
+            <input class="form-control" type="text" name="email" id="email" data-validate-field="email" required>
             <div class="input-group-append">
               <span class="input-group-text" id="basic-addon2">@gmail.com</span>
             </div>
@@ -31,7 +33,7 @@
         <div>
           <div class="form-group col-md-6">
             <label for="cpf">CPF</label>
-            <input class="form-control" type="text" name="cpf" id="cpf" maxlength="11" required>
+            <input class="form-control" type="text" name="cpf" id="cpf" maxlength="11" data-validate-field="cpf" required>
           </div>
           <div class="form-group col-md-6">
             <label for="city">Cidade</label>
@@ -59,7 +61,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 form-check form-check-inline">
+        <div class="col-md-6 form-check form-check-inline d-flex justify-content-center">
           <label class="form-check-label mr-2" for="house">Casa</label>
           <input class="form-check-input mr-2" type="radio" name="house" id="house" value="casa" required>
           <label class="form-check-label mr-2" for="apartment">Apartamento</label>
@@ -86,7 +88,7 @@
           </div>
           <div class="form-group col-md-6">
             <label for="start">Data de início</label>
-            <input class="form-control" type="text" name="start" id="start" maxlength="10" placeholder="dd/mm/aaaa" required>
+            <input class="form-control" type="text" name="start" id="start" placeholder="dd/mm/aaaa" required>
           </div>
         </div>
 
@@ -105,5 +107,9 @@
     </form>
   </div>
   <script src="script.js"></script>
+  <script>
+    document.getElementById('start').DatePickerX.init();
+  </script>
+  <script src="validation.js"></script>
 </body>
 </html>

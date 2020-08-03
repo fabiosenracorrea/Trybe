@@ -22,7 +22,7 @@ Sugestões: Just-validate e popup-validation
 
 #### Comments
 
-something interesting
+The challenge here was to apply each external framework/library without breaking the intended use and making it work as the previous checks. To add an extra challenge, i also customized the data validation section to check for valid CPFs.
 
 
 ###### Feedback
