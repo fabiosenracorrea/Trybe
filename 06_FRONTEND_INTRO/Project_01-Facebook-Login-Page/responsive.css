@@ -1,0 +1,235 @@
+@media (max-width: 750px) {
+  .top-bar {
+    padding: 0;
+    justify-content: center;
+    position: relative;
+  }
+
+  .top-bar:after {
+    content: 'Você deve se conectar primeiro.';
+    box-sizing: border-box;
+    position: absolute;
+    bottom: -28px;
+    padding: 7px 3px 4px 8px;
+    background-color: rgb(255, 230, 161);
+    color: rgb(202, 125, 10);
+    line-height: 16px;
+    font-weight: 500;
+    border-bottom: 1.2px solid rgb(255, 176, 72);
+    width: 100%;
+  }
+
+  .top-bar .facebook-login {
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    left: 10vw;
+    justify-content: center;
+    width: 80vw;
+    align-items: center;
+  }
+
+  .facebook-login .form-group {
+    width: 95%;
+    position: relative;
+    margin: 0;
+  }
+
+  .form-group input {
+    background-color: rgba(236, 236, 236, 0.857);
+    color: grey;
+    font-size: 90%;
+    font-weight: 700;
+    margin: 0;
+    padding: 8px;
+    width: 95%;
+  }
+
+  .email {
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+    border-top: 0.5px solid grey;
+    border-left: 0.5px solid grey;
+    border-right: 0.5px solid grey;
+    position: relative;
+  }
+
+  .email:focus {
+    outline: none;
+  }
+
+  .password {
+    border-radius: 0 0 4px 4px;
+    border-top: 0.5px solid grey;
+    border-left: 0.5px solid grey;
+    border-right: 0.5px solid grey;
+    border-bottom: 0.5px solid grey;
+  }
+
+  .form-group label {
+    color: grey;
+    position: absolute;
+    pointer-events: none;
+    font-weight: 500;
+    bottom: 5px;
+    left: 8px;
+    z-index: 9999;
+  }
+
+  .email:focus + label,
+  .email:not(:placeholder-shown) + label {
+    display: none;
+  }
+
+  .password:focus + label,
+  .password:not(:placeholder-shown) + label {
+    display: none;
+  }
+
+  .form-group small {
+    bottom: -160px;
+    color: rgb(112, 112, 229);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    font-weight: 500;
+    left: 25vw;
+    position: absolute;
+  }
+
+  .form-group small:after {
+    background-color: green;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: white;
+    content: "Criar nova conta";
+    font-size: 90%;
+    font-weight: 700;
+    left: -1px;
+    padding: 8px;
+    position: absolute;
+    text-align: center;
+    top: -40px;
+    width: 100%;
+  }
+
+  .facebook-login .form-control {
+    width: 95%;
+    margin-top: 20px;
+    align-self: unset;
+  }
+
+  .form-control {
+    position: relative;
+  }
+
+  .form-control button {
+    width: 95%;
+    padding: 6px;
+    margin: 0;
+    background-color: rgb(16, 121, 250);
+    position: relative;
+  }
+
+  .form-control:after {
+    content: '';
+    border-bottom: 1px solid grey;
+    position: absolute;
+    bottom: -30px;
+    width: 95%;
+    left: 0;
+    z-index: 30;
+    box-sizing: border-box;
+  }
+
+  .form-control button:after {
+    background-color: white;
+    bottom: -35px;
+    box-sizing: border-box;
+    color: black;
+    content: 'ou';
+    font-weight: 400;
+    left: 32vw;
+    pointer-events: none;
+    position: absolute;
+    width: 40px;
+    z-index: 9999;
+  }
+
+  .main-content {
+    display: none;
+  }
+
+  .main-container {
+    background: white;
+  }
+
+  a:nth-child(5) {
+    grid-area: lan6;
+  }
+
+  a:nth-child(6) {
+    grid-area: lan7;
+  }
+
+  a:nth-child(8) , a:nth-child(9) , a:nth-child(10) {
+    display: none;
+  }
+
+  footer {
+    width: 100%
+  }
+
+  .footer-content .page-options {
+    display: none;
+  }
+
+  footer hr {
+    display: none;
+  }
+
+
+  footer .footer-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  footer .page-language {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 4px;
+    grid-template-areas: "lan1 lan2" "lan3 lan4" "lan5 lan6" "lan7 btn";
+  }
+
+  footer .page-language button {
+    width: 17px;
+    height: 17px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    border: 1px solid blue;
+    border-radius: 2px;
+    background-color: white;
+  }
+
+  footer .page-language a {
+    text-align: center;
+  }
+
+  footer .copyright p {
+    display: none;
+  }
+
+  footer .copyright:after {
+    content: "Facebook, Inc.";
+    font-size: 80%;
+    color: grey;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+}
