@@ -24,6 +24,8 @@ If you want quick acces to each module, you can either select their respective d
 
 * [Module 01 - Bash & Shell Script](https://github.com/fabiosenracorrea/Trybe/tree/master/01_BASH_SHELL_SCRIPT)
 * Module 02 - Git & Github
-* [Module 03 - HTML & CSS Introducition](https://github.com/fabiosenracorrea/Trybe/tree/master/03_HTML_CSS_INTRO)
+* [Module 03 - HTML & CSS Introduction](https://github.com/fabiosenracorrea/Trybe/tree/master/03_HTML_CSS_INTRO)
 * [Module 04 - JavaScript Introduction](https://github.com/fabiosenracorrea/Trybe/tree/master/04_JAVASCRIPT_INTRO)
 * [Module 05 - DOM Manipulation](https://github.com/fabiosenracorrea/Trybe/tree/master/05_JS_DOM_MANIPULATION)
+* [Module 06 - Full Front-End Introduction](https://github.com/fabiosenracorrea/Trybe/tree/master/06_FRONTEND_INTRO)
+* [Module 07 - Javascript ES6 & Unitary Tests](https://github.com/fabiosenracorrea/Trybe/tree/master/07_JAVASCRIPT_ES6)
