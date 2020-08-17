@@ -4,7 +4,7 @@ This directory covers Trybe's 7th module.
 
 ## What was covered here?
 
-As a further understanding of the capabilities of a software developer, this module is centered around learning new powerful features about Javascript, in order to write better 'bug-proof' programs. Especifically, it was covered:
+As a further understanding of the capabilities of a software developer, this module is centered around learning new powerful features about Javascript, in order to write better 'bug-proof' programs. Specifically, it was covered:
 
 * [Var x Let, Arrow Functions & Template Literals](./7.1_Var-Let_Scopes_Arrow_Template)
 * [JS Objects](./7.2_JS-Objects)

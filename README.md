@@ -4,7 +4,7 @@ Repository dedicated to storing every exercise and relevant content during Trybe
 
 ### What's covered here?
 
-Trybe is a 1-year intesive course on becoming a full-stack web developer. During this period, several excluisve and interative contents are developed by each student, covering **mostly** - but *not exclusively* - these topics:
+Trybe is a 1-year intensive course on becoming a full-stack web developer. During this period, several exclusive and interactive contents are developed by each student, covering **mostly** - but *not exclusively* - these topics:
 
 * HTML (w/ semantics)
 * CSS (w/ responsive)
@@ -20,7 +20,7 @@ Trybe is a 1-year intesive course on becoming a full-stack web developer. During
 
 ### Summary
 
-If you want quick acces to each module, you can either select their respective directory or go through here:
+If you want quick access to each module, you can either select their respective directory or go through here:
 
 * [Module 01 - Bash & Shell Script](https://github.com/fabiosenracorrea/Trybe/tree/master/01_BASH_SHELL_SCRIPT)
 * Module 02 - Git & Github
@@ -29,3 +29,4 @@ If you want quick acces to each module, you can either select their respective d
 * [Module 05 - DOM Manipulation](https://github.com/fabiosenracorrea/Trybe/tree/master/05_JS_DOM_MANIPULATION)
 * [Module 06 - Full Front-End Introduction](https://github.com/fabiosenracorrea/Trybe/tree/master/06_FRONTEND_INTRO)
 * [Module 07 - Javascript ES6 & Unitary Tests](https://github.com/fabiosenracorrea/Trybe/tree/master/07_JAVASCRIPT_ES6)
+* [Module 08 - Higher Order Functions (HOF)](https://github.com/fabiosenracorrea/Trybe/tree/master/08_HIGHER_ORDER_FUNCTIONS)

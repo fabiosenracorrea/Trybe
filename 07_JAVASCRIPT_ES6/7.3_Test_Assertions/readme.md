@@ -230,3 +230,23 @@ const getLargestNumber = (array) => {
 const parameter = [45, 8, 2, 50, 1, 7, 99];
 const result = 99;
 ```
+
+### Exercises Part 6 - Bonus 5
+
+```
+Create a Password verifications class called “PasswordVerifier”.
+
+Add the following verifications to a master function called “Verify()”
+
+password should be larger than 8 chars
+password should not be null
+password should have one uppercase letter at least
+password should have one lowercase letter at least
+password should have one number at least
+Each one of these should throw an exception with a different message of your choosing
+
+Add feature: Password is OK if at least three of the previous conditions is true
+Add feature: password is never OK if item 1.4 is not true.
+Assume Each verification takes 1 second to complete. How would you solve items 2 and 3 so tests can run faster?
+```
+To answer above questions, what should be done is first test case 1.4, if that fails, end execution and throw error right away. Create 2 control variables to track how many of our tests have failed/succeed and make the execution end when the requirement is met. In this case, if fails > 2 or Succeeded == 3 we can stop checking.
