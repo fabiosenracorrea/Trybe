@@ -21,4 +21,19 @@ function flatten() {
   )
 }
 
-assert.deepEqual(flatten(), ["1", "2", "3", true, 4, 5, 6]);
+// or
+
+function flatten2() {
+  return (
+    arrays.reduce((start, next) => start.concat(next), [])
+  )
+}
+// or
+
+function flatten3() {
+  return (
+    arrays.reduce((start, next) => [...start, ...next], [])
+  )
+}
+
+assert.deepEqual(flatten3(), ["1", "2", "3", true, 4, 5, 6]);

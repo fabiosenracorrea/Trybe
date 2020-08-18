@@ -11,7 +11,7 @@ One last array method that needs to be covered is **reduce**. And given it's imp
 Dada uma matriz de matrizes, transforme em uma única matriz.
 (flatter a matrix and return it)
 
--> Gotta remember that each reduce iteration checks an entire array. Then, a forEach inside the reduce does the trick. [Check it out here](./exercises/exercise1.js)
+-> 3 solutions were presented, using a forEach, the array method .concat and the spread operator [Check it out here](./exercises/exercise1.js)
 
 #### Exercise 2
 
