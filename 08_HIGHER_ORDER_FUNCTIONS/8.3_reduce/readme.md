@@ -1,4 +1,4 @@
-## 8.2 - Map and Filter methods
+## 8.3 - Reduce Method
 
 ### What was covered here?
 
