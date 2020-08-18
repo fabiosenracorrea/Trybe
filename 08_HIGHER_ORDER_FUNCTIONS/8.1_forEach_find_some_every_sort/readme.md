@@ -65,7 +65,7 @@ Faça uma função que retorne true, se algum livro foi lançado na década de 8
 Faça uma função que retorne true, caso nenhum author tenha nascido no mesmo ano, e false, caso contrário.
 (Create a function to check if every author was born in a unique year)
 
--> Decided to up the difficulty of the challenge here, and used a reduce function. A simple forEach function was also added. [Check it out](./exercises/exercise7.js)
+-> Decided to up the difficulty of the challenge here, and used a reduce function. Also added a simple function using forEach and another using sort! [Check it out](./exercises/exercise7.js)
 
 #### Comments
 

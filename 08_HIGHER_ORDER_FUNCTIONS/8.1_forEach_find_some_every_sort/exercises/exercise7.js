@@ -78,6 +78,8 @@ function authorUnique() {
   return books.length === birthYears.length;
 }
 
+// or
+
 function authorUnique2() {
   let uniqueYears = [];
 
@@ -90,4 +92,20 @@ function authorUnique2() {
   return books.length === uniqueYears.length;
 }
 
-assert.equal(authorUnique(), expected_result);
+// or
+
+function authorUnique3() {
+  let unique = true;
+  (
+    books
+      .sort((a, b) => {
+        if (a.author.birthYear === b.author.birthYear) {
+          unique = false;
+        }
+      })
+  );
+  return unique;
+}
+
+
+assert.equal(authorUnique3(), expected_result);
