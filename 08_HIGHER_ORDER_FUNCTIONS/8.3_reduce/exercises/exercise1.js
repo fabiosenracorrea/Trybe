@@ -7,10 +7,6 @@ const arrays = [
     [4, 5, 6]
 ];
 
-function singleFlat(start, next) {
-  start.push(next)
-}
-
 function flatten() {
   return (
     arrays
