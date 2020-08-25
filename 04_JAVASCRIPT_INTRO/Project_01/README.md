@@ -1,5 +1,11 @@
-# Boas vindas ao repositório do Projeto Playground Functions!
+## Project 01 - Playground Functions
 
+The first project of Trybe's 4th module, designed towards use of basic Javascript features learned throughout the module.
+
+### What was proposed here
+
+As a literal copy/paste of the instructions:
+---
 
 **1 - Usando o operador &&**
 -
@@ -130,7 +136,7 @@ Entradas da função:
 Caso o array venha vazio sua função deve retornar 'Vazio!'
 
 **Bônus**
-=
+
 **11 - Número de telefone**
 -
 Crie uma função chamada `generatePhoneNumber` que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
@@ -182,10 +188,17 @@ String retornada:
   "7 copos de água"
 ```
 
-**Notas**
-
-- Para simplificar, consideraremos que qualquer coisa com um número à frente é uma bebida **e que a sua string sempre virá com o formato quantidade (em número) + tipo da bebida**.
-
-- O número na frente de cada bebida está no intervalo entre 1 e 9.
-
 ---
+
+### Grade
+
+This project got a **100%/100%** grade and can be checked out entirely on [here](https://github.com/tryber/sd-06-project-playground-functions/pull/67).
+
+
+#### Comments
+
+Mastering the basics of Javascript is a pretty standard requirement to anyone that wants to excel as a software developer in the field. As such, this project should not present any challenge to anyone that wants that.
+
+###### Feedback
+
+As always, any feedback or suggestion is welcomed.
