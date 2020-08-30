@@ -2,7 +2,7 @@
 
 ## O que vamos aprender?
 
-Agora que você já entendeu o que é uma *Higher Order Function* e uma função de *callback* e aplicou esses conhecimentos para entender alguns dos novos métodos de interação e Array que o ES6 nos trouxe, chegou a hora de aprender o que são, talvez, as *HOFs mais importantes*: *map* e *reduce*.
+Agora que você já entendeu o que é uma *Higher Order Function* e uma função de *callback* e aplicou esses conhecimentos para entender alguns dos novos métodos de iteração e Array que o ES6 nos trouxe, chegou a hora de aprender o que são, talvez, as *HOFs mais importantes*: *map* e *reduce*.
 
 ## Você será capaz de:
 
@@ -96,7 +96,7 @@ Mas, o que aconteceu aqui? Vamos por partes:
 
 6. Isso acontece para cada elemento, até que chegamos no último: o elemento de index 5, que é o 10. Ele é passado para a *callback*, e, sendo `10 ** 2 === 100`, a função retorna 100 e o map adiciona este valor como sendo index 5 do **novo array**.
 
-7. Finalizada a interação com o array, o map por fim retorna o **novo array**, contendo o **retorno de todas as interações** da *callback* nos elementos do *numbers*.
+7. Finalizada a iteração com o array, o map por fim retorna o **novo array**, contendo o **retorno de todas as iterações** da *callback* nos elementos do *numbers*.
 
 Essa descrição de código lhe parece familiar? Você com certeza já realizou alguma operação similar nos últimos meses, utilizando o tradicional *for* para isso. Veja o código abaixo, ele é completamente equivalente ao código utilizando o map:
 
@@ -114,7 +114,7 @@ console.log(numbersSquared); // [4, 16, 25, 49, 64, 100]
 
 Você consegue perceber que, mesmo com um nível de complexidade pequeno, o segundo código é muito mais **verboso**, ou seja, possui muito mais declarações e palavras que temos que nos preocupar? Por exemplo, se nos esquecermos que não podemos acessar o index de mesmo número que a length do array, estaremos inserindo um *undefined* no final de nosso *numbersSquared*.
 
-E ainda: imagine que você precise realizar outras operações com o array que você obteve de resultado. Para cada interação você vai ter que criar um novo *for*, ter cuidado com as variáveis inseridas, com o tamanho do novo array... Começa a ficar muito trabalhoso, e um "oceano de *for*s um atrás do outro, dificultando ainda o seu próprio entendimento do que o código está fazendo.
+E ainda: imagine que você precise realizar outras operações com o array que você obteve de resultado. Para cada iteração você vai ter que criar um novo *for*, ter cuidado com as variáveis inseridas, com o tamanho do novo array... Começa a ficar muito trabalhoso, e um "oceano de *for*s um atrás do outro, dificultando ainda o seu próprio entendimento do que o código está fazendo.
 
 Vamos ao próximo exemplo: Pensando um pouco no exemplo que demos do supermercado, imagine que você tem uma lista de produtos, cada um contendo as seguintes informações:
 
@@ -141,7 +141,7 @@ const nameOfProducts = products.map((product) => product.name);
 console.log(nameOfProducts); // ['Desinfetante Veja',"Ketchup Hellmann's", 'Milho Enlatado Zero-Six', 'Cereal Nescal Ball', 'Biscoito Trakinas']
 ```
 
-Observe que, como queremos apenas o que está armazenado na propriedade *name* de cada produto, a nossa função retorna exatamente isso: o que está armazenado em cada *product.name*, que, claro, em cada interação do map, é um valor diferente, como visto no *console.log* ao final.
+Observe que, como queremos apenas o que está armazenado na propriedade *name* de cada produto, a nossa função retorna exatamente isso: o que está armazenado em cada *product.name*, que, claro, em cada iteração do map, é um valor diferente, como visto no *console.log* ao final.
 
 Até agora vimos algumas interações diretas, em que o retorno da *callback* é facilmente identificável e **segue a mesma regra** para todos os elementos. Mas isso não precisa acontecer! Você pode usar condicionais dentro de sua função de *callback* para **transformar** o seu elemento como quiser antes de retorná-lo para o map.
 
@@ -158,7 +158,7 @@ const mappedNumbers = numbers.map((number) => {
 });
 ```
 
-Ou seja, no código acima a nossa função de *callback* irá entregar ao map, para cada interação, o quadrado do número *se ele é par*, caso contrário (ou seja, o número é impar), irá entregar o número ao cubo.
+Ou seja, no código acima a nossa função de *callback* irá entregar ao map, para cada iteração, o quadrado do número *se ele é par*, caso contrário (ou seja, o número é impar), irá entregar o número ao cubo.
 
 Você pode fazer quantos casos e operações com o elemento quiser, só se lembre de sempre **retornar** a transformação para que o novo array tenha exatamente aqui que você queria. Construa a sua função de *callback* pensando em como é o elemento que você recebe de parâmetro e como você quer que ele seja. O map vai apenas aplicar essa regra de negócio em todos os elementos do array, criando retornando o array com as modificações que você implementou.
 
@@ -340,7 +340,7 @@ Novamente, vamos por partes para entender o que aconteceu:
 
 6. Isso acontece para cada elemento, até que chegamos no último: o elemento de index 4, que é objeto do Biscoito Trakinas. Ele é passado para a *callback*, juntamente com o "acumulador", que agora tem valor de 44. E, sendo `44 + 5 === 49`, a função retorna 49. Então este é o **novo valor do acumulador**.
 
-7. Finalizada a interação com o array, o *reduce* por fim retorna o valor final do **acumulador**, que é o que é salvo na variável *payableAmount*.
+7. Finalizada a iteração com o array, o *reduce* por fim retorna o valor final do **acumulador**, que é o que é salvo na variável *payableAmount*.
 
 Você consegue perceber a diferença entre o *map* e o *reduce*? Enquanto o map nós usamos para **transformar** o array de alguma forma, o reduce nós usamos para **reduzir** o array a algo. Mas cuidado: o reduce não é possui utilidade apenas para reduzirmos nossos elementos à números, como fizemos acima.
 
@@ -691,7 +691,7 @@ Estes exercícios também estão relacionados ao array de universidades.
 
 2. A partir do array das universidades, obtenha uma lista que contenha todos os cursos ofertados por universidades brasileiras. Não se esqueça de adicionar o nome de cada universidade dentro de cada curso!
 
-3. A partir do array de cursos obtido no exercício anterior, obtenha um objeto que contenha, a quantidade de cursos disponíveis, a nota e a duração média de todos esses cursos, e a maior nota de corte encontrada. O objeto deve ser neste formato:
+3. A partir do array de cursos obtido no exercício anterior, obtenha um objeto que contenha a quantidade de cursos disponíveis, a nota e a duração média de todos esses cursos, e a maior nota de corte encontrada. O objeto deve ser neste formato:
 
 ```javascript
 const obj = {
@@ -702,5 +702,229 @@ const obj = {
 }
 ```
 
+## Gabaritos
 
+1. Como nós temos um array de universidades (objetos) e queremos TRANSFORMAR cada objeto em apenas o nome da respectiva faculdade, precisamos de um **map** simples. Ao final, já que foi pedido em ordem alfabética, encadeamos um **sort**. E aqui vale lembrar que o método sort ordena automaticamente por ordem alfabética se nenhuma função de *callback* for passada à ele!
+
+```javascript
+const namesOfUniversities = (
+  universities
+    .map((university) => university.name)
+    .sort()
+);
+```
+
+2. Similar ao exercício anterior, aqui precisamos TRANSFORMAR cada objeto do nossa array de universidades em uma string, que contém as informações de nome e endereço completo de cada universidade. Para isso, um simples **map** resolve a questão. Para melhor visualização de como os dados foram obtidos, criou-se uma variável para cada valor.
+
+```javascript
+const addressOfUniversitives = (
+  universities
+    .map((university) => {
+      const name = university.name;
+      const street = university.address.street;
+      const number = university.address.number;
+      const city = university.address.city;
+      const state = university.address.state;
+      const country = university.address.country;
+      return `${name}: ${street}, nº ${number}, ${city}, ${state}, ${country}.`;
+    })
+);
+```
+
+3. Esse próximo exercício tem uma lógica de **map** similar ao anterior, mas tem um ponto de atenção: aqui precisamos *filtrar* para termos apenas um array de universidades brasileiras. Como o método **filter** retorna um array contendo os elementos que satisfazem a condição estipulada em sua *callback*, podemos encadear o **map** logo após.
+
+```javascript
+const acronymAndCity = (
+  universities
+    .filter(university => university.address.country === 'Brazil')
+    .map(uni => `${uni.acronym}: ${uni.address.city}`)
+);
+```
+
+4. Aqui, novamente, precisamos TRANSFORMAR o objeto de universidade para outro elemento. No caso, um outro objeto, no formato como passado no enunciado. O único dado que requer atenção é a **quantidade diferente de campus** de cada universidade. O objeto de universidades possui um *array* de cursos, em que cada elemento é um objeto contendo algumas informações do respectivo curso. Para obter a quantidade de cursos disponíveis, basta medir o *length* deste array. Mas nem sempre cada curso terá um campus diferente do outro. Para encontrarmos quais são os campus diferentes, podemos REDUZIR o array de cursos para um novo array, que só contém os nomes dos campus diferentes.
+
+Para tal operação, observe a lógica dentro do *reduce*: Só vamos incluir ao nosso array de nomes de campus se ainda não existir o determinado nome no momento de nossa iteração. Caso já exista, precisamos apenas "passar para frente" o nosso array de nomes diferentes, sem qualquer alteração. Ao final, basta medir o tamanho deste array.
+
+Observe que este *reduce* ocorre **dentro** do *map*: Depois de obtermos o array de nomes diferentes precisamos retornar um objeto no formato pedido.
+
+```javascript
+const uniInfo = (
+  universities
+    .map((university) => {
+      const differentCampusArray = (
+        university.courses
+          .reduce((start, course) => {
+            if (start.includes(course.campus)) {
+              return start;
+            }
+            start.push(course.campus);
+            return start;
+          }, [])
+      )
+
+      return {
+        name: university.name,
+        acronym: university.acronym,
+        courses: university.courses.length,
+        differentCampus: differentCampusArray.length,
+      }
+    })
+);
+```
+
+5. Em posse de um array de produtos comprados, precisamos apenas REDUZIR tal array para o preço total gasto. Para tal, somamos ao acumulador a soma do preço de cada produto multiplicado por sua respectiva quantidade. Note que aqui, como possuímos um *array de objetos*, precisamos iniciar o acumulador como zero.
+
+```javascript
+const totalAmount = (
+  products
+    .reduce((start, product) => start + (product.price * product.quantity), 0)
+);
+```
+
+6. Neste exercício, precisamos TRANSFORMAR o array de produtos que temos para um que contenha apenas o seu nome e se ele foi elegível ou não à um desconto.
+
+```javascript
+const discountApplied = (
+  products
+    .map((product) => {
+      let discount = false;
+
+      if (product.quantity >= 4) {
+        discount = true;
+      };
+
+      return {
+        name: product.name,
+        discount,
+      }
+    })
+);
+```
+
+7. Neste exercício, precisamos REDUZIR o array de produtos que possuímos para um objeto de "resumo". Para tal, é interessante definir a estrutura deste objeto primeiro, para termos uma melhor visualização de como manipulá-lo. Como o nosso objeto base será sempre o nosso acumulador, precisamos nos lembrar de retorná-lo na função de *callback* dentro do reduce, depois das devidas operações realizadas.
+
+Como adicionamos os nomes dos produtos um a um, optou-se por realizar a ordenação do array de produtos depois de termos o objeto resumo finalizado.
+
+```javascript
+const baseObj = {
+  products: [],
+  items: 0,
+  amountPaid: 0,
+}
+
+const productsBought = (
+  products
+    .reduce((start, product) => {
+      start.products.push(product.name);
+      start.items += product.quantity;
+      start.amountPaid += (product.price * product.quantity);
+      return start;
+    }, baseObj)
+)
+
+productsBought.products.sort();
+```
+
+### Extras
+
+1. Aqui precisamos TRANSFORMAR o array de universidades em um outro array, em que cada elemento é uma universidade com seu país e nota média dos cursos. Como a informação dos cursos de cada universidade é um *array*, podemos reduzí-lo para a soma de todas as notas. Depois, basta dividí-lo pela quantidade de cursos.
+
+**Bônus**: Notou algo ligeiramente diferente no retorno deste *map*? Isso é um pequeno *spoiler* de um conteúdo deste módulo: *Object Short Syntax*.
+
+```javascript
+const uniWithGrade = (
+  universities
+    .map((uni) => {
+      const name = uni.name;
+      const country = uni.address.country;
+      const sumOfGrade = uni.courses.reduce((start, course) => start + course.grade, 0);
+      const overallGrade = sumOfGrade / uni.courses.length;
+
+      return {
+        name,
+        country,
+        overallGrade,
+      };
+    })
+);
+```
+
+2. Vamos quebrar o problema antes de resolvê-lo: Precisamos criar um array que contenha todos os cursos disponíveis em universidades brasileiras. Aqui, **não podemos usar o map**: A quantidade de cursos pode ser maior ou menor que a quantidade de universidades, então não conseguimos aplicar o map, já que ele retorna um array de mesmo tamanho do array que é chamado. Mas, olha só: e se começarmos com um array vazio e ir acrescentando nele cada curso que virmos pela frente? Para isso, podemos usar o reduce! Mas atenção: o reduce vai iterar apenas cada universidade, que, por sua vez, pode ter mais de um curso. Logo, para conseguirmos adicionar todos de uma vez, é necessário iterar o array de cursos de cada universidade. E, a cada iteração dessa, adicionar ao nosso array inicial (do primeiro reduce) o curso iterado. Isso é importante porque queremos obter um *array de cursos*.
+
+Observe que o **acumulador do segundo reduce** é igual ao **acumulador do primeiro reduce**. Consegue perceber a ordem de execução deste exercício? Tem rodá-lo utilizando o debugger do VS Code para ajudar em sua visualização.
+
+```javascript
+
+const allBrazilianCourses = (
+  universities
+    .filter((uni) => uni.address.country === 'Brazil')
+    .reduce((start, uni) => {
+      uni.courses
+        .reduce((initial, course) => {
+          course.university = uni.name;
+          initial.push(course);
+          return initial;
+        }, start);
+
+      return start;
+    } ,[])
+);
+```
+
+3. Como temos que REDUZIR o array de cursos que temos para um objeto, usaremos o *reduce*. E aqui usaremos os dois parâmetros opicionais que a *callback* do reduce pode ter para facilitar a nossa iteração e demonstrar que podemos ter várias condições dentro de um *reduce*. Montamos novamente um objeto base para inserí-lo como acumulador, nos moldes requisitados e, para cada iteração do *reduce*, somamos a nota e a duração ao seus respectivos valores, além de checar se a nota de corte atual é maior que a que tínhamos anteriormente.
+
+Só que temos um detalhe: Não queremos a *soma* das notas e durações, mas sim a *média*. Para contornar isso, adicionamos uma condição ao final de todas essas operações: verificamos se estamos na iteração final, ou seja, no último index do array, e, se estivermos, dividimos os valores de nota e duração pelo tamanho do array de cursos, chegando, finalmente, no valor médio.
+
+Não se assuste com este uso, é apenas para demonstrar uma aplicação destes parâmetros opcionais.Verifique a segunda sugestão de solução, em que fazemos o *update* da nota e duração média **após** o reduce inteiro.
+
+Primeira sugestão de solução:
+
+```javascript
+const baseObj2 = {
+  country: 'Brazil',
+  avgGrade: 0,
+  avgDuration: 0,
+  highestEntryGrade: 0
+}
+
+const uniOverview = (
+  allBrazilianCourses
+    .reduce((start, course, index, array) => {
+      start.avgGrade += course.grade;
+      start.avgDuration += course.duration;
+
+      if (start.highestEntryGrade < course.entryGrade) {
+        start.highestEntryGrade = course.entryGrade;
+      }
+
+      if (index === array.length - 1) {
+        start.avgGrade /= array.length;
+        start.avgDuration /= array.length;
+      }
+
+      return start;
+    }, baseObj2)
+)
+```
+
+Segunda sugestão:
+
+```javascript
+const uniOverview = (
+  allBrazilianCourses
+    .reduce((start, course, index, array) => {
+      start.avgGrade += course.grade;
+      start.avgDuration += course.duration;
+
+      if (start.highestEntryGrade < course.entryGrade) {
+        start.highestEntryGrade = course.entryGrade;
+      }
+
+      return start;
+    }, baseObj2)
+)
+
+uniOverview.avgGrade /= allBrazilianCourses.length;
+uniOverview.avgDuration /= allBrazilianCourses.length;
+```
 

@@ -353,3 +353,5 @@ const uniOverview = (
       return start;
     }, baseObj2)
 )
+
+console.log(uniOverview)
