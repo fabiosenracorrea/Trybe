@@ -10,12 +10,15 @@ Continuing from last module, this module covers some major improvements JS has g
 * [Map & Filter](./8.2_map_filter)
 * [Reduce](./8.3_reduce)
 * [Rest/Spread, Destructuring, Short Syntax](./8.4_rest_spread_and_more)
+* [Project 01 - Zoo Functions](./Project_01)
 
 To check each part of the module, simply click on the desired link above.
 
 #### Comments
 
-TBA
+Javascript pre/post ES6+ are completely different worlds. The 'post' modifications brought the language to a high level state, opening a lot of possibilities and expanding the 'js scope'.
+
+Understanding how to use these features really takes your code level to the next level.
 
 ###### Feedback
 

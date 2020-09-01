@@ -2,7 +2,7 @@
 
 ## O que vamos aprender?
 
-Agora que você já entendeu o que é uma *Higher Order Function* e uma função de *callback* e aplicou esses conhecimentos para entender alguns dos novos métodos de iteração e Array que o ES6 nos trouxe, chegou a hora de aprender o que são, talvez, as *HOFs mais importantes*: *map* e *reduce*.
+Agora que você já entendeu o que é uma *Higher Order Function* e uma função de *callback* e aplicou esses conhecimentos para entender alguns dos novos métodos de iteração em Array que o ES6 nos trouxe, chegou a hora de aprender o que são, talvez, as *HOFs mais importantes*: *map* e *reduce*.
 
 ## Você será capaz de:
 
@@ -114,7 +114,7 @@ console.log(numbersSquared); // [4, 16, 25, 49, 64, 100]
 
 Você consegue perceber que, mesmo com um nível de complexidade pequeno, o segundo código é muito mais **verboso**, ou seja, possui muito mais declarações e palavras que temos que nos preocupar? Por exemplo, se nos esquecermos que não podemos acessar o index de mesmo número que a length do array, estaremos inserindo um *undefined* no final de nosso *numbersSquared*.
 
-E ainda: imagine que você precise realizar outras operações com o array que você obteve de resultado. Para cada iteração você vai ter que criar um novo *for*, ter cuidado com as variáveis inseridas, com o tamanho do novo array... Começa a ficar muito trabalhoso, e um "oceano de *for*s um atrás do outro, dificultando ainda o seu próprio entendimento do que o código está fazendo.
+E ainda: imagine que você precise realizar outras operações com o array que você obteve de resultado. Para cada iteração você vai ter que criar um novo *for*, ter cuidado com as variáveis inseridas, com o tamanho do novo array... Começa a ficar muito trabalhoso, e um "oceano de *fors*" um atrás do outro, dificultando ainda o seu próprio entendimento do que o código está fazendo.
 
 Vamos ao próximo exemplo: Pensando um pouco no exemplo que demos do supermercado, imagine que você tem uma lista de produtos, cada um contendo as seguintes informações:
 
@@ -160,7 +160,7 @@ const mappedNumbers = numbers.map((number) => {
 
 Ou seja, no código acima a nossa função de *callback* irá entregar ao map, para cada iteração, o quadrado do número *se ele é par*, caso contrário (ou seja, o número é impar), irá entregar o número ao cubo.
 
-Você pode fazer quantos casos e operações com o elemento quiser, só se lembre de sempre **retornar** a transformação para que o novo array tenha exatamente aqui que você queria. Construa a sua função de *callback* pensando em como é o elemento que você recebe de parâmetro e como você quer que ele seja. O map vai apenas aplicar essa regra de negócio em todos os elementos do array, criando retornando o array com as modificações que você implementou.
+Você pode fazer quantos casos e operações com o elemento quiser, só se lembre de sempre **retornar** a transformação para que o novo array tenha exatamente aquilo que você quer. Construa a sua função de *callback* pensando em como é o elemento que você recebe de parâmetro e como você quer que ele seja. O map vai apenas aplicar essa regra de negócio em todos os elementos do array, retornando o array com as modificações que você implementou.
 
 Antes de prosseguirmos, você deve estar se perguntando como diferenciar o uso do **forEach** e do **map**, não é mesmo? Vamos dar uma olhada:
 
@@ -248,7 +248,7 @@ const phrases = (
       } else if (numberOfFavTechs === 1) {
         return `${studentName} tem ${student.age} anos e 1 tecnologia favorita!`;
       } else {
-        return `${studentName} não tem tecnologias favoritas`;
+        return `${studentName} não tem tecnologias favoritas :(`;
       }
     })
   );
@@ -262,14 +262,14 @@ Talvez ainda mais poderosa que a *map*, a *reduce* é a HOF que requer um pouco 
 
 * **O que a reduce retorna?**
 
-1. A **reduce** retorna o "acumulador", que é uma variável que sofre alteração à cada iteração da *callback* no array.
+1. A **reduce** retorna o "acumulador", que é uma variável que pode sofrer alteração à cada iteração da *callback* no array.
 
 * **Quais são os parâmetros que devo passar para a reduce?**
 
 2. A reduce aceita **dois** parâmetros, sendo o segundo opcional:
 
-  1. a função de *callback*
-  2. o valor inicial para o "acumulador".
+  * a função de *callback*
+  * o valor inicial para o "acumulador".
 
 *Caso não seja passado um valor inicial, ele será igual o primeiro elemento do array que estamos iterando!*
 
@@ -286,7 +286,7 @@ function callback(accumulator, element, index, array) {
 
 Em que:
 
-  1. **accumulator**: valor atual do "acumulador" na iteração atual;
+  1. **accumulator**: valor do "acumulador" na iteração atual;
   2. **element**: elemento em que estamos aplicando a função;
   3. **index**: index do elemento em que estamos aplicando a função;
   4. **array**: array em que estamos utilizando o map.
@@ -299,14 +299,14 @@ Mas, afinal, o que é esse "acumulador"?
 
 É **qualquer** tipo de variável que você quer que carregue algo do elemento que estamos iterando para o próximo.
 
-Pense no exemplo do supermercado: temos um array contendo vários produtos, com seus respectivos preços e códigos de barras. Mas no final de contas, só o que interessa para o supermercado é somar o preço de cada produto para chegar no valor final que você tem de pagar. Isso pode ser a aplicação de um *reduce* no nosso array de produtos!
+Pense no exemplo do supermercado: temos um array contendo vários produtos, com seus respectivos preços e códigos de barras. Mas no final de contas, só o que interessa para você ao passar com os produtos no caixa é somar o preço de cada produto para chegar no valor final a pagar. Isso pode ser a aplicação de um *reduce* no nosso array de produtos!
 
 Para ficar ainda mais claro, vamos pensar o seguinte:
 
 Quando estamos com nossas compras no caixa, podemos interpretar a situação como sendo a seguinte:
 
-* Cada produto em nosso carrinho de compras é um elemento de um array. Ele contém nome, código de barras preço.
-* O computador com código de barras é a função de *callback*: Para cada produto, ele vai ver o código de barras para identificar o produto e pegar somente o *preço* para armazenar. Na próxima leitura de produto, o computador já vai começar sabendo o preço do produto antigo, e vai apenas somar à ele o preço do produto recém scaneado, salvado, agora, o preço total até então. Isso se repete até que os produtos sejam todos encerrados, ao passo que o computador vai ter o seu último valor salvo: o valor de todas as somas.
+* Cada produto em nosso carrinho de compras é um elemento de um array. Ele contém nome, código de barras e preço.
+* O computador com código de barras é a função de *callback*: Para cada produto, ele vai ver o código de barras para identificar o produto e pegar somente o *preço* para armazenar. Na próxima leitura de produto, o computador já vai começar sabendo o preço do produto antigo, e vai apenas somar à ele o preço do produto recém scaneado, salvando, agora, o preço total até então. Isso se repete até que os produtos sejam todos scaneados, ao passo que o computador vai ter o seu último valor salvo: o valor de todas as somas.
 * A pessoa atendente operando o computador é o *reduce*: ela vai pegar cada produto de seu carrinho e *passar pelo computador*. Quando acabarem os produtos, ela irá te *retornar* o último valor que o computador tem salvo: o valor de todas as somas.
 
 Agora vamos ver como isso ficaria em código:
@@ -342,7 +342,7 @@ Novamente, vamos por partes para entender o que aconteceu:
 
 7. Finalizada a iteração com o array, o *reduce* por fim retorna o valor final do **acumulador**, que é o que é salvo na variável *payableAmount*.
 
-Você consegue perceber a diferença entre o *map* e o *reduce*? Enquanto o map nós usamos para **transformar** o array de alguma forma, o reduce nós usamos para **reduzir** o array a algo. Mas cuidado: o reduce não é possui utilidade apenas para reduzirmos nossos elementos à números, como fizemos acima.
+Você consegue perceber a diferença entre o *map* e o *reduce*? Enquanto o map nós usamos para **transformar** o array de alguma forma, o reduce nós usamos para **reduzir** o array a algo. Mas cuidado: o reduce não possui utilidade apenas para reduzirmos nossos elementos à números, como fizemos acima.
 
 Imagine que nós temos o mesmo array de produtos, mas agora queremos obter um **objeto** que contenha a seguinte estrutura:
 
@@ -421,7 +421,7 @@ Agora que você já aprendeu as HOFs mais importantes, pode utilizar os seus con
 
 Mas existem casos em que queremos alterar mais de uma vez os dados que temos para obter o resultado desejado. Pense no exemplo em que construímos o array de frases com as pessoas estudantes da trybe. Nele retornamos uma frase com base na quantidade de tecnologias favoritas, não é mesmo? E se quisermos obter, na verdade, um array com as frases apenas para estudantes com *30 ou menos anos*, ordenado de forma alfabética?
 
-Temo um problema que parece relativamente complexo, mas vamos quebrá-lo em partes:
+Temos um problema que parece relativamente complexo, mas vamos quebrá-lo em partes:
 
 * Precisamos obter um array só com as pessoas estudantes de até 30 anos
 * Depois disso, precisamos gerar o array com as frases para elas
@@ -851,7 +851,7 @@ const uniWithGrade = (
 
 2. Vamos quebrar o problema antes de resolvê-lo: Precisamos criar um array que contenha todos os cursos disponíveis em universidades brasileiras. Aqui, **não podemos usar o map**: A quantidade de cursos pode ser maior ou menor que a quantidade de universidades, então não conseguimos aplicar o map, já que ele retorna um array de mesmo tamanho do array que é chamado. Mas, olha só: e se começarmos com um array vazio e ir acrescentando nele cada curso que virmos pela frente? Para isso, podemos usar o reduce! Mas atenção: o reduce vai iterar apenas cada universidade, que, por sua vez, pode ter mais de um curso. Logo, para conseguirmos adicionar todos de uma vez, é necessário iterar o array de cursos de cada universidade. E, a cada iteração dessa, adicionar ao nosso array inicial (do primeiro reduce) o curso iterado. Isso é importante porque queremos obter um *array de cursos*.
 
-Observe que o **acumulador do segundo reduce** é igual ao **acumulador do primeiro reduce**. Consegue perceber a ordem de execução deste exercício? Tem rodá-lo utilizando o debugger do VS Code para ajudar em sua visualização.
+Observe que o **acumulador do segundo reduce** é igual ao **acumulador do primeiro reduce**. Consegue perceber a ordem de execução deste exercício? Tente rodá-lo utilizando o debugger do VS Code para ajudar em sua visualização.
 
 ```javascript
 
