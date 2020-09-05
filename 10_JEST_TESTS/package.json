@@ -1,0 +1,16 @@
+{
+  "name": "10_JEST_TESTS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.4.2",
+    "node-fetch": "^2.6.0"
+  }
+}
