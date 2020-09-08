@@ -16,7 +16,8 @@ Trybe is a 1-year intensive course on becoming a full-stack web developer. Durin
 * SQL
 * No SQL (w/ mongodb)
 * Unit Tests
-* Python & Basic Algorithm logic
+* Python
+* Algorithm logic
 
 ### Summary
 
@@ -30,3 +31,5 @@ If you want quick access to each module, you can either select their respective 
 * [Module 06 - Full Front-End Introduction](https://github.com/fabiosenracorrea/Trybe/tree/master/06_FRONTEND_INTRO)
 * [Module 07 - Javascript ES6 & Unitary Tests](https://github.com/fabiosenracorrea/Trybe/tree/master/07_JAVASCRIPT_ES6)
 * [Module 08 - Higher Order Functions (HOF)](https://github.com/fabiosenracorrea/Trybe/tree/master/08_HIGHER_ORDER_FUNCTIONS)
+* [Module 09 - Asynchronous Javascript](https://github.com/fabiosenracorrea/Trybe/tree/master/09_ASYNCHRONOUS_JAVASCRIPT)
+* [Module 10 - Jest](https://github.com/fabiosenracorrea/Trybe/tree/master/10_JEST_TESTS)
