@@ -55,7 +55,7 @@ Utilizando a sintaxe de Promise, faça um teste que verifique o resultado da fun
 
 ### Exercise 5
 
-(same as for but with async/await)
+(same as exercise 4 but with async/await)
 
 [check 4 and 5 out](./Async_Tests/database.test.js)
 
@@ -78,7 +78,7 @@ Here i did a solution using async and another using Promise (direct use)[Check i
 
 Unitary tests are a most on modern applications. They save you a lot of time (and money). Understanding how to work with the different types of code JS can have to build optimized and correct tests for each case is a must.
 
-That said, dealing with callbacks and async functions on JS is one of the hardest parts of the language, it wouldnt be different when it comes to testing.
+That said, dealing with callbacks and async functions on JS is one of the hardest parts of the language, it wouldn't be different when it comes to testing.
 
 ###### Feedback
 
