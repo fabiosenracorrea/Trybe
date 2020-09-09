@@ -13,7 +13,7 @@ function createCustomElement(element, className, innerText) {
   return e;
 }
 
-function createProductItemElement({ sku, name, image }) {
+function createProductItemElement({ id: sku, title: name, thumbnail: image }) {
   const section = document.createElement('section');
   section.className = 'item';
 
@@ -38,7 +38,8 @@ function calculateCartTotalPrice() {
 
   if (productsSaved && productsSaved[0]) {
     const totalPrice = productsSaved.reduce((start, next) => start + next.salePrice, 0);
-    priceElement.innerText = `${totalPrice}`;
+    const priceFormated = totalPrice.toFixed(2);
+    priceElement.innerText = `${priceFormated}`;
   } else {
     priceElement.remove();
   }
@@ -65,6 +66,7 @@ function clearCarfOffScreenIfEmpty() {
     itemContainer.style.flexBasis = '100%';
     return;
   }
+
   cartContainer.style.display = 'flex';
   itemContainer.style.flexBasis = '70%';
 }
@@ -93,7 +95,7 @@ function createCartItemElement({ sku, name, salePrice, image }) {
   container.className = 'cart-item-container';
 
   p.className = 'cart__item';
-  p.innerText = `SKU: ${sku} | NAME: ${name} | PRICE: $${salePrice}`;
+  p.innerText = `Produto: ${name} \n\n Código: ${sku} \n\n Preço: $${salePrice}`;
 
   container.appendChild(img);
   container.appendChild(p);
@@ -112,15 +114,14 @@ function loadCartItems() {
 
   if (productsSaved) {
     productsSaved.forEach((product) => {
-      const { sku, name, salePrice, image } = product;
-      const cartItem = createCartItemElement({ sku, name, salePrice, image });
+      const cartItem = createCartItemElement(product);
       addClickedItemToCart(cartItem);
     });
     calculateCartTotalPrice();
   }
 }
 
-function saveToLocalStorage({ sku, name, salePrice, image }) {
+function saveToLocalStorage({ id: sku, title: name, price: salePrice, thumbnail: image }) {
   const productsSaved = JSON.parse(localStorage.getItem('products')) || [];
 
   const itemSaved = productsSaved.find(item => item.sku === sku);
@@ -162,16 +163,12 @@ function buildAvailableProducts(products) {
   const container = document.querySelector('.items');
 
   products.forEach((product) => {
-    const {
-      id: sku, title: name, thumbnail: image, price: salePrice,
-    } = product;
-
-    const productElement = createProductItemElement({ sku, name, image });
+    const productElement = createProductItemElement(product);
 
     productElement
       .querySelector('.item__add')
       .addEventListener('click', () => {
-        saveToLocalStorage({ sku, name, salePrice, image });
+        saveToLocalStorage(product);
         loadCartItems();
         calculateCartTotalPrice();
       });
@@ -218,7 +215,6 @@ async function updateCartProducts(product) {
     const productInfo = await productNow.json();
     const { title: name, price: salePrice, thumbnail: image } = productInfo;
 
-
     const updatedProduct = {
       ...product,
       name,
@@ -235,7 +231,7 @@ async function updateCartProducts(product) {
 async function updateCartValues() {
   const productsSaved = JSON.parse(localStorage.getItem('products'));
 
-  if (productsSaved && productsSaved[0]){
+  if (productsSaved && productsSaved[0]) {
     const updatedProducts = await productsSaved.reduce(async (start, item) => {
       const updatedItem = await updateCartProducts(item);
 

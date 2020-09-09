@@ -34,6 +34,7 @@ header , body , h2 {
   justify-content: space-around;
   padding: 8px;
   width: 100%;
+  background-color: #f0f0f5;
 }
 
 .items {
@@ -46,13 +47,15 @@ header , body , h2 {
 }
 
 .item {
-  border: 1px solid black;
+  border: 1px solid rgb( 82 , 228 , 82 );
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   height: auto;
   margin: 5px;
   width: 200px;
+  background-color: white;
+  padding: 8px;
 }
 
 .item .item__sku {
@@ -100,20 +103,22 @@ header , body , h2 {
   border-radius: 8px;
   color: white;
   font-weight: 700;
-  height: 30px;
+  height: 35px;
   margin: 0 auto;
   order: 3;
-  width: 50%;
+  width: 30%;
 }
 
 .cart .total-price {
   margin: 10px auto;
   order: 2;
   text-align: center;
+  font-weight: 700;
 }
 
 .total-price:before {
   content: 'Total: $';
+  font-weight: 400;
 }
 
 .cart .cart__title {
