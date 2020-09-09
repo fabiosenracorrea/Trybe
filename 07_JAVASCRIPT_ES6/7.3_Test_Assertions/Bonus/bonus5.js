@@ -25,9 +25,8 @@ function Verify(ps) {
 
   } catch (err) {
     errorCount += 1;
-    if (errorCount > 2) {
-      throw new Error(err);
-    }
+
+    if (errorCount > 2) throw new Error(err);
   }
 
   try {
@@ -38,9 +37,8 @@ function Verify(ps) {
 
   } catch (err) {
     errorCount += 1;
-    if (errorCount > 2) {
-      throw new Error(err);
-    }
+
+    if (errorCount > 2) throw new Error(err);
   }
 
   try {
@@ -52,9 +50,8 @@ function Verify(ps) {
 
   } catch (err) {
     errorCount += 1;
-    if (errorCount > 2) {
-      throw new Error(err);
-    }
+
+    if (errorCount > 2) throw new Error(err);
   }
 
   try {
@@ -66,9 +63,8 @@ function Verify(ps) {
 
   } catch (err) {
     errorCount += 1;
-    if (errorCount > 2) {
-      throw new Error(err);
-    }
+
+    if (errorCount > 2) throw new Error(err);
   }
 }
 
