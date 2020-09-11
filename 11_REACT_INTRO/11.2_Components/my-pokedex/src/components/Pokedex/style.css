@@ -1,0 +1,45 @@
+.pokedex-ui {
+  display: flex;
+}
+
+.pokemon-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 2rem;
+}
+
+.pass-pokemon {
+  margin-top: calc(6.5rem + 1rem);
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  width: 2rem;
+  height: 2rem;
+  background-color: green;
+  border: 0.5px solid black;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(6, 65, 6);
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+.left-btn {
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+
+
+.right-btn {
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
