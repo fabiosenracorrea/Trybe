@@ -33,3 +33,5 @@ If you want quick access to each module, you can either select their respective 
 * [Module 08 - Higher Order Functions (HOF)](https://github.com/fabiosenracorrea/Trybe/tree/master/08_HIGHER_ORDER_FUNCTIONS)
 * [Module 09 - Asynchronous Javascript](https://github.com/fabiosenracorrea/Trybe/tree/master/09_ASYNCHRONOUS_JAVASCRIPT)
 * [Module 10 - Jest](https://github.com/fabiosenracorrea/Trybe/tree/master/10_JEST_TESTS)
+* [Module 11 - React Introduction](https://github.com/fabiosenracorrea/Trybe/tree/master/11_REACT_INTRO)
+* [Module 12 - React States, Events and Forms](https://github.com/fabiosenracorrea/Trybe/tree/master/12_REACT_STATE_EVENT_FORMS)
