@@ -1,0 +1,11 @@
+h1 , h2 , h3 , form , header , p , input , label , button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+select , body , footer , div , span , img {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

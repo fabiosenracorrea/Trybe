@@ -1,0 +1,77 @@
+.add-movie {
+  margin: 16px auto 0;
+  max-width: 700px;
+  padding: 12px;
+  text-align: center;
+  width: 85%;
+}
+
+.add-movie .input-group {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 12px 0;
+}
+
+.add-movie .input-group .input-container {
+  width: 100%;
+}
+
+.add-movie .input-group .input-container + .input-container {
+  margin-left: 6px;
+}
+
+.add-movie .input-group .input-container input {
+  border: 1px solid #343a40;
+  border-radius: 5px;
+  height: 34px;
+  padding: 4px;
+  width: 100%;
+}
+
+.add-movie .input-group .input-container select {
+  background-color: white;
+  border-radius: 5px;
+  height: 34px;
+  padding: 4px;
+  width: 100%;
+}
+
+.add-movie label {
+  display: block;
+  margin: 6px 0;
+}
+
+.add-movie .textarea-container textarea {
+  min-height: 50px;
+  resize: vertical;
+  width: 100%;
+}
+
+.add-movie button {
+  background-color: rgb(236, 116, 35);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  margin-top: 20px;
+  padding: 8px;
+}
+
+.add-movie button:active {
+  transform: translateY(4px);
+}
+
+@media ( max-width : 500px ) {
+
+  .add-movie .input-group {
+    display: block;
+  }
+
+  .add-movie .input-group .input-container input {
+    width: 100%;
+  }
+
+  .add-movie .input-group .input-container label {
+    margin: 12px 0;
+  }
+}
