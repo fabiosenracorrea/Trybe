@@ -35,3 +35,4 @@ If you want quick access to each module, you can either select their respective 
 * [Module 10 - Jest](https://github.com/fabiosenracorrea/Trybe/tree/master/10_JEST_TESTS)
 * [Module 11 - React Introduction](https://github.com/fabiosenracorrea/Trybe/tree/master/11_REACT_INTRO)
 * [Module 12 - React States, Events and Forms](https://github.com/fabiosenracorrea/Trybe/tree/master/12_REACT_STATE_EVENT_FORMS)
+* [Module 13 - React Component Lifecycle & Routing](https://github.com/fabiosenracorrea/Trybe/tree/master/13_REACT_LIFECYCLE_AND_ROUTING)
