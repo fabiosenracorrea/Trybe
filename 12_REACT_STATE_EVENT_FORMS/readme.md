@@ -12,7 +12,7 @@ On this short module, we cover:
 
 * [State & Events on React](./12.1_STATE_EVENTS)
 * [Form Events](./12.2_FORMS)
-* [Project 01 - Movie Cards Library (2/3)](./Project_01_Movie_Library)
+* [Project 01 - Movie Cards Library (2/3)](./Project_01_Stateful_Movie_Library)
 
 To check each part of the module, simply click on the desired link above.
 
