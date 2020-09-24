@@ -137,8 +137,6 @@ As a highlight for the project, the CSS used to create the movie card Library (o
 
 Obviously it takes more CSS to style the cards themselves, but this small setting pretty much kills it.
 
-Because there could be different states responsible for filtering ALL movies, it was decided that applying 3 instances of pretty straight forward '.filter' calls would be the cleanest way to achieve this goal. Any particular feedback on this logic would be awesome, tho.
-
 ###### Feedback
 
 As always, any feedback or suggestion is welcomed.
