@@ -1,0 +1,27 @@
+.loading-container {
+  color: white;
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  align-content: center;
+}
+
+.loading-container .loader-container {
+  display: flex;
+  align-items: center;
+}
+
+.loading-container .loader {
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid rgb(95, 54, 95); /* Blue */
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  animation: spin 2s linear infinite;
+  margin-right: 12px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
