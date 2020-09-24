@@ -115,7 +115,7 @@ Ao clicar neste link, faça uma requisição utilizando a função `deleteMovie`
 
 ### Grade
 
-This project got a **100%/100%** grade and can be checked out entirely on [here](https://github.com/tryber/sd-06-project-movie-card-library-stateful/pull/90).
+This project got a **100%/100%** grade and can be checked out entirely on [here](https://github.com/tryber/sd-06-project-movie-card-library-crud/pull/83).
 
 
 #### Comments
