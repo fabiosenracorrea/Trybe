@@ -1,0 +1,162 @@
+.product-detail-content {
+  min-height: 80vh;
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 10px 20px;
+}
+
+.product-detail-container {
+  background-color: white;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.product-detail-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-details-division {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-details-division .product-detail-img {
+  width: 100px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-info .product-detail-price {
+  font-weight: 700;
+  color: rgb(134, 184, 121);
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.product-detail-free-shipping {
+  position: relative;
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.product-detail-free-shipping:before {
+  content: '\f48b';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: gold;
+  margin-right: 10px;
+}
+
+.product-add-cart-container {
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.product-add-cart-container p {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.product-add-cart-container .add-minus {
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 2px;
+  border: 1px solid rgb(134, 184, 121);
+  background-color: rgb(134, 184, 121);
+  font-weight: 700;
+  color: white;
+}
+
+.product-add-cart-container .add-minus:hover {
+  border-color: green;
+}
+
+.product-add-cart-container input {
+  width: 45px;
+}
+
+.product-add-cart-container button {
+  padding: 2px 6px;
+  height: 24px;
+  background-color: rgb(134, 184, 121);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+}
+
+.product-detail-more-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px 20px;
+}
+
+.product-detail-more-info div {
+  margin: 5px 0;
+}
+
+.product-detail-more-info div:nth-child(2),
+.product-detail-more-info div:nth-child(4),
+.product-detail-more-info div:nth-child(6),
+.product-detail-more-info div:nth-child(8),
+.product-detail-more-info div:nth-child(10),
+.product-detail-more-info div:nth-child(12),
+.product-detail-more-info div:nth-child(14),
+.product-detail-more-info div:nth-child(16) {
+  text-align: end;
+}
+
+.product-reviews {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.user-reviews {
+  margin: 40px 0;
+}
+
+.user-reviews .comment {
+  padding: 20px 10px;
+  border-radius: 8px;
+  border: 2px solid rgb(164, 243, 164);
+  background-color: white;
+}
+
+.user-reviews .comment + .comment {
+  margin-top: 25px;
+}
+
+.user-reviews .comment-header {
+  display: flex;
+}
+
+.user-reviews .comment-header p {
+  margin-right: 20px;
+  position: relative;
+}
+
+.user-reviews .comment-header p:before {
+  content: '\f007';
+  font-weight: 900;
+  font-family: 'Font Awesome 5 Free', sans-serif;
+  margin-right: 8px;
+}
+
+.user-reviews .comment-body {
+  margin-top: 18px;
+  text-align: start;
+}

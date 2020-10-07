@@ -1,0 +1,146 @@
+.empty-cart-message-container,
+.shopping-cart-page {
+  min-height: 80vh;
+  padding: 0 20px;
+}
+
+.shopping-cart-page {
+  max-width: 1300px;
+  margin: 40px auto;
+}
+
+.shopping-cart-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.shopping-cart-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shopping-cart-content {
+  flex-basis: 70%;
+}
+
+.shopping-cart-items {
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.shopping-cart-items + .shopping-cart-items {
+  margin-top: 20px;
+}
+
+.cart-item-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.cart-item-info {
+  text-align: end;
+}
+
+.cart-item-price {
+  font-weight: 700;
+  color: rgb(134, 184, 121);
+  margin-bottom: 8px;
+}
+
+.shopping-cart-product-quantity {
+  margin: 8px 0;
+}
+
+.plus-minus {
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 2px;
+  border: 1px solid rgb(134, 184, 121);
+  background-color: rgb(134, 184, 121);
+  font-weight: 700;
+  color: white;
+}
+
+.plus-minus:hover {
+  border-color: green;
+}
+
+.cart-item-btn-container button,
+.shopping-cart-resume button,
+.shopping-cart-resume a {
+  padding: 2px 6px;
+  height: 24px;
+  background-color: rgb(134, 184, 121);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+}
+
+.shopping-cart-resume {
+  flex-basis: 30%;
+  background-color: white;
+  border-radius: 8px;
+  margin-left: 24px;
+
+  padding: 8px 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.shopping-cart-resume h4 {
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.value-container {
+  font-size: 80%;
+}
+
+.item-value p:last-child {
+  text-align: end;
+  font-weight: 700;
+}
+
+.value-container .total-value {
+  text-align: end;
+  margin-top: 8px;
+  padding-top: 4px;
+  border-top: 2px dashed grey;
+  color: rgb(134, 184, 121);
+  font-weight: 700;
+}
+
+
+.resume-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shopping-cart-resume a {
+  font-size: 80%;
+  display: flex;
+  align-items: center;
+}
+
+/* NO ITEMS IN CART SECTION */
+
+.empty-cart-message-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-cart-message-container span {
+  font-size: 3rem;
+  margin-right: 2rem;
+}

@@ -1,0 +1,71 @@
+.app-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 12px 20px;
+  background-image: linear-gradient(360deg, rgb(164, 243, 164), rgb(79, 197, 124));
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-title .header-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.app-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.app-header nav a {
+  font-size: 2.5rem;
+  color: black;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-quantity {
+  background-color: slategray;
+  border-radius: 100%;
+  font-size: 15px;
+  height: 18px;
+  position: absolute;
+  right: -25%;
+  top: -15%;
+  text-align: center;
+  width: 18px;
+  color: white;
+}
+
+.shake-cart {
+  animation: shake 0.5s linear;
+}
+
+/* https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

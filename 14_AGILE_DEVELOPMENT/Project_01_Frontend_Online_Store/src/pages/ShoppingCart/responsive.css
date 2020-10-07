@@ -1,0 +1,11 @@
+@media (max-width: 560px) {
+
+  .shopping-cart-container {
+    flex-direction: column;
+  }
+
+  .shopping-cart-resume {
+    margin-top: 40px;
+  }
+}
+

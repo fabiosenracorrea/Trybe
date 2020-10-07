@@ -1,0 +1,63 @@
+.card {
+  background-color: white;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border: 2px solid #f0f0f5;
+  border-radius: 5px;
+}
+
+.card.added {
+  border-color: rgb(166, 33, 243);
+}
+
+.card:hover {
+  border-color: rgb(164, 243, 164);
+}
+
+.card h3 {
+  text-align: center;
+  font-size: 75%;
+  height: 25px;
+}
+
+.card .product-img {
+  width: 100px;
+  height: 100px;
+  margin: 4px 0;
+}
+
+.card a {
+  color: rgb(134, 184, 121);
+  transition: color 0.2s;
+}
+
+.card a:hover {
+  color: rgb(7, 90, 7);
+}
+
+.card button {
+  padding: 2px 6px;
+  height: 36px;
+  background-color: rgb(134, 184, 121);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+}
+
+.card .product-free-shipping {
+  position: relative;
+}
+
+.card .product-free-shipping:before {
+  content: '\f48b';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: gold;
+  margin-right: 10px;
+}
+

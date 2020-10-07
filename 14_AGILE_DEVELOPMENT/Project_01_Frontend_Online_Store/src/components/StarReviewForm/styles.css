@@ -1,0 +1,72 @@
+.star-rating-container input {
+  display: none;
+}
+
+.star-rating-container label {
+  color: grey;
+  font-size: 24px;
+  padding: 4px;
+  transition: color 0.1s ease;
+}
+
+.star-rating-container input:not(:checked) ~ label:hover,
+.star-rating-container input:not(:checked) ~ label:hover ~ label {
+  color: rgb(60, 184, 255);
+}
+
+.star-rating-container input:checked ~ label {
+  color: rgb(255, 251, 0)
+}
+
+.comment-rating {
+  color: gold;
+}
+
+.comment-no-rating {
+  color: grey;
+}
+
+.form-email-rating,
+.comment-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+
+.form-email-rating input {
+  margin-right: 20px;
+  padding: 8px 4px;
+  height: 28px;
+  border-radius: 8px;
+  border: none;
+  width: 40%;
+}
+
+
+.comment-btn-container textarea {
+  margin-right: 20px;
+  padding: 8px;
+  height: 28px;
+  border-radius: 8px;
+  border: none;
+  min-height: 48px;
+  width: 80%;
+  resize: vertical;
+}
+
+.comment-btn-container button {
+  padding: 2px 6px;
+  height: 24px;
+  background-color: rgb(134, 184, 121);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  outline: none;
+}
+
+.comment-btn-container button:active {
+  transform: translateY(4px);
+}

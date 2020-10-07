@@ -1,0 +1,11 @@
+@media (max-width: 560px) {
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-content p {
+    margin-top: 10px;
+  }
+}

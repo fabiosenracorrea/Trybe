@@ -1,0 +1,31 @@
+@media (max-width: 560px) {
+
+  .search-product-content {
+    flex-direction: column;
+  }
+
+  .category-container {
+    order: 2;
+    border: none;
+  }
+
+  .category-container ul {
+    column-gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin-top: 16px;
+    padding: 16px;
+    row-gap: 1rem;
+  }
+
+  .category-container ul li {
+    height: 36px;
+  }
+
+  .category-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
