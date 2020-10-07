@@ -6,7 +6,7 @@ This project was done in 4 days of work by a group of 4 students. It's main purp
 
 You can check the project functionality and overall look on the gif below. The group decided to go for a 'simple' CSS, in which the main purpose is to deliver a functional *and responsive* interface, not really worrying too much about the whole design.
 
-![project overview](./project-overview.gif)
+![project overview](./project_overview.gif)
 
 ### What was proposed here
 
