@@ -116,3 +116,23 @@ form .input-btn-container select {
   font-size: 4rem;
   margin-right: 2rem;
 }
+
+/* loading */
+
+.loader {
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid rgb(136, 212, 136);; /* Blue */
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.product-list .no-product-container span.loading-text {
+  font-size: 2rem;
+}

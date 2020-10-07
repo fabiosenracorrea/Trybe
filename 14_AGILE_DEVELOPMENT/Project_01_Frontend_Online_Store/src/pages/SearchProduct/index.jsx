@@ -31,6 +31,7 @@ class SearchProduct extends Component {
       cartIds: [],
       cartProductsQuantity: 0,
       sort: '',
+      loading: false,
     };
   }
 
@@ -67,35 +68,45 @@ class SearchProduct extends Component {
     });
   }
 
-  async handleSearchProduct(event) {
+  handleSearchProduct(event) {
     event.preventDefault();
 
-    const { categoryId, inputValue } = this.state;
-
-    if (!inputValue) {
-      return;
-    }
-
-    const {
-      results: products,
-    } = await getProductsFromCategoryAndQuery(categoryId, inputValue);
-
     this.setState({
-      products,
-    });
+      loading: true,
+    }, async () => {
+      const { categoryId, inputValue } = this.state;
+
+      if (!inputValue) {
+        return;
+      }
+
+      const {
+        results: products,
+      } = await getProductsFromCategoryAndQuery(categoryId, inputValue);
+
+      this.setState({
+        products,
+        loading: false,
+      });
+    })
   }
 
-  async handleCategoryClick(categoryId) {
-    const { inputValue } = this.state;
-
-    const {
-      results: products,
-    } = await getProductsFromCategoryAndQuery(categoryId, inputValue);
-
+  handleCategoryClick(categoryId) {
     this.setState({
-      products,
-      categoryId,
-    });
+      loading: true,
+    }, async () => {
+      const { inputValue } = this.state;
+
+      const {
+        results: products,
+      } = await getProductsFromCategoryAndQuery(categoryId, inputValue);
+
+      this.setState({
+        products,
+        categoryId,
+        loading: false,
+      });
+    })
   }
 
   addItemToCart(id) {
@@ -163,7 +174,7 @@ class SearchProduct extends Component {
   }
 
   render() {
-    const { categories, inputValue, products, cartProductsQuantity, cartIds } = this.state;
+    const { categories, inputValue, products, cartProductsQuantity, cartIds, loading } = this.state;
     return (
       <>
         <Header cartProductsQuantity={ cartProductsQuantity } />
@@ -215,7 +226,7 @@ class SearchProduct extends Component {
             </form>
 
             <div className="product-list">
-              {products[0]
+              {(products[0] && !loading)
                 ? products.map(({ title, thumbnail, price, id, shipping }) => (
 
                   <ProductCard
@@ -243,8 +254,20 @@ class SearchProduct extends Component {
                 ))
                 : (
                   <div className="no-product-container">
-                    <span className="far fa-sad-tear" />
-                    <p className="no-products">Nenhum produto foi encontrado</p>
+                    {loading
+                      ? (
+                        <>
+                          <span className="loader" />
+                          <span className="loading-text">loading...</span>
+                        </>
+                      )
+                      : (
+                        <>
+                          <span className="far fa-sad-tear" />
+                          <p className="no-products">Nenhum produto foi encontrado</p>
+                        </>
+                      )
+                    }
                   </div>
                 )}
             </div>
