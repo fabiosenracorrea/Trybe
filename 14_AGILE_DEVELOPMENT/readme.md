@@ -6,7 +6,19 @@ This directory covers Trybe's 14th module.
 
 We step off the 'hard skill content lane' for a module to learn more about Agile Development!
 
-- TBA!!
+As it's known, there are a lot of *frameworks* surrounding Agile's ideas. On this module, after reading and understanding more about the [Agile Manifesto](https://agilemanifesto.org/), we focus our energy on 2 of said frameworks:
+
+* **SCRUM**: Centered around *sprints* of development, pre-determined period of time dedicated to developing what was, also, previously defined that should be done. It's based on quick, directly to the point, daily meetings so the team can communicate with each other and focus on getting things done. A visual representation of this would be:
+
+![scrum example](./images/scrum.png)
+
+* **KANBAN**: A visual way of dividing and keeping track of everything that needs to be done (on an entire project or on a sprint). It's usually a board (or virtual board), accessible generally by the entire team. It should look something like:
+
+![kanban example](./images/kanban.jpg)
+
+If you find this format familiar, this is exactly what [Trello](https://trello.com/) is based on. If you just found out about it, i highly recommend checking it out! It's free and really easy to organize even your daily tasks.
+
+---
 
 Because this whole module references team work, the only 'hard skill' we cover is a Project to develop the front end of an online store *in a group of 4 students*. You can check it out:
 
