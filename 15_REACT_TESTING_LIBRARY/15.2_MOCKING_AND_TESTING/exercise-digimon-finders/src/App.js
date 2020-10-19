@@ -5,7 +5,10 @@ import Digimon from './Digimon';
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { digimon: { name: '' }, searchDigimon: '', isFetching: false, errorMessage: '' };
+
+    this.highlight = this.highlight.bind(this);
+
+    this.state = { digimon: { name: '' }, searchDigimon: '', isFetching: false, errorMessage: '', highlight: false };
   }
 
   inputValue = (value) => {
@@ -13,6 +16,13 @@ class App extends React.Component {
       ...state,
       searchDigimon: value,
     }));
+  }
+
+  highlight() {
+    const { highlight } = this.state;
+    this.setState({
+      highlight:!highlight,
+    })
   }
 
   requestDigimon = async () => {
@@ -30,7 +40,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { digimon, searchDigimon, isFetching, errorMessage } = this.state;
+    const { digimon, searchDigimon, isFetching, errorMessage, highlight } = this.state;
     return (
       <div className="App">
         <input
@@ -48,7 +58,7 @@ class App extends React.Component {
         </button>
         { isFetching && !errorMessage
           ? <Digimon digimon={digimon} />
-          : <h1>{errorMessage || 'Faça uma pesquisa'}</h1>
+          : <h1 className={`hl1 ${highlight ? 'hl2' : ''}`} onClick={this.highlight}>{errorMessage || 'Faça uma pesquisa'}</h1>
         }
       </div>
     );

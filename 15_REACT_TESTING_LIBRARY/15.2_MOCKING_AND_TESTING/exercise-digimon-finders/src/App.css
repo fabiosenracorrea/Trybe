@@ -8,3 +8,14 @@
   justify-content: center;
   text-align: center;
 }
+
+h1.hl1 {
+  background: linear-gradient(90deg, rgba(182, 90, 90, 0) 50%, rgb(138, 48, 48) 0);
+  background-position: 0;
+  background-size: 200%;
+  transition: background-position 0.8s;
+}
+
+h1.hl2 {
+  background-position: -100%;
+}
