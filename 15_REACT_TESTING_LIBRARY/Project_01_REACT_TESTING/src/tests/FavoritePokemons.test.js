@@ -6,20 +6,20 @@ import App from '../App';
 
 describe('FavoritePokemon.jsx addition', () => {
   it('should display no favorite pokemon if none is previously selected', () => {
-    const { queryByText } = render(
+    const { getByText } = render(
       <MemoryRouter>
         <FavoritePokemons />
       </MemoryRouter>,
     );
 
     const noFavoriteMessage = new RegExp('no favorite pokemon found', 'i');
-    const noFavoritesElement = queryByText(noFavoriteMessage);
+    const noFavoritesElement = getByText(noFavoriteMessage);
 
     expect(noFavoritesElement).toBeInTheDocument();
   });
 
   it('should list all favorite pokemon', () => {
-    const { getByText, getByTestId, getByRole, getAllByText, queryByText } = render(
+    const { getByText, getByTestId, getByRole, getAllByText } = render(
       <MemoryRouter>
         <App />
       </MemoryRouter>,
@@ -50,8 +50,8 @@ describe('FavoritePokemon.jsx addition', () => {
 
     fireEvent.click(getByText(/favorite\spokémons/i));
 
-    const firstPokemonIsOnScreen = queryByText(firstPokemonName);
-    const secondPokemonIsOnScreen = queryByText(secondPokemonName);
+    const firstPokemonIsOnScreen = getByText(firstPokemonName);
+    const secondPokemonIsOnScreen = getByText(secondPokemonName);
 
     expect(firstPokemonIsOnScreen).toBeInTheDocument();
     expect(secondPokemonIsOnScreen).toBeInTheDocument();
@@ -104,11 +104,11 @@ describe('FavoritePokemon.jsx addition', () => {
     fireEvent.click(getByText(/favorite\spokémons/i));
 
     favoriteNames.forEach((pokemon) => {
-      const pokemonNameElement = queryByText(pokemon);
+      const pokemonNameElement = getByText(pokemon);
       expect(pokemonNameElement).toBeInTheDocument();
     });
 
     const pokemonNotFavoriteName = queryByText(pokemonNotFavorited);
-    expect(pokemonNotFavoriteName).toBeNull();
+    expect(pokemonNotFavoriteName).not.toBeInTheDocument();
   });
 });

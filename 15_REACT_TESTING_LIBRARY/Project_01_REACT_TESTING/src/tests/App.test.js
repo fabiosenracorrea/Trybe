@@ -6,12 +6,12 @@ import App from '../App';
 
 describe('App.jsx tests', () => {
   it('renders a heading with the text `Pokédex`', () => {
-    const { queryByText } = render(
+    const { getByText } = render(
       <MemoryRouter>
         <App />
       </MemoryRouter>,
     );
-    const heading = queryByText(/Pokédex/i);
+    const heading = getByText(/Pokédex/i);
     expect(heading).toBeInTheDocument();
   });
 
@@ -102,7 +102,7 @@ describe('App.jsx tests', () => {
   it('redirects to Not Found page when unknown URL is given', () => {
     const history = createMemoryHistory();
 
-    const { queryByText } = render(
+    const { getByText } = render(
       <Router history={ history }>
         <App />
       </Router>,
@@ -110,7 +110,7 @@ describe('App.jsx tests', () => {
 
     history.push('/nsifjsdijfiosdjfo');
 
-    const notFoundPage = queryByText(/page\srequested\snot\sfound/i);
+    const notFoundPage = getByText(/page\srequested\snot\sfound/i);
 
     expect(notFoundPage).toBeInTheDocument();
   });

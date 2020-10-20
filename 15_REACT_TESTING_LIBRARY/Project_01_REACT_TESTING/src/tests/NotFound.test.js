@@ -5,17 +5,17 @@ import NotFound from '../components/NotFound';
 
 describe('NotFound.jsx tests', () => {
   it('should contain an H2 heading with specific text', () => {
-    const { queryByText } = render(
+    const { getByText } = render(
       <MemoryRouter>
         <NotFound />
       </MemoryRouter>,
     );
 
-    const aboutTitle = queryByText(/page\srequested\snot\sfound/i);
+    const aboutTitle = getByText(/page\srequested\snot\sfound/i);
     expect(aboutTitle).toBeInTheDocument();
     expect(aboutTitle.tagName).toBe('H2');
 
-    const cryingEmoji = queryByText('😭');
+    const cryingEmoji = getByText('😭');
     expect(cryingEmoji).toBeInTheDocument();
   });
 

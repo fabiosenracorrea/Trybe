@@ -119,7 +119,7 @@ describe('PokemonDetails.jsx testing detailed info showed on screen', () => {
 
     history.push(`pokemons/${pokemonID}`);
 
-    const { queryByText } = render(
+    const { getByText } = render(
       <Router history={ history }>
         <PokemonDetails
           pokemons={ testPokemon }
@@ -131,7 +131,7 @@ describe('PokemonDetails.jsx testing detailed info showed on screen', () => {
     );
 
     const patternWanted = new RegExp(`${pokemonRendered.name} details`, 'i');
-    const displayedText = queryByText(patternWanted);
+    const displayedText = getByText(patternWanted);
 
     expect(displayedText).toBeInTheDocument();
   });
@@ -154,7 +154,7 @@ describe('PokemonDetails.jsx testing detailed info showed on screen', () => {
 
     const moreDetailsLink = queryByText(/more\sdetails/i);
 
-    expect(moreDetailsLink).toBeNull();
+    expect(moreDetailsLink).not.toBeInTheDocument();
   });
 
   it('should have a summary section using H2 tag', () => {
@@ -162,7 +162,7 @@ describe('PokemonDetails.jsx testing detailed info showed on screen', () => {
 
     history.push(`pokemons/${pokemonID}`);
 
-    const { queryByText } = render(
+    const { getByText } = render(
       <Router history={ history }>
         <PokemonDetails
           pokemons={ testPokemon }
@@ -173,7 +173,7 @@ describe('PokemonDetails.jsx testing detailed info showed on screen', () => {
       </Router>,
     );
 
-    const summaryElement = queryByText(/summary/i);
+    const summaryElement = getByText(/summary/i);
 
     expect(summaryElement).toBeInTheDocument();
     expect(summaryElement.tagName).toBe('H2');
@@ -184,7 +184,7 @@ describe('PokemonDetails.jsx testing detailed info showed on screen', () => {
 
     history.push(`pokemons/${pokemonID}`);
 
-    const { queryByText } = render(
+    const { getByText } = render(
       <Router history={ history }>
         <PokemonDetails
           pokemons={ testPokemon }
@@ -195,7 +195,7 @@ describe('PokemonDetails.jsx testing detailed info showed on screen', () => {
       </Router>,
     );
 
-    const summaryElement = queryByText(pokemonRendered.summary);
+    const summaryElement = getByText(pokemonRendered.summary);
 
     expect(summaryElement).toBeInTheDocument();
     expect(summaryElement.tagName).toBe('P');
@@ -208,7 +208,7 @@ describe('PokemonDetails.jsx testing map section', () => {
 
     history.push(`pokemons/${pokemonID}`);
 
-    const { queryByText } = render(
+    const { getByText } = render(
       <Router history={ history }>
         <PokemonDetails
           pokemons={ testPokemon }
@@ -220,7 +220,7 @@ describe('PokemonDetails.jsx testing map section', () => {
     );
 
     const patternWanted = new RegExp(`^Game Locations of ${pokemonRendered.name}$`, 'i');
-    const displayedText = queryByText(patternWanted);
+    const displayedText = getByText(patternWanted);
 
     expect(displayedText).toBeInTheDocument();
     expect(displayedText.tagName).toBe('H2');
@@ -231,7 +231,7 @@ describe('PokemonDetails.jsx testing map section', () => {
 
     history.push(`pokemons/${pokemonID}`);
 
-    const { queryByText, queryAllByAltText } = render(
+    const { getByText, getAllByAltText } = render(
       <Router history={ history }>
         <PokemonDetails
           pokemons={ testPokemon }
@@ -243,12 +243,12 @@ describe('PokemonDetails.jsx testing map section', () => {
     );
 
     pokemonRendered.foundAt.forEach((place) => {
-      const locationOnScreen = queryByText(place.location);
+      const locationOnScreen = getByText(place.location);
 
       expect(locationOnScreen).toBeInTheDocument();
 
       const altPattern = new RegExp(`^${pokemonRendered.name} location$`, 'i');
-      const locationImages = queryAllByAltText(altPattern);
+      const locationImages = getAllByAltText(altPattern);
 
       expect(locationImages.length).toBe(pokemonRendered.foundAt.length);
 
@@ -264,7 +264,7 @@ describe('PokemonDetails.jsx user favorite interaction', () => {
 
     history.push(`pokemons/${pokemonID}`);
 
-    const { getByRole, queryByAltText, rerender } = render(
+    const { getByRole, getByAltText, rerender } = render(
       <Router history={ history }>
         <PokemonDetails
           pokemons={ testPokemon }
@@ -290,7 +290,7 @@ describe('PokemonDetails.jsx user favorite interaction', () => {
     );
 
     const altFormat = new RegExp(`^${pokemonRendered.name} is marked as favorite$`, 'i');
-    const favoriteStarElement = queryByAltText(altFormat);
+    const favoriteStarElement = getByAltText(altFormat);
 
     expect(favoriteStarElement).toBeInTheDocument();
 
@@ -343,7 +343,7 @@ describe('PokemonDetails.jsx user favorite interaction', () => {
       if (index % DIVISOR === EVEN) {
         expect(favoriteStarElement).toBeInTheDocument();
       } else {
-        expect(favoriteStarElement).toBeNull();
+        expect(favoriteStarElement).not.toBeInTheDocument();
       }
     });
   });
@@ -353,7 +353,7 @@ describe('PokemonDetails.jsx user favorite interaction', () => {
 
     history.push(`pokemons/${pokemonID}`);
 
-    const { queryByText } = render(
+    const { getByText } = render(
       <Router history={ history }>
         <PokemonDetails
           pokemons={ testPokemon }
@@ -364,7 +364,7 @@ describe('PokemonDetails.jsx user favorite interaction', () => {
       </Router>,
     );
 
-    const favoriteCheckBox = queryByText(/pokémon\sfavoritado\?/i);
+    const favoriteCheckBox = getByText(/pokémon\sfavoritado\?/i);
 
     expect(favoriteCheckBox).toBeInTheDocument();
     expect(favoriteCheckBox.tagName).toBe('LABEL');

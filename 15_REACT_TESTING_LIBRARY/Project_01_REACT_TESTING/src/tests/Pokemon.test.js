@@ -25,7 +25,7 @@ const testPokemon = {
 
 describe('Pokemon.jsx testing', () => {
   it('should render with correct name, src/alt and weight', () => {
-    const { queryByText, queryByAltText } = render(
+    const { getByText, getByAltText } = render(
       <MemoryRouter>
         <Pokemon
           isFavorite={ false }
@@ -35,18 +35,18 @@ describe('Pokemon.jsx testing', () => {
     );
 
     const correctName = new RegExp(`^${testPokemon.name}$`, 'i');
-    const correctNameElement = queryByText(correctName);
+    const correctNameElement = getByText(correctName);
 
     expect(correctNameElement).toBeInTheDocument();
 
     const { averageWeight: { measurementUnit, value } } = testPokemon;
     const weightFormat = new RegExp(`^Average Weight: ${value} ${measurementUnit}$`, 'i');
-    const weightFormatElement = queryByText(weightFormat);
+    const weightFormatElement = getByText(weightFormat);
 
     expect(weightFormatElement).toBeInTheDocument();
 
     const altFormat = new RegExp(`^${testPokemon.name} sprite$`, 'i');
-    const pokemonImage = queryByAltText(altFormat);
+    const pokemonImage = getByAltText(altFormat);
 
     expect(pokemonImage).toBeInTheDocument();
     expect(pokemonImage.src).toBe(testPokemon.image);
@@ -55,7 +55,7 @@ describe('Pokemon.jsx testing', () => {
   it('should show details link if flag is not set to false', () => {
     const history = createMemoryHistory();
 
-    const { queryByText } = render(
+    const { getByText } = render(
       <Router history={ history }>
         <Pokemon
           isFavorite={ false }
@@ -64,7 +64,7 @@ describe('Pokemon.jsx testing', () => {
       </Router>,
     );
 
-    const detailsLink = queryByText(/more\sdetails/i);
+    const detailsLink = getByText(/more\sdetails/i);
     expect(detailsLink).toBeInTheDocument();
 
     fireEvent.click(detailsLink);
@@ -77,7 +77,7 @@ describe('Pokemon.jsx testing', () => {
   });
 
   it('should have a star icon if favorited', () => {
-    const { queryByAltText } = render(
+    const { getByAltText } = render(
       <MemoryRouter>
         <Pokemon
           pokemon={ testPokemon }
@@ -87,7 +87,7 @@ describe('Pokemon.jsx testing', () => {
     );
 
     const altFormat = new RegExp(`^${testPokemon.name} is marked as favorite$`, 'i');
-    const favoriteStarElement = queryByAltText(altFormat);
+    const favoriteStarElement = getByAltText(altFormat);
 
     expect(favoriteStarElement).toBeInTheDocument();
     expect(favoriteStarElement.src).toBe('http://localhost/star-icon.svg');

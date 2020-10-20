@@ -127,23 +127,23 @@ describe('Pokedex.jsx testing', () => {
     );
 
     testPokemon.forEach((pokemon) => {
-      const pokemonName = queryByText(pokemon.name);
+      const pokemonName = getByText(pokemon.name);
       expect(pokemonName).toBeInTheDocument();
 
       const nextPokemonBtn = getByText(/próximo\spokémon/i);
       fireEvent.click(nextPokemonBtn);
 
       const firstPokemonCycled = queryByText(pokemon.name);
-      expect(firstPokemonCycled).toBeNull();
+      expect(firstPokemonCycled).not.toBeInTheDocument();
     });
 
     // checking if cycle starts again
-    const firstPokemonAgain = queryByText(testPokemon[0].name);
+    const firstPokemonAgain = getByText(testPokemon[0].name);
     expect(firstPokemonAgain).toBeInTheDocument();
   });
 
   it('should be able to filter by any type present', () => {
-    const { queryAllByTestId } = render(
+    const { getAllByTestId } = render(
       <MemoryRouter>
         <Pokedex
           isPokemonFavoriteById={ favorited }
@@ -152,7 +152,7 @@ describe('Pokedex.jsx testing', () => {
       </MemoryRouter>,
     );
 
-    const filterButtons = queryAllByTestId('pokemon-type-button');
+    const filterButtons = getAllByTestId('pokemon-type-button');
 
     filterButtons.forEach((button) => {
       const buttonText = button.innerHTML;
@@ -168,7 +168,7 @@ describe('Pokedex.jsx testing', () => {
 
     const changedPokemon = [...testPokemon, extraPokemon];
 
-    const { queryAllByTestId } = render(
+    const { getAllByTestId } = render(
       <MemoryRouter>
         <Pokedex
           isPokemonFavoriteById={ favorited }
@@ -181,7 +181,7 @@ describe('Pokedex.jsx testing', () => {
       (types, pokemon) => [...types, pokemon.type], [],
     );
 
-    const filterButtons = queryAllByTestId('pokemon-type-button');
+    const filterButtons = getAllByTestId('pokemon-type-button');
 
     filterButtons.forEach((button) => {
       const buttonText = button.innerHTML;
@@ -192,7 +192,7 @@ describe('Pokedex.jsx testing', () => {
   });
 
   it('should have a reset filter button', () => {
-    const { queryByText, getByText, queryAllByTestId } = render(
+    const { getByText, getAllByTestId } = render(
       <MemoryRouter>
         <Pokedex
           isPokemonFavoriteById={ favorited }
@@ -201,10 +201,10 @@ describe('Pokedex.jsx testing', () => {
       </MemoryRouter>,
     );
 
-    const allButton = queryByText(/all/i);
+    const allButton = getByText(/all/i);
     expect(allButton).toBeInTheDocument();
 
-    fireEvent.click(queryAllByTestId('pokemon-type-button')[0]);
+    fireEvent.click(getAllByTestId('pokemon-type-button')[0]);
 
     const nextPokemonBtn = getByText(/próximo\spokémon/i);
     expect(nextPokemonBtn).toBeDisabled();
@@ -216,17 +216,17 @@ describe('Pokedex.jsx testing', () => {
 
     // cycle - means the reset button reset to initial conditions
     testPokemon.forEach((pokemon) => {
-      const pokemonName = queryByText(pokemon.name);
+      const pokemonName = getByText(pokemon.name);
       expect(pokemonName).toBeInTheDocument();
       fireEvent.click(nextPokemonAgain);
     });
 
-    const firstPokemon = queryByText(testPokemon[0].name);
+    const firstPokemon = getByText(testPokemon[0].name);
     expect(firstPokemon).toBeInTheDocument();
   });
 
   it('should always show reset-button', () => {
-    const { queryByText, queryAllByTestId } = render(
+    const { getByText, getAllByTestId } = render(
       <MemoryRouter>
         <Pokedex
           isPokemonFavoriteById={ favorited }
@@ -235,14 +235,14 @@ describe('Pokedex.jsx testing', () => {
       </MemoryRouter>,
     );
 
-    const allButton = queryByText(/all/i);
+    const allButton = getByText(/all/i);
     expect(allButton).toBeInTheDocument();
 
-    const filterButtons = queryAllByTestId('pokemon-type-button');
+    const filterButtons = getAllByTestId('pokemon-type-button');
 
     filterButtons.forEach((filter) => {
       fireEvent.click(filter);
-      const resetButton = queryByText(/all/i);
+      const resetButton = getByText(/all/i);
       expect(resetButton).toBeInTheDocument();
     });
   });
@@ -264,7 +264,7 @@ describe('Pokedex.jsx testing', () => {
   });
 
   it('should have specific title', () => {
-    const { queryByText } = render(
+    const { getByText } = render(
       <MemoryRouter>
         <Pokedex
           isPokemonFavoriteById={ favorited }
@@ -273,7 +273,7 @@ describe('Pokedex.jsx testing', () => {
       </MemoryRouter>,
     );
 
-    const nextPokemonBtn = queryByText(/encountered\spokémon/i);
+    const nextPokemonBtn = getByText(/encountered\spokémon/i);
     expect(nextPokemonBtn).toBeInTheDocument();
     expect(nextPokemonBtn.tagName).toBe('H2');
   });
