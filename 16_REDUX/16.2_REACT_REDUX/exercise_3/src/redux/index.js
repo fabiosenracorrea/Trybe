@@ -1,11 +1,6 @@
-import { createStore, combineReducers } from 'redux';
-import carReducer from './reducers/carReducer';
-import signalReducer from './reducers/signalReducer';
+import { createStore } from 'redux';
 
-const reducer = combineReducers({
-  carReducer,
-  signalReducer,
-})
+import reducer from './reducers';
 
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
