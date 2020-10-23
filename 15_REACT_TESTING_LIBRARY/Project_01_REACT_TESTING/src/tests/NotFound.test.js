@@ -3,30 +3,28 @@ import { MemoryRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import NotFound from '../components/NotFound';
 
+let screen;
+
 describe('NotFound.jsx tests', () => {
-  it('should contain an H2 heading with specific text', () => {
-    const { getByText } = render(
+  beforeEach(() => {
+    screen = render(
       <MemoryRouter>
         <NotFound />
       </MemoryRouter>,
     );
+  })
 
-    const aboutTitle = getByText(/page\srequested\snot\sfound/i);
+  it('should contain an H2 heading with specific text', () => {
+    const aboutTitle = screen.getByText(/page\srequested\snot\sfound/i);
     expect(aboutTitle).toBeInTheDocument();
     expect(aboutTitle.tagName).toBe('H2');
 
-    const cryingEmoji = getByText('😭');
+    const cryingEmoji = screen.getByText('😭');
     expect(cryingEmoji).toBeInTheDocument();
   });
 
   it('should contain specific image', () => {
-    const { getByAltText } = render(
-      <MemoryRouter>
-        <NotFound />
-      </MemoryRouter>,
-    );
-
-    const pokedexImg = getByAltText(
+    const pokedexImg = screen.getByAltText(
       /pikachu\scrying\sbecause\sthe\spage\srequested\swas\snot\sfound/i,
     );
 
