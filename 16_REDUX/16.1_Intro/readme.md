@@ -2,7 +2,7 @@
 
 Before we jump right into React w/ Redux, let's learn the basics.
 
-On this lesson, the basic methods of managing these stages are covered:
+On this lesson, the crucial methods of managing states with Redux are covered:
 
 - store
 - reducer

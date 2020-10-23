@@ -6,7 +6,7 @@ This directory covers Trybe's 16th module.
 
 TBA
 
-* [REdux Intro](./16.1_Intro)
+* [Redux Intro](./16.1_Intro)
 
 To check each part of the module, simply click on the desired link above.
 
