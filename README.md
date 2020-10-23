@@ -38,3 +38,4 @@ If you want quick access to each module, you can either select their respective 
 * [Module 13 - React Component Lifecycle & Routing](https://github.com/fabiosenracorrea/Trybe/tree/master/13_REACT_LIFECYCLE_AND_ROUTING)
 * [Module 14 - Agile Development](https://github.com/fabiosenracorrea/Trybe/tree/master/14_AGILE_DEVELOPMENT)
 * [Module 15 - React Testing Library](https://github.com/fabiosenracorrea/Trybe/tree/master/15_REACT_TESTING_LIBRARY)
+* [Module 16 - Redux](https://github.com/fabiosenracorrea/Trybe/tree/master/16_REDUX)
