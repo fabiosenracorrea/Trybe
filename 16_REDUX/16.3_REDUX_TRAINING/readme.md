@@ -25,6 +25,14 @@ Clientes cadastrados.
 
 Estados que não necessitem navegar para outros componentes, podem ser guardados internamente. Todos os outros devem ser trafegados via Redux.
 
+**Bônus**
+
+- Você irá implementar funcionalidades ao código do cadastro de clientes.
+
+Na página de Clientes cadastrados, crie um botão que ordene os clientes em ordem alfabética a partir do campo nome. Caso o botão seja clicado novamente, a ordenação original deve ser mostrada.
+
+Cada cadastro deve ser acompanhado de um botão com o texto X. Caso o botão seja clicado, o cadastro deve ser excluído.
+
 ----
 
 #### Comments
