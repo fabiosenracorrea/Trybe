@@ -83,7 +83,6 @@ class Dashboard extends React.Component {
       </div>
     );
   }
-
 }
 
 function mapStateToProps(state) {

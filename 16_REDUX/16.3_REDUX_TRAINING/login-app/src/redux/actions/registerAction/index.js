@@ -16,8 +16,6 @@ export function registerClientAction({ name, age, email }, remove = false) {
   return {
     type: UNREGISTER,
     client: {
-      name,
-      age,
       email,
     },
   };
