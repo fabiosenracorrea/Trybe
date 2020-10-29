@@ -154,13 +154,13 @@ describe('Pokedex.jsx testing', () => {
 
     const filterButtons = getAllByTestId('pokemon-type-button');
 
-    filterButtons.forEach((button) => {
-      const buttonText = button.innerHTML;
-      expect(testTypes.includes(buttonText)).toBeTruthy();
-    });
+    const filterTypesPresent = filterButtons.map((button) => button.innerHTML);
 
-    // combined with forEach guarantees every type has a button
-    expect(filterButtons.length).toBe(testTypes.length);
+    expect(filterTypesPresent.length).toBe(testTypes.length);
+
+    testTypes.forEach((type) => {
+      expect(filterTypesPresent.includes(type)).toBeTruthy();
+    });
   });
 
   it('should dynamically generate filter buttons', () => {
@@ -183,12 +183,13 @@ describe('Pokedex.jsx testing', () => {
 
     const filterButtons = getAllByTestId('pokemon-type-button');
 
-    filterButtons.forEach((button) => {
-      const buttonText = button.innerHTML;
-      expect(newTestTypes.includes(buttonText)).toBeTruthy();
-    });
+    const filterTypesPresent = filterButtons.map((button) => button.innerHTML);
 
-    expect(filterButtons.length).toBe(newTestTypes.length);
+    expect(filterTypesPresent.length).toBe(newTestTypes.length);
+
+    newTestTypes.forEach((type) => {
+      expect(filterTypesPresent.includes(type)).toBeTruthy();
+    });
   });
 
   it('should have a reset filter button', () => {

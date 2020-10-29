@@ -25,36 +25,37 @@ describe('FavoritePokemon.jsx addition', () => {
       </MemoryRouter>,
     );
 
-    const firstPokemonName = getByTestId('pokemon-name').innerHTML;
+    const FAVORITED_POKEMON = 2;
 
-    const firstPokemonDetails = getByText(/more\sdetails/i);
-    fireEvent.click(firstPokemonDetails);
+    const runController = Array(FAVORITED_POKEMON).fill();
 
-    const favoriteCheckBox = getByRole('checkbox', { name: /pokémon\sfavoritado\?/i });
-    fireEvent.click(favoriteCheckBox);
+    const favoriteNames = [];
 
-    fireEvent.click(getByText(/home/i));
+    runController.forEach(() => {
+      const pokemonName = getByTestId('pokemon-name').innerHTML;
 
-    while (getByTestId('pokemon-name').innerHTML === firstPokemonName) {
-      const nextPokemonBtn = getByText(/próximo\spokémon/i);
-      fireEvent.click(nextPokemonBtn);
-    }
+      const pokemonDetails = getByText(/more\sdetails/i);
+      fireEvent.click(pokemonDetails);
 
-    const secondPokemonName = getByTestId('pokemon-name').innerHTML;
+      const favoriteCheckBox = getByRole('checkbox', { name: /pokémon\sfavoritado\?/i });
+      fireEvent.click(favoriteCheckBox);
 
-    const secondPokemonDetails = getByText(/more\sdetails/i);
-    fireEvent.click(secondPokemonDetails);
+      favoriteNames.push(pokemonName);
 
-    const secondCheckBox = getByRole('checkbox', { name: /pokémon\sfavoritado\?/i });
-    fireEvent.click(secondCheckBox);
+      fireEvent.click(getByText(/home/i));
+
+      while (favoriteNames.includes(getByTestId('pokemon-name').innerHTML)) {
+        const nextPokemonBtn = getByText(/próximo\spokémon/i);
+        fireEvent.click(nextPokemonBtn);
+      }
+    });
 
     fireEvent.click(getByText(/favorite\spokémons/i));
 
-    const firstPokemonIsOnScreen = getByText(firstPokemonName);
-    const secondPokemonIsOnScreen = getByText(secondPokemonName);
-
-    expect(firstPokemonIsOnScreen).toBeInTheDocument();
-    expect(secondPokemonIsOnScreen).toBeInTheDocument();
+    favoriteNames.forEach((pokemonName) => {
+      const pokemonOnScreen = getByText(pokemonName);
+      expect(pokemonOnScreen).toBeInTheDocument();
+    });
 
     // cleaning up
 
