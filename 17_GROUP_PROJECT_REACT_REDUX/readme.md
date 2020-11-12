@@ -4,7 +4,7 @@ This directory covers Trybe's 17th module.
 
 ## What was covered here?
 
-After learning more about [React](https://reactjs.org/), React Routing(https://reactrouter.com/), Agile Development(https://en.wikipedia.org/wiki/Agile_software_development) and Redux(https://redux.js.org/), it's time to put everything to a test!
+After learning more about [React](https://reactjs.org/), [React Routing](https://reactrouter.com/), [Agile Development](https://en.wikipedia.org/wiki/Agile_software_development) and [Redux](https://redux.js.org/), it's time to put everything to a test!
 
 On this module we've just a project, developed using everything listed above in a group of 4 developers.
 
