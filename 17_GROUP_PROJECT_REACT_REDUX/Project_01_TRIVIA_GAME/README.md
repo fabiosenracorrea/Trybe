@@ -2,6 +2,8 @@
 
 The second project of Trybe's 16th module, centered around Redux and it's global state capabilities, while also applying AGILE knowledge to work in a team.
 
+> This project's login design was inspired by my GoFinance APP, [check it out](https://github.com/fabiosenracorrea/goFinance)
+
 ## Quick Overview
 
 ![Trivia's project gif](./project_overview)
