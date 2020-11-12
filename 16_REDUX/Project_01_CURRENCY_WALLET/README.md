@@ -2,6 +2,12 @@
 
 The first project of Trybe's 16th module, centered around Redux and it's global state capabilities.
 
+> This project's login design was inspired by my GoFinance APP, [check it out](https://github.com/fabiosenracorrea/goFinance)
+
+## Quick Overview
+
+![Currency Wallet GIF](./project_overview.gif)
+
 ### What was proposed here
 
 As a literal copy/paste of the instructions:
