@@ -1,12 +1,12 @@
-## Project 02 - Group Project - A Trivia Game
+## Project 01 - Group Project - A Trivia Game
 
-The second project of Trybe's 16th module, centered around Redux and it's global state capabilities, while also applying AGILE knowledge to work in a team.
+The second project of Trybe's 17th module, centered around Redux and it's global state capabilities, while also applying AGILE knowledge to work in a team.
 
 > This project's login design was inspired by my GoFinance APP, [check it out](https://github.com/fabiosenracorrea/goFinance)
 
 ## Quick Overview
 
-![Trivia's project gif](./project_overview)
+<img src="./project_overview.gif" alt="Trivia Game Gif" width="80%" align="center" />
 
 ### What was proposed here
 
