@@ -6,7 +6,7 @@ The first project of Trybe's 16th module, centered around Redux and it's global 
 
 ## Quick Overview
 
-![Currency Wallet GIF](./project_overview.gif)
+<img alt="Currency Wallet Project" src="./project_overview.gif" width="100%" />
 
 ### What was proposed here
 
