@@ -36,7 +36,7 @@ const [userRankings, setUserRankings] = useState(() => {
 
 2. **useContext**
 
-Basically to be used in conjunction with **createContext** to be able to extract the *value* provider from the context.Provider. Basically:
+Basically to be used in conjunction with **createContext** to be able to extract the *value* provided from the context.Provider. Basically:
 
 ```js
 import { useContext } from 'react';
