@@ -120,6 +120,8 @@ Because this matter is basically always associated with the previous topic, the 
 
 React Hooks is a HUGE improvements to our functional components. It completed changed how we can interact with React and more easily build complex components.
 
+Particularly, i find the **useEffect** of of the hardest standard hooks to be used properly, because of it's power on acting as a blank card for every important *lifecycle* method we have. Provided that you know how to use it (and paired with custom hooks you might want to create), this can surely elevate your React skills to the next level.
+
 Because it's a relatively new feature, there's a lot of 'legacy' react code out there that still uses classes to manage component-state and lifecycle, so make sure you also know how to deal with that.
 
 ###### Feedback
