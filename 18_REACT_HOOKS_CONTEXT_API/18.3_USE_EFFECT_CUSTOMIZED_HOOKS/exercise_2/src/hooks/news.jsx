@@ -23,7 +23,7 @@ function NewsProvider({ children }) {
     } finally {
       setLoading(false);
     }
-  }, [getNews])
+  }, []);
 
   return (
     <newsContext.Provider value={{ appNews, fetchNews, error, loading }}>
