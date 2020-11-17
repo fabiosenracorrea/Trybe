@@ -103,7 +103,7 @@ export function useUserScore() {
 
 And, just like that, we now have a custom hook to access our context from everywhere in our application, just by importing it!
 
-PS: That Error is that to remind you that you can only access context from components that are descendant of that context's Provider.
+PS: That Error is there to remind you that you can only access context from components that are descendant of that context's Provider.
 
 ----
 
