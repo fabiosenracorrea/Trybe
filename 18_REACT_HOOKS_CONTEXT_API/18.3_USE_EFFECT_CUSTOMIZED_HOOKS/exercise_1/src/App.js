@@ -1,4 +1,6 @@
 import React from 'react'
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 function Name({ name, onNameChange }) {
   return (
@@ -34,10 +36,26 @@ function Display({ name, animal }) {
 //   return <div>{`Hey ${name}, you are great!`}</div>
 // }
 
+function useCounter() {
+  const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCounter(oldC => oldC + 1);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return counter;
+}
+
 function App() {
   // 🐨 inclua um useState para o 'animal'
   const [name, setName] = React.useState('');
   const [animal, setAnimal] = React.useState('');
+
+  const counter = useCounter();
 
   return (
     <form>
@@ -46,6 +64,8 @@ function App() {
       <FavoriteAnimal animal={ animal } onAnimalChange={(event) => setAnimal(event.target.value)} />
       {/* 🐨 passe a prop animal aqui */}
       <Display name={name} animal={animal} />
+
+      <p>{counter}</p>
     </form>
   );
 }
