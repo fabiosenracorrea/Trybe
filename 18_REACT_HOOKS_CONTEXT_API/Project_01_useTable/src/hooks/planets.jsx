@@ -15,6 +15,7 @@ import {
 } from './utils/numericComparison';
 import fetchPlanets from '../services/api';
 import sortPlanetsByColumn from './utils/sortPlanets';
+import reApplyPlanetsFilters from './utils/applyFilters';
 
 const planetContext = createContext();
 
@@ -72,7 +73,7 @@ function PlanetProvider({ children }) {
   }, [planetsData]);
 
   const planetsSortOptions = useMemo(() => {
-    const badOptions = [
+    const toExcludeOptions = [
       'created',
       'edited',
       'films',
@@ -82,7 +83,7 @@ function PlanetProvider({ children }) {
     let sortOptions;
 
     if (planetInfo) {
-      sortOptions = planetInfo.filter((info) => !badOptions.includes(info));
+      sortOptions = planetInfo.filter((info) => !toExcludeOptions.includes(info));
     }
 
     return sortOptions;
@@ -152,49 +153,41 @@ function PlanetProvider({ children }) {
 
     setPlanets(filteredPlanetsByNumericComparison);
 
-    const oldNumericFilters = filters.filterByNumericValues;
-    const newFilterAdded = {
-      column,
-      comparison,
-      value,
-    };
+    setFilters((oldFilters) => {
+      const oldNumericFilters = oldFilters.filterByNumericValues;
+      const newFilterAdded = {
+        column,
+        comparison,
+        value,
+      };
 
-    setFilters((oldFilters) => ({
-      ...oldFilters,
-      filterByNumericValues: [...oldNumericFilters, newFilterAdded],
-    }));
-  }, [filters.filterByNumericValues, planets]);
+      return ({
+        ...oldFilters,
+        filterByNumericValues: [...oldNumericFilters, newFilterAdded],
+      });
+    });
+  }, [planets]);
 
   const removeFilter = useCallback((toRemoveColumn) => {
-    const newFilters = filters
+    const newNumericFilters = filters
       .filterByNumericValues
       .filter((oldFilter) => oldFilter.column !== toRemoveColumn);
 
     const { filterByName: { name } } = filters;
 
-    // re-applying filters
+    const filtersToApply = {
+      nameFilter: name,
+      numericFilters: newNumericFilters,
+    };
 
-    const filteredPlanetsByName = planetsData.filter((planet) => {
-      const nameRegex = new RegExp(name, 'i');
-      const planetMatches = nameRegex.test(planet.name);
-
-      return planetMatches;
-    });
-
-    let filteredPlanetsByColumns = filteredPlanetsByName;
-
-    newFilters.forEach(({ column, comparison, value }) => {
-      filteredPlanetsByColumns = filteredPlanetsByColumns.filter((planet) => (
-        compareColumns(planet[column], comparison, value)
-      ));
-    });
+    const reFilteredPlanets = reApplyPlanetsFilters(planetsData, filtersToApply);
 
     setFilters((oldFilters) => ({
       ...oldFilters,
-      filterByNumericValues: newFilters,
+      filterByNumericValues: newNumericFilters,
     }));
 
-    setPlanets(filteredPlanetsByColumns);
+    setPlanets(reFilteredPlanets);
   }, [filters, planetsData]);
 
   const sortPlanets = useCallback((column, direction) => {
@@ -202,12 +195,11 @@ function PlanetProvider({ children }) {
 
     setPlanets(sortedPlanets);
 
+    const newSorting = { column, direction };
+
     setFilters((oldFilters) => ({
       ...oldFilters,
-      sort: {
-        column,
-        sort: direction,
-      },
+      sort: newSorting,
     }));
   }, [planets]);
 
