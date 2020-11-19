@@ -52,11 +52,19 @@ function PlanetProvider({ children }) {
     const examplePlanet = planetsData[0];
     let headers;
 
+    const toExcludeHeaders = [
+      'residents',
+      'url',
+      'created',
+      'edited',
+      'films',
+    ];
+
     if (examplePlanet) {
       headers = (
         Object
           .keys(examplePlanet)
-          .filter((header) => header !== 'residents')
+          .filter((header) => !toExcludeHeaders.includes(header))
       );
     }
 
