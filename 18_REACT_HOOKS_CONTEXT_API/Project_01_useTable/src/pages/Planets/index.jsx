@@ -4,7 +4,7 @@ import { FiX, FiFilter, FiAlignCenter } from 'react-icons/fi';
 import Loading from '../../components/Loading';
 import PlanetsTable from '../../components/PlanetsTable';
 
-import renderFilterIcon from './utils/renderFIlterIcon';
+import renderFilterIcon from './utils/renderFilterIcon';
 import { usePlanets } from '../../hooks/planets';
 import { availableNumericComparisons } from '../../hooks/utils/numericComparison';
 
@@ -229,7 +229,6 @@ function Planets() {
             ))}
           </div>
         )}
-
       </div>
 
       <PlanetsTable />

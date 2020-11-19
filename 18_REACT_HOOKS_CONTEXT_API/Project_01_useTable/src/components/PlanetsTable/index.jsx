@@ -20,7 +20,7 @@ function PlanetsTable() {
 
         <tbody>
           {planets.map((planet) => (
-            <tr key={ `${planet.url}-${Math.random()}` }>
+            <tr key={ `${planet.name}-${Math.random()}` }>
               {planetInfo.map((header) => (
                 <td
                   key={ `${planet.name}-${header}` }
