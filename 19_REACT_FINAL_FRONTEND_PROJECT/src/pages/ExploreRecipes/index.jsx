@@ -21,6 +21,7 @@ function ExploreRecipes({ pageType }) {
     const randomRecipeID = await loadRandomRecipe(pageType);
 
     if (!randomRecipeID) {
+      // eslint-disable-next-line
       alert('Ocorreu um erro na busca aleatória, tente novamente.');
 
       return;

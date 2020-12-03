@@ -1,11 +1,12 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import copy from 'clipboard-copy';
 
 import Header from '../../components/Header';
 import FoodDrinkFilter from '../../components/FoodDrinkFilter';
 
 import { useRecipes } from '../../hooks/recipes';
+
+import { shareWhenMultipleRecipesPresent } from '../../utils/shareRecipe';
 
 import shareIcon from '../../images/shareIcon.svg';
 import heartIcon from '../../images/blackHeartIcon.svg';
@@ -34,24 +35,6 @@ function Favorites() {
     const { value: filterClicked } = target;
 
     setFilter(filterClicked);
-  }, []);
-
-  const handleShareClick = useCallback((id, type) => {
-    const url = `http://localhost:3000/${type}s/${id}`;
-
-    copy(url);
-
-    const copiedRecipe = {
-      [id]: true,
-    };
-
-    setCopyLink(copiedRecipe);
-
-    const DISPLAYED_TEXT_TIME = 2000;
-
-    setTimeout(() => {
-      setCopyLink({});
-    }, DISPLAYED_TEXT_TIME);
   }, []);
 
   const handleRecipeUnfavorite = useCallback((id) => {
@@ -98,7 +81,9 @@ function Favorites() {
               <div className="done-recipe-share-container">
                 <button
                   type="button"
-                  onClick={ () => handleShareClick(recipe.id, recipe.type) }
+                  onClick={ () => shareWhenMultipleRecipesPresent(
+                    recipe.id, recipe.type, setCopyLink,
+                  ) }
                 >
                   <img
                     src={ shareIcon }

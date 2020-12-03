@@ -1,13 +1,14 @@
 import React, {
-  useCallback, useMemo, useState, useRef,
+  useCallback, useMemo, useState,
 } from 'react';
 import { Link } from 'react-router-dom';
-import copy from 'clipboard-copy';
 
 import Header from '../../components/Header';
 import FoodDrinkFilter from '../../components/FoodDrinkFilter';
 
 import { useCook } from '../../hooks/cook';
+
+import { shareWhenMultipleRecipesPresent } from '../../utils/shareRecipe';
 
 import shareIcon from '../../images/shareIcon.svg';
 
@@ -35,24 +36,6 @@ function DoneRecipes() {
     const { value: filterClicked } = target;
 
     setFilter(filterClicked);
-  }, []);
-
-  const handleShareClick = useCallback(async (id, type) => {
-    const url = `http://localhost:3000/${type}s/${id}`;
-
-    await copy(url);
-
-    const copiedRecipe = {
-      [id]: true,
-    };
-
-    setCopyLink(copiedRecipe);
-
-    const DISPLAYED_TEXT_TIME = 2000;
-
-    setTimeout(() => {
-      setCopyLink({});
-    }, DISPLAYED_TEXT_TIME);
   }, []);
 
   return (
@@ -88,10 +71,6 @@ function DoneRecipes() {
                 : `${recipe.alcoholicOrNot}`}
             </p>
 
-            {/* {recipe.type === 'comida' && (
-              <p data-testid={`${index}-horizontal-area`}>{recipe.area}</p>
-            )} */}
-
             <p
               data-testid={ `${index}-horizontal-done-date` }
             >
@@ -105,7 +84,9 @@ function DoneRecipes() {
 
               <button
                 type="button"
-                onClick={ () => handleShareClick(recipe.id, recipe.type) }
+                onClick={ () => shareWhenMultipleRecipesPresent(
+                  recipe.id, recipe.type, setCopyLink,
+                ) }
               >
                 <img
                   data-testid={ `${index}-horizontal-share-btn` }

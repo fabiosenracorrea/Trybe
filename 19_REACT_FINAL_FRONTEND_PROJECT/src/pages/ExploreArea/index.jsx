@@ -27,7 +27,9 @@ function ExploreArea({ pageType }) {
   const {
     loadAreas, loadingAreas, foodAreas, loadingFoodsByArea, loadFoodsByArea,
   } = useExplore();
+
   const { currentRecipes } = useRecipes();
+
   const { appSearch, loadingRecipes } = useSearch();
 
   useEffect(() => {

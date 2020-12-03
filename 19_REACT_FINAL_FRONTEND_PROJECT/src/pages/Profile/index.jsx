@@ -28,9 +28,11 @@ function Profile() {
 
       <div className="profile-content">
         <div className="user-info-container">
+
           {!!user.name && (
             <h2>
               <img src={ loginLogo } alt="alternative logo" />
+
               {user.name}
             </h2>
           )}

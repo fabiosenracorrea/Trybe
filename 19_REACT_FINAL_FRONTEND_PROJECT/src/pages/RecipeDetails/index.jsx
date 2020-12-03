@@ -3,7 +3,6 @@ import React, {
 } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import copy from 'clipboard-copy';
 import { VscDebugStart, VscDebugRestart } from 'react-icons/vsc';
 import { FiArrowLeft } from 'react-icons/fi';
 
@@ -15,6 +14,7 @@ import LoadingBook from '../../components/LoadingBook';
 
 import parseRecipeToFavorite from '../../utils/parseFavoriteRecipeFormat';
 import parseIngredientAndMeasures from '../../utils/parseIngredientAndMeasures';
+import { shareWhenSingleRecipePresent } from '../../utils/shareRecipe';
 
 import shareIcon from '../../images/shareIcon.svg';
 import blackHeart from '../../images/blackHeartIcon.svg';
@@ -42,20 +42,6 @@ function RecipeDetails({ pageType }) {
 
     return unloadRandom;
   }, [id, loadSingleRecipe, unloadRandom, pageType]);
-
-  const handleShareClick = useCallback(() => {
-    const url = `http://localhost:3000/${pageType}/${id}`;
-
-    copy(url);
-
-    setCopiedLink(true);
-
-    const DISPLAYED_TEXT_TIME = 2000;
-
-    setTimeout(() => {
-      setCopiedLink(false);
-    }, DISPLAYED_TEXT_TIME);
-  }, [id, pageType]);
 
   const recipeDetails = useMemo(
     () => currentFocusedRecipes[pageType].recipe,
@@ -162,7 +148,7 @@ function RecipeDetails({ pageType }) {
           </button>
 
           <button
-            onClick={ handleShareClick }
+            onClick={ () => shareWhenSingleRecipePresent(id, pageType, setCopiedLink) }
             type="button"
           >
             <img

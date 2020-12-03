@@ -3,7 +3,6 @@ import React, {
 } from 'react';
 import { useParams, useHistory, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import copy from 'clipboard-copy';
 import { FiArrowLeft, FiCheck } from 'react-icons/fi';
 
 import { useCook } from '../../hooks/cook';
@@ -13,6 +12,7 @@ import LoadingBook from '../../components/LoadingBook';
 
 import parseRecipeToFavorite from '../../utils/parseFavoriteRecipeFormat';
 import parseIngredientAndMeasures from '../../utils/parseIngredientAndMeasures';
+import { shareWhenSingleRecipePresent } from '../../utils/shareRecipe';
 
 import shareIcon from '../../images/shareIcon.svg';
 import blackHeart from '../../images/blackHeartIcon.svg';
@@ -46,20 +46,6 @@ function RecipeInProgress({ pageType }) {
       loadRecipeToCook(pageType, id);
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  const handleShareClick = useCallback(() => {
-    const url = `http://localhost:3000/${pageType}/${id}`;
-
-    copy(url);
-
-    setCopiedLink(true);
-
-    const DISPLAYED_TEXT_TIME = 2000;
-
-    setTimeout(() => {
-      setCopiedLink(false);
-    }, DISPLAYED_TEXT_TIME);
-  }, [id, pageType]);
 
   const currentlyCooking = useMemo(() => {
     const recipeToCook = sessionStartedRecipes[pageType].find(({ recipe }) => (
@@ -172,7 +158,7 @@ function RecipeInProgress({ pageType }) {
           </button>
 
           <button
-            onClick={ handleShareClick }
+            onClick={ () => shareWhenSingleRecipePresent(id, pageType, setCopiedLink) }
             type="button"
           >
             <img
