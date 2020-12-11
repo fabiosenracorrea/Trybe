@@ -2,6 +2,8 @@
 
 The project of Trybe's 19th module, the last of the **Front-end** section!
 
+*disclaimer*: The code on this particular directory is not the current for this project. Check the actual updated code [here](https://github.com/fabiosenracorrea/your_recipes_app)
+
 ## Quick Overview
 
 ![project overview](./project_overview.gif)
