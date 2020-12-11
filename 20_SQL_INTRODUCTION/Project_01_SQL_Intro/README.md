@@ -1,4 +1,4 @@
-## Project 01 - Redux: Currency Wallet
+## Project 01 - SQL: Check your basics!
 
 The first project of Trybe's 20th module, centered around basic SQL skills and queries.
 
