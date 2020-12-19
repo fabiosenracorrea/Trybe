@@ -41,6 +41,6 @@ If you want quick access to each module, you can either select their respective 
 * [Module 16 - Redux](https://github.com/fabiosenracorrea/Trybe/tree/master/16_REDUX)
 * [Module 17 - Group Project: React & Redux](https://github.com/fabiosenracorrea/Trybe/tree/master/17_GROUP_PROJECT_REACT_REDUX)
 * [Module 18 - React Hooks & Context API](https://github.com/fabiosenracorrea/Trybe/tree/master/18_REACT_HOOKS_CONTEXT_API)
-* [Module 19 - Final Frontend project: Recipes App](https://github.com/fabiosenracorrea/Trybe/tree/master/19_FINAL_FRONTEND_PROJECT)
+* [Module 19 - Final Frontend project: Recipes App](https://github.com/fabiosenracorrea/Trybe/tree/master/19_REACT_FINAL_FRONTEND_PROJECT)
 * [Module 20 - SQL Introduction](https://github.com/fabiosenracorrea/Trybe/tree/master/20_SQL_INTRODUCTION)
 * [Module 21 - SQL Functions, Joins & Subqueries](https://github.com/fabiosenracorrea/Trybe/tree/master/21_SQL_FUNCTIONS_JOIN_SUBQUERIES)
