@@ -7,6 +7,7 @@ This directory covers Trybe's 21th module.
 TBA
 
 * [SQL Functions](./21.1_SQL_FUNCTIONS)
+* [Join, Union & Sub-Queries w/ Exists](./21.2_JOIN_UNION_SUBS)
 
 To check each part of the module, simply click on the desired link above.
 
