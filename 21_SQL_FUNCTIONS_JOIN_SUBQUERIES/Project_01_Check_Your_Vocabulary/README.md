@@ -405,7 +405,9 @@ This project got a **100%/100%** grade and can be checkout entirely on [here](ht
 
 #### Comments
 
+As vastly discussed on this module, solid knowledge on every topic covered by each challenge on this project is vital to build a respectable career as a software developer.
 
+Because of such importance, SQL knowledge should be constantly practiced and studied.
 
 ###### Feedback
 
