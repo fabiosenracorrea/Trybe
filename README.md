@@ -44,3 +44,4 @@ If you want quick access to each module, you can either select their respective 
 * [Module 19 - Final Frontend project: Recipes App](https://github.com/fabiosenracorrea/Trybe/tree/master/19_REACT_FINAL_FRONTEND_PROJECT)
 * [Module 20 - SQL Introduction](https://github.com/fabiosenracorrea/Trybe/tree/master/20_SQL_INTRODUCTION)
 * [Module 21 - SQL Functions, Joins & Subqueries](https://github.com/fabiosenracorrea/Trybe/tree/master/21_SQL_FUNCTIONS_JOIN_SUBQUERIES)
+* [Module 21 - SQL Functions, Joins & Subqueries](https://github.com/fabiosenracorrea/Trybe/tree/master/22_SQL_DATABASE_MODELING)
