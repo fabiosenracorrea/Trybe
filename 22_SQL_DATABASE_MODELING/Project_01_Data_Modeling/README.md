@@ -59,6 +59,10 @@ Essa configuração deve ser feita baseada no seu banco de dados **após a norma
 
 * Salve as queries criadas no arquivo `desafio1.sql`.
 
+*Basic model proposed:*
+
+![database model proposal](./basic_model.jpg)
+
 ---
 
 ## Desafio 2
