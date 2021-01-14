@@ -75,7 +75,7 @@ CREATE TABLE songs(
 ) engine = InnoDB;
 
 CREATE TABLE song_plays(
-  PRIMARY KEY(user_id, song_id),
+  id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,
   song_id INT NOT NULL,
   played_at DATETIME DEFAULT NOW(),
