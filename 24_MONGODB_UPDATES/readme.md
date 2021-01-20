@@ -4,15 +4,16 @@ This directory covers Trybe's 24th module.
 
 ## What was covered here?
 
-
 * [Simple Updates](./24.1_SIMPLE_UPDATES)
-* [Filter Operations](./24.2_COMPLEX_UPDATES)
-* [Project 01 - TBA](./Project_01_TBA)
+* [Complex Updates - Part 1](./24.2_COMPLEX_UPDATES_P1)
+* [Complex Updates - Part 2](./24.3_COMPLEX_UPDATES_P2)
+* [Project 01 - TBA](./Project_01_Commerce)
 
 To check each part of the module, simply click on the desired link above.
 
 #### Comments
 
+Following some simple CRUD operations, it's time to really dig in the Update part, as it's important to understand how to properly query the different data inside the documents.
 
 ###### Feedback
 
