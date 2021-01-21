@@ -119,6 +119,96 @@ db.orders.aggregate([
 // ... more documents
 ```
 
+Since the aggregation with another collection creates an **array** with the data on the matching document, we can perform operations (and even an entire pipeline) on that array! Using:
+
+* **let**: used to define the variables that will be used inside the $lookup pipeline
+* **pipeline**: the operations you want to perform.
+
+Let's take a look at this example:
+
+```javascript
+// collection 1 - orders
+{ _id: 1, item: "almonds", price: 12, ordered: 2 },
+{ _id: 2, item: "pecans", price: 20, ordered: 1 },
+{ _id: 3, item: "cookies", price: 10, ordered: 60 }
+
+// collection 2 - warehouses
+{ _id: 1, stock_item: "almonds", warehouse: "A", instock: 120 },
+{ _id: 2, stock_item: "pecans", warehouse: "A", instock: 80 },
+{ _id: 3, stock_item: "almonds", warehouse: "B", instock: 60 },
+{ _id: 4, stock_item: "cookies", warehouse: "B", instock: 40 },
+{ _id: 5, stock_item: "cookies", warehouse: "A", instock: 80 }
+
+// operation:
+db.orders.aggregate([
+  {
+    $lookup: {
+      from: "warehouses",
+      let: { order_item: "$item", order_qty: "$ordered" },
+      pipeline: [
+        {
+          $match: {
+            $expr: {
+              $and: [
+                { $eq: [ "$stock_item",  "$$order_item" ] },
+                { $gte: [ "$instock", "$$order_qty" ] }
+              ]
+            }
+          }
+        },
+        { $project: { stock_item: 0, _id: 0 } }
+      ],
+      as: "stockdata"
+    }
+  }
+]);
+
+// results in:
+
+{
+  "_id" : 1,
+  "item" : "almonds",
+  "price" : 12,
+  "ordered" : 2,
+  "stockdata" : [
+    {
+      "warehouse" : "A",
+      "instock" : 120
+    },
+    {
+      "warehouse" : "B",
+      "instock" : 60
+    }
+  ]
+}
+{
+  "_id" : 2,
+  "item" : "pecans",
+  "price" : 20,
+  "ordered" : 1,
+  "stockdata" : [
+    {
+      "warehouse" : "A",
+      "instock" : 80
+    }
+  ]
+}
+{
+  "_id" : 3,
+  "item" : "cookies",
+  "price" : 10,
+  "ordered" : 60,
+  "stockdata" : [
+    {
+      "warehouse" : "A",
+      "instock" : 80
+    }
+  ]
+}
+```
+
+Note that warehouse B was not included into the *stockdata* field of "cookies", as it doesn't have enough units in stock, as per our requirement.
+
 ### $group
 
 Just like the GROUP BY in SQL. This operator receives 1 argument, **_id** to receive any grouping attribute from a document, and the all other arguments must be resulted of aggregations.
