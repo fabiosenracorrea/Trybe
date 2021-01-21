@@ -279,9 +279,9 @@ db.books.aggregate(
 
 On this module we have 3 batches of exercises. You can check them out below:
 
-[$lookup Practice](./exercises/lookupPractice.md)
-[$group Practice](./exercises/groupPractice.md)
-[Complete Exercises](./exercises/exercises.md)
+* [$lookup Practice](./exercises/lookupPractice.md)
+* [$group Practice](./exercises/groupPractice.md)
+* [Complete Exercises](./exercises/exercises.md)
 
 ----
 
