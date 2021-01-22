@@ -24,9 +24,11 @@ Basic syntax:
 
 ```javascript
 db.movies.find(
-  { ratings: { $gt: 2, $lt: 5 }}
+  { ratings: { $elemMatch: { $gt: 2, $lt: 5 } }}
 );
 ```
+
+This query will return any document that has a rating in it's rating array that is bigger than 2 and smaller than 5.
 
 ### $size
 
@@ -68,15 +70,17 @@ Basic syntax:
 
 ```javascript
 db.movies.find({
-  description: { $text: { $search: "deadly" } }
+  $text: { $search: "deadly" }
 });
 ```
 
 ```javascript
 db.movies.find({
-  description: { $text: { $search: "\"This is a phrase to be searched\"" } }
+  $text: { $search: "\"This is a phrase to be searched\"" }
 });
 ```
+
+Be aware! $text is a top-level operador.
 
 ### $regex
 
