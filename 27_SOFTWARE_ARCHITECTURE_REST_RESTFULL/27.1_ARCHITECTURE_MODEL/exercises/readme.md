@@ -1,5 +1,7 @@
 # Express Database Model exercises
 
+> *Note: To follow the instructions correctly, these apps dont use any __service__ or __repository__.*
+
 This exercise will be done twice, using MySQL and MongoDB connections
 
 * [MySQL Solution](./MySQL_server)
