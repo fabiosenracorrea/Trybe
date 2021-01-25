@@ -80,7 +80,7 @@ class UserController {
 
     const userModel = new User();
 
-    await userModel.delete(Number(id));
+    await userModel.delete(id);
 
     return response.status(204).json({ message: 'User deleted with success' });
   }

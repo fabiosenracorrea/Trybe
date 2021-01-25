@@ -64,6 +64,23 @@ class User {
   async update(userInfo) {
     const { first_name, last_name, email, password, id } = userInfo;
 
+    const userID = Number(id);
+
+    const [queryResult] = await connection.execute(
+      `
+        SELECT first_name, last_name, email, id
+        FROM users
+        WHERE id = ?
+      `,
+      [userID]
+    );
+
+    const userData = queryResult[0];
+
+    if (!userData) {
+      throw new AppError('User not found.', 404);
+    }
+
     if (password) {
       await connection.execute(
         `
@@ -76,7 +93,7 @@ class User {
           WHERE
             id = ?
         `,
-        [first_name, last_name, email, password, id]
+        [first_name, last_name, email, password, userID]
       );
     } else {
       await connection.execute(
@@ -89,9 +106,26 @@ class User {
           WHERE
             id = ?
         `,
-        [first_name, last_name, email, id]
+        [first_name, last_name, email, userID]
       );
     }
+
+    const [queryResult] = await connection.execute(
+      `
+        SELECT first_name, last_name, email, id
+        FROM users
+        WHERE id = ?
+      `,
+      [userID]
+    );
+
+    const updatedUserData = queryResult[0];
+
+    return updatedUserData;
+  }
+
+  async delete(userID) {
+    const id = Number(userID);
 
     const [queryResult] = await connection.execute(
       `
@@ -102,19 +136,19 @@ class User {
       [id]
     );
 
-    const updatedUserData = queryResult[0];
+    const userData = queryResult[0];
 
-    return updatedUserData;
-  }
+    if (!userData) {
+      throw new AppError('User not found.', 404);
+    }
 
-  async delete(userID) {
     await connection.execute(
       `
         DELETE
         FROM users
         WHERE id = ?
       `,
-      [userID]
+      [id]
     );
   }
 }
