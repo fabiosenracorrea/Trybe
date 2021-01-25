@@ -177,7 +177,7 @@ On this module we have 1 batches of exercises. You can check them out below:
 
 #### Comments
 
-
+Database connection is crucial to any application on these days. There are a lot of dependencies that abstract away how the application handles with the database (eg. query builders and orms), but it's also nice to understand how one can connect with it and execute any query wanted just by using the database's driver.
 
 ###### Feedback
 
