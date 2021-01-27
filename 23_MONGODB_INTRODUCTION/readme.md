@@ -13,6 +13,7 @@ To check each part of the module, simply click on the desired link above.
 
 #### Comments
 
+MongoDB is the most used noSQL database as od 2020/2021. The flexibility with data types and collections can go a long way. As such, it's basically mandatory to know how to perform the most simple operations on it. If you come from JS, you will see it's pretty straight forward to learn and use some powerful queries.
 
 ###### Feedback
 
