@@ -71,7 +71,7 @@ This is where the configuration of connection with your database will be. It has
   "password": null,
   "database": "your_database",
   "host": "127.0.0.1",
-  "dialect": "something"
+  "dialect": "mysql" // type of SQL database used
 },
 ```
 
