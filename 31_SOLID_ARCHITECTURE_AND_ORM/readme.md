@@ -8,7 +8,7 @@ This directory covers Trybe's 31th module.
 * [ORM: Database Interface](./31.2_ORM_DATABASE_INTERFACE)
 * [ORM Associations](./31.3_ORM_ASSOCIATIONS)
 * [Tests: Best Practices](./31.4_TESTS_BEST_PRACTICES)
-* [Project 01 - TBA](./Project_01_TBA)
+* [Project 01 - Blogs API](./Project_01_Blogs_API)
 
 To check each part of the module, simply click on the desired link above.
 
