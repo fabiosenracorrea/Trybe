@@ -1,5 +1,5 @@
 const mockProductModel = require('../models/fakes/FakeProduct');
-const { getAllProducts, getProductById, createProduct, deleteProductById } = require('./ProductController');
+const { getAllProducts, getProductById, createProduct, deleteProductById, editProductById } = require('./ProductController');
 
 jest.mock('../models/Product.js', () => {
   return mockProductModel.FakeProduct;
@@ -195,6 +195,86 @@ describe('ProductController testing', () => {
       })
 
       deleteProductById(mockRequest, mockResponse);
+
+      const expectedStatusCode = 500;
+      expect(mockResponse.status).toHaveBeenCalledWith(expectedStatusCode);
+      expect(mockResponse.json).toHaveBeenCalled();
+
+    });
+  });
+
+  describe('add or update product implementation', () => {
+    it('should add product and return when non existing ID is provided', () => {
+      const nonExistingID = 999;
+
+      const productToCreate = {
+        name: 'Skol Beats',
+        brand: 'Ambev',
+      };
+
+      const mockRequest = {
+        body: productToCreate,
+        params: {
+          id: nonExistingID,
+        }
+      };
+
+      let returnedProducts;
+      const productsBefore = [...mockedProducts];
+
+      const mockResponse = {
+        status: jest.fn(),
+        json: jest.fn().mockImplementation((products) => {
+          returnedProducts = products;
+        }),
+      };
+
+      editProductById(mockRequest, mockResponse);
+
+      expect(mockProductModel.FakeProduct.addOrUpdate).toHaveBeenCalled();
+
+      const expectedStatusCode = 201;
+      expect(mockResponse.status).toHaveBeenCalledWith(expectedStatusCode);
+      expect(mockResponse.json).toHaveBeenCalled();
+
+      const applicationIDLogic = productsBefore[productsBefore.length - 1].id + 1
+
+      const createdProduct = {
+        name: productToCreate.name,
+        brand: productToCreate.brand,
+        id: applicationIDLogic,
+      };
+
+      const expectedListOfProducts = [...productsBefore, createdProduct];
+
+      expect(returnedProducts).toEqual(expectedListOfProducts);
+    });
+
+    it('should return a 500 when function errors occur', () => {
+      const nonExistingID = 999;
+
+      const productToCreate = {
+        name: 'Skol Beats',
+        brand: 'Ambev',
+      };
+
+      const mockRequest = {
+        body: productToCreate,
+        params: {
+          id: nonExistingID,
+        }
+      };
+
+      const mockResponse = {
+        status: jest.fn(),
+        json: jest.fn(),
+      };
+
+      mockProductModel.FakeProduct.addOrUpdate.mockImplementationOnce(() => {
+        throw new Error('Mocking an error during product creation');
+      })
+
+      editProductById(mockRequest, mockResponse);
 
       const expectedStatusCode = 500;
       expect(mockResponse.status).toHaveBeenCalledWith(expectedStatusCode);

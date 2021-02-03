@@ -18,8 +18,3 @@ You can check the instructions for creating the boiler plate [here](./boilerPlat
 
 **Exercício 5**: Agora que temos todas os controllers testados, está na hora de testarmos nosso modelo.
 
-**Bônus 1**: Utilize a biblioteca FakerJS para mockar seus dados mais próximos de um cenário real.
-
-**Bônus 2**: Adicione testes de integração usando supertest , um para cada endpoint da nossa API, para aumentar ainda mais nosso coverage.
-
-**Bônus 3**: Aplique Property-based testing utilizando a biblioteca fast-check .

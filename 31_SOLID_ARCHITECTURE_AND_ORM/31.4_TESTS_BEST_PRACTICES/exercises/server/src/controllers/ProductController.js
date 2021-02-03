@@ -51,11 +51,11 @@ const editProductById = (req, res) => {
   try {
     const products = ProductModel.addOrUpdate(req.params.id, name, brand);
 
-    res.status(200);
+    res.status(201);
     res.json(products);
   } catch (e) {
     res.status(500);
-    res.send({ message: 'Algo deu errado' });
+    res.json({ message: 'Algo deu errado' });
   }
 };
 
