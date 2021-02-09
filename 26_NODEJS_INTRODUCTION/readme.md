@@ -9,13 +9,15 @@ This directory covers Trybe's 26th module.
 * [Node Architecture](./26.3_NODE_ARCHITECTURE)
 * [HTTP w/ Node: Express](./26.4_NODE_AND_EXPRESS)
 * [Express Practicing](./26.5_EXPRESS_PRACTICING)
-* [Project 01 - TBA](./Project_01_TBA)
+* [Project 01 - Crush Manager](./Project_01_Crush_Manager)
 
 To check each part of the module, simply click on the desired link above.
 
 #### Comments
 
-TBA
+NodeJS grows faster and faster in the industry. It's usage becomes wider as it's powers become stronger. Combined with NodeJS itself, express plays a huge role on server creations, and it's simplicity to implement and gradually improve have been winning developers over the years.
+
+If you like JS, you must play around this combo!
 
 ###### Feedback
 
