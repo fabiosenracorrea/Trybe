@@ -1,18 +1,19 @@
-## Module XX - TITLE
+## Module34 - Computer & Network Architecture
 
-This directory covers Trybe's XXth module.
+This directory covers Trybe's 34th module.
 
 ## What was covered here?
 
-* [Aggregation - Part I](./25.1_AGGREGATION_P1)
-* [Aggregation - Part II](./25.2_AGGREGATION_P2)
-* [Project 01 - TBA](./Project_01_Aggregations)
+* [Computer Architecture](./34.1_COMPUTER_ARCHITECTURE)
+* [Network Architecture](./34.2_NETWORK_ARQUITECTURE)
+* [Tools And Safety](./34.3_TOOLS_AND_SAFETY)
+* [Project 01 - Exploring Protocols](./Project_01_Exploring_Protocols)
 
 To check each part of the module, simply click on the desired link above.
 
 #### Comments
 
-TBA
+This module is responsible for covering some of internet basics rules of architectures, security and potential flaws. An awesome pause between our extensive JS curriculum and the great Python modules.
 
 ###### Feedback
 
