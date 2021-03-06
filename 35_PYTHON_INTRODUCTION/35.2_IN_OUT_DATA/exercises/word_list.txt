@@ -1,0 +1,7 @@
+world
+mathematics
+science
+computer
+planet
+earth
+hello
