@@ -6,13 +6,13 @@ This directory covers Trybe's 29th module.
 
 * [Deployment Introduction and Heroku](./29.1_DEPLOYMENT_INTO_AND_HEROKU)
 * [Process Management](./29.2_PROCESS_MANAGEMENT)
-* [Project: Heroku Deployment and PM2 Management](./Project_01_Heroku_PM2_Deploy)
+* [Project: Heroku Deployment and PM2 Management](./Project_01_HEROKU_DEPLOY)
 
 To check each part of the module, simply click on the desired link above.
 
 #### Comments
 
-TBA
+There are multiple ways of deploying an application nowadays. Out of the free versions, heroku shines for it's simplicity.
 
 ###### Feedback
 
