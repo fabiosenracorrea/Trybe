@@ -1,4 +1,4 @@
-class ListUsersService {
+class ListPostService {
   constructor(blogPostsRepository) {
     this.blogPostsRepository = blogPostsRepository;
   }
@@ -10,4 +10,4 @@ class ListUsersService {
   }
 }
 
-module.exports = ListUsersService;
+module.exports = ListPostService;

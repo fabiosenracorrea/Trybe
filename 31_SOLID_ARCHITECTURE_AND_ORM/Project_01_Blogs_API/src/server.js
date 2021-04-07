@@ -4,16 +4,12 @@ const express = require('express');
 require('express-async-errors');
 
 const appRoutes = require('./routes/index');
+
 const handleErrors = require('./middlewares/handleErrors');
 
 const app = express();
 
 app.use(express.json());
-
-// required for tests
-app.get('/', (_request, response) => {
-  response.send();
-});
 
 app.use(appRoutes);
 

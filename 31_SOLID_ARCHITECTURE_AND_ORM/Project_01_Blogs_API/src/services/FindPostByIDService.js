@@ -1,7 +1,7 @@
 const AppError = require('../errors/AppError');
 const { NOT_FOUND } = require('../errors/status');
 
-class FindUserByIDService {
+class FindPostByIDService {
   constructor(blogPostsRepository) {
     this.blogPostsRepository = blogPostsRepository;
   }
@@ -19,4 +19,4 @@ class FindUserByIDService {
   }
 }
 
-module.exports = FindUserByIDService;
+module.exports = FindPostByIDService;

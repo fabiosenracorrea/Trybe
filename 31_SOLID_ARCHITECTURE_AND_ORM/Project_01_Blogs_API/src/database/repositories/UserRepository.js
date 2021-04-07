@@ -37,20 +37,6 @@ class UserRepository {
     return newUser;
   }
 
-  // async update({ id, title, author, pageQuantity }) {
-  //   const bookToUpdate = {
-  //     title,
-  //     pageQuantity,
-  //     author,
-  //   };
-
-  //   await Book.update(bookToUpdate, {
-  //     where: {
-  //       id,
-  //     },
-  //   });
-  // }
-
   async deleteByID(id) {
     this.count += 1;
 

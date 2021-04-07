@@ -1,4 +1,4 @@
-class CreateUserService {
+class CreatePostService {
   constructor(postRepository) {
     this.postRepository = postRepository;
   }
@@ -12,4 +12,4 @@ class CreateUserService {
   }
 }
 
-module.exports = CreateUserService;
+module.exports = CreatePostService;
