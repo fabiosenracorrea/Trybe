@@ -14,7 +14,7 @@ To check each part of the module, simply click on the desired link above.
 
 #### Comments
 
-TBA
+Creating SOLID servers is something every developer should aim for. Not only it keeps all of our code organized, it facilitates our tests!
 
 ###### Feedback
 
