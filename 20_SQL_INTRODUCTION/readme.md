@@ -9,7 +9,7 @@ Starting the whole backend section of the course, it's time to cover one of the 
 The database variation used was [MySQL](https://www.mysql.com/)
 
 * [Introduction](./20.1_Introduction)
-* [Function Mocking](./10.3_Mock_Functions)
+* [Data Filtering](./20.2_Data_Filtering)
 * [Project 01 - Check your basics!](./Project_01_SQL_Intro)
 
 To check each part of the module, simply click on the desired link above.
